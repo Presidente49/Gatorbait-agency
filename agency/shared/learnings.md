@@ -116,3 +116,8 @@ in each brand's own `learnings.md`.
 - **Back up the encryption key, not just the data.** For n8n: losing
   `N8N_ENCRYPTION_KEY` orphans every stored credential with no recovery.
   Key + volumes + workflows-as-code, or the backup is theater.
+- **Paperclip is the control plane the agency was missing.** 8 agents + skills + studio + cloud automation is a fleet with no management layer. Paperclip's model (org chart, heartbeat wakes, per-agent budgets, atomic task checkout, governance gates, audit trail) maps 1:1 onto what the agency needs — and its multi-company tenancy IS the white-label model (one company per brand). Adopt the concepts now; deploy the app when a VPS is ready.
+- **Heartbeats beat loops.** Agents shouldn't run continuously — short wake-windows (schedule, assignment, @-mention, manual, approval) with a fixed protocol (check identity → review assignments → checkout task → work → update status) are cheaper, more auditable, and easier to reason about than always-on daemons.
+- **Budgets are a governance feature, not finance.** Per-agent monthly caps that hard-stop the agent turn "don't run up the API bill" from a hope into a mechanism. Set caps before the first heartbeat, per brand.
+- **Atomic checkout prevents double-work.** One agent owns a task at a time or nobody does. Our no-duplicate-posts/no-double-reel rules are the content-side version — make the invariant structural wherever the runtime allows it.
+- **Keep a sources registry.** Every external repo evaluated (integrated OR rejected, with license verdict and date) goes in `agency/docs/SOURCES.md`. Future scans check it first — never pay the evaluation cost twice, and never accidentally re-admit a rejected license.
