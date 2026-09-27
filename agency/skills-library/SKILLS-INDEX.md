@@ -24,17 +24,21 @@ All skills are adapted from [charlie947/social-media-skills](https://github.com/
 | [reels-scripting.md](./reels-scripting.md) | scribe | Reverse-engineer a reference Reel into a 30-45s script with a 95/100 QA gate |
 | [voice-builder.md](./voice-builder.md) | scribe | Brand interview + sample analysis → `brand-voice.md` + `about.md` |
 | [video-thumbnail.md](./video-thumbnail.md) | blueprint | Thumbnail brief + image prompt (16:9 and 9:16) from a video title |
+| [marketing/brand-first.md](./marketing/brand-first.md) | all | Read the active brand's context files before asking the user anything |
+| [marketing/quality-gate.md](./marketing/quality-gate.md) | scribe | Expert-panel recursive scoring gate for drafts (90+ to ship) |
+| [marketing/revenue-attribution.md](./marketing/revenue-attribution.md) | wrench | Content→revenue attribution: first-touch/linear/time-decay + CPA by type |
+| [marketing/youtube-outliers.md](./marketing/youtube-outliers.md) | scout | 2x outlier rule + packaging readback windows (CTR, watch time, subs) |
 
 ## By agent
 
-- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer
-- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder
+- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/youtube-outliers
+- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/quality-gate
 - **hype** (social publishing): pinned-comment
 - **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail
 - **rank** (SEO): none yet
 - **bridge** (outreach/partnerships): profile-optimizer
 - **webmaster** (website/backend): none yet
-- **wrench** (ops/automation): none yet
+- **wrench** (ops/automation): marketing/revenue-attribution
 
 ## Notes
 

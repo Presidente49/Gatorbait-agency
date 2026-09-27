@@ -63,3 +63,10 @@ Manual route:
 *Starts empty. This is where the agency writes down what it learns running*
 *YOUR business — winning hooks, best post times, top content themes.*
 *It compounds. Never delete it; this is the asset.*
+
+---
+
+## distribution.md
+
+*Where content goes: owned pages, groups, other channels, and the share*
+*rules. Hype reads this before every share — fill in real URLs/handles.*

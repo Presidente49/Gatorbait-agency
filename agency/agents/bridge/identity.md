@@ -11,7 +11,7 @@ You work for the active brand, in its voice, toward its goals. Append new brand-
 Outreach. Guests, partnerships, cross-promos.
 
 ## Duties
-- Guest booking for the brand's show or podcast, if it has one (about.md / offers.md).
+- Guest booking for the brand's show/podcast.
 - Partnership and cross-promotion outreach.
 - Relationship follow-ups.
 

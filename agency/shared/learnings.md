@@ -116,3 +116,67 @@ in each brand's own `learnings.md`.
 - **Back up the encryption key, not just the data.** For n8n: losing
   `N8N_ENCRYPTION_KEY` orphans every stored credential with no recovery.
   Key + volumes + workflows-as-code, or the backup is theater.
+- **Paperclip is the control plane the agency was missing.** 8 agents + skills + studio + cloud automation is a fleet with no management layer. Paperclip's model (org chart, heartbeat wakes, per-agent budgets, atomic task checkout, governance gates, audit trail) maps 1:1 onto what the agency needs — and its multi-company tenancy IS the white-label model (one company per brand). Adopt the concepts now; deploy the app when a VPS is ready.
+- **Heartbeats beat loops.** Agents shouldn't run continuously — short wake-windows (schedule, assignment, @-mention, manual, approval) with a fixed protocol (check identity → review assignments → checkout task → work → update status) are cheaper, more auditable, and easier to reason about than always-on daemons.
+- **Budgets are a governance feature, not finance.** Per-agent monthly caps that hard-stop the agent turn "don't run up the API bill" from a hope into a mechanism. Set caps before the first heartbeat, per brand.
+- **Atomic checkout prevents double-work.** One agent owns a task at a time or nobody does. Our no-duplicate-posts/no-double-reel rules are the content-side version — make the invariant structural wherever the runtime allows it.
+- **Keep a sources registry.** Every external repo evaluated (integrated OR rejected, with license verdict and date) goes in `agency/docs/SOURCES.md`. Future scans check it first — never pay the evaluation cost twice, and never accidentally re-admit a rejected license.
+- **Memory is a system, not a diary.** Hindsight's model (banks, retain/recall/reflect, evidence-backed observations with proof counts) is how the learning loop graduates: one bank per brand, observations refined by new evidence instead of overwritten, quarterly reflection promoting repeats into mental models. A lesson without evidence is a hypothesis — label it so.
+- **Chat is for decisions, documents are for records.** Anything a human re-reads, compares week-over-week, or shares with a client belongs in a real document that agents write (Univer's "office harness" insight). The weekly analytics digest should be a workbook, not a chat message.
+- **Make the review structural.** FOR-CLAUDE-CODE.md invites review; the Claude Code GitHub Action makes it automatic — every PR reviewed against the white-label contract, attribution headers, and license rules. Standing work should never wait on a human.
+- **Agents get keys, not the kingdom.** Buzz's identity-scoped agents (own keys, own memberships, own audit trail) are the infrastructure version of our standing rule. When an agent needs phone-level access (mobile-mcp pattern), approval gates apply doubly — never standing authorization on auth, payments, or deletions.
+## Growth & monetization (from marketingskills + ai-marketing-skills, 2026-09-26)
+
+- **The offer is the thing, not the page.** Better copy on a weak offer compounds slowly; a stronger offer with average copy converts immediately. When someone asks for "better copy," diagnose the offer first — score the Value Equation (dream outcome × perceived likelihood ÷ time delay × effort), fix the lowest lever one iteration at a time. (agency/growth/OFFER-DESIGN.md)
+- **A loop isn't closed until the change is judged.** Platform truth wins over opinions: every test, content change, or strategy shift gets a readback (baseline vs. candidate, primary metric defined up front, caveats named) before its lesson enters the playbook. Only the author liking it is not evidence. (agency/growth/ANALYTICS-LOOP.md)
+- **Two-tier action model for every scheduled loop:** Tier 1 (read, analyze, draft, stage) runs unattended; Tier 2 (spend, send, publish, delete, change live settings) is gated behind human approval unless explicitly authorized with caps + allowlist. Every loop has a kill switch and logs no raw PII. (agency/growth/LOOP-SPEC.md)
+- **Nothing publishable ships without the quality gate:** a 7–10 expert panel scores recursively to 90/100 (AI-slop detector weighted 1.5x, brand-voice match non-negotiable, max 3 rounds). Rejections become permanent rules in the brand's learnings — that is how quality compounds. (agency/skills-library/marketing/quality-gate.md)
+- **Attribute revenue to content before buying more of it:** run first-touch, linear, and time-decay attribution together — where they disagree is where each content type actually works. CPA by content type decides future budget; the top 10% of pieces get repurposed. (agency/skills-library/marketing/revenue-attribution.md)
+- **On YouTube, steal what's proven, then package it better:** anything at 2x+ channel-average views is an outlier — extract its title/thumbnail/hook pattern. Never call packaging validated until the readback window checks out (24–48h CTR, 7-day watch time, 28-day subscriber gain). (agency/skills-library/marketing/youtube-outliers.md)
+- **Brand-first convention:** every marketing skill reads the brand's context files (brand-voice, audience, offers, learnings) before asking the owner a single question. Shared skills, per-brand context — that is what makes white-label possible. (agency/skills-library/marketing/brand-first.md)
+- **Don't peek at experiments early:** pre-commit to sample size; checking results early manufactures false positives. Test one variable at a time, judge on the primary metric, and promote winners to the playbook as reusable patterns with segment deltas. (agency/growth/EXPERIMENT-RUNBOOK.md)
+- **Never discount to acquire:** discount-askers churn ~2x the rate of full-price customers and a coupon anchors the product as cheap. Raise value with the offer instead — bonuses that are additive (not inflated), guarantees matched to the business model, scarcity that's real. (agency/growth/OFFER-DESIGN.md)
+- **Clarity beats cleverness in copy:** specific > vague, benefits > features, customer language > company language. One idea per section. Banned pattern-matches: "game-changing", "10x", "secret", "limited time" with no real limit, invented "$X value" claims. (agency/growth/COPY-PATTERNS.md)
+<!-- lanes-learnings fragment — bullets for agency/shared/learnings.md, lane scan 2026-09-26. Append under a new "## Repo shopping" section or the closest fit. -->
+
+## Repo shopping (2026-09-26 lane scan)
+
+- **Medusa v2 is the agency's merch backend default** (MIT core).
+  One deployment per brand — no native multi-tenancy. Pair with a
+  Next.js storefront skinned from the brand pack, or the brand's
+  existing site via API.
+- **POD wiring pattern:** event-driven order submit (`order.placed`
+  → provider API), idempotent webhooks back into fulfillments, live
+  shipping rates with flat-rate fallback, one fulfillment per parcel.
+  Printful via `print2medusa`, Printify via `medusa-plugin-printify`
+  (both MIT). No ads until a full test order per hero SKU passes.
+- **Velo rule:** backend-only APIs, secrets, and npm packages live
+  behind `*.web.js` web modules with explicit `Permissions`; page
+  code passes parameters and receives URLs. Author Velo in git and
+  sync via the Wix CLI — the in-browser editor is not the source
+  of truth.
+- **Wix design system:** tokens first (Site Styles from the brand
+  pack), saved section presets, custom CSS only as the escape hatch.
+- **JSON-first site documents are the web trend to bet on:**
+  `{ name, theme, blocks[] }` that humans, editors, and agents all
+  read and write (OpenPage, MIT). Generate the JSON, never the code —
+  review becomes diffing, which agents do reliably.
+- **License discipline, again:** Vendure's third-party writeups say
+  MIT; its actual LICENSE.md is GPLv3-first. Read the file, never
+  the badge. Saleor is BSD-3 (permissive) but outside the strict
+  MIT/Apache-2.0 allow-list — rejected on the rule, flagged for
+  re-evaluation if policy widens.
+- **A merch store earns a bigger catalog only after hero SKUs prove
+  conversion.** Breadth before proof is inventory thinking in a
+  no-inventory business.
+
+## 2026-09-27 — License policy widened (Brenden's call)
+- **Rule is now: permissive licenses only** (MIT, Apache-2.0, BSD,
+  ISC) — not just MIT/Apache-2.0. Still permanently out: GPL/AGPL,
+  unlicensed, ambiguous, commercial carve-outs.
+- **Saleor (BSD-3) integrated** on the widened rule: headless
+  GraphQL commerce, and its multichannel model (per-channel pricing /
+  currency / stock) is white-label native — one channel per brand.
+- Lesson: write rejections as reversible. The Saleor NOT-INTEGRATED
+  file said "re-evaluate first if policy widens" — because it did,
+  integration took minutes instead of a re-scan.
