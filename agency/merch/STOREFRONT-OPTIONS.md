@@ -11,7 +11,7 @@ everything else is here so we can say why we didn't pick it.
 | Platform | Stack | License (verified) | Verdict |
 |---|---|---|---|
 | **Medusa v2** | Node.js / TypeScript, modular | **MIT** (core; Enterprise materials carved out under a separate commercial license — we stay on the MIT core) | ✅ Agency default |
-| Saleor | Python, GraphQL-first | BSD 3-Clause (permissive) | ⚠️ Rejected by agency license policy (strict MIT/Apache-2.0 allow-list). Technically fine, procedurally out. See `agency/cloud/saleor/NOT-INTEGRATED.md`. |
+| Saleor | Python, GraphQL-first | BSD 3-Clause (permissive) | ✅ Integrated — multichannel maps to one channel per brand. See `agency/cloud/saleor/OVERVIEW.md`. |
 | Vendure | TypeScript / NestJS, GraphQL | GPLv3 Community Edition + commercial VCL | ❌ Rejected (copyleft). See `agency/cloud/vendure/NOT-INTEGRATED.md`. |
 | WooCommerce | PHP / WordPress | GPLv2 | ❌ Copyleft, legacy stack — no fit for new brand builds. |
 | Shopify (Hydrogen) | SaaS core, React storefront | Proprietary | ❌ Rent, don't own. Fine for clients who already have Shopify; not the agency's self-host default. |

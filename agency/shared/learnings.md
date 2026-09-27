@@ -169,3 +169,14 @@ in each brand's own `learnings.md`.
 - **A merch store earns a bigger catalog only after hero SKUs prove
   conversion.** Breadth before proof is inventory thinking in a
   no-inventory business.
+
+## 2026-09-27 — License policy widened (Brenden's call)
+- **Rule is now: permissive licenses only** (MIT, Apache-2.0, BSD,
+  ISC) — not just MIT/Apache-2.0. Still permanently out: GPL/AGPL,
+  unlicensed, ambiguous, commercial carve-outs.
+- **Saleor (BSD-3) integrated** on the widened rule: headless
+  GraphQL commerce, and its multichannel model (per-channel pricing /
+  currency / stock) is white-label native — one channel per brand.
+- Lesson: write rejections as reversible. The Saleor NOT-INTEGRATED
+  file said "re-evaluate first if policy widens" — because it did,
+  integration took minutes instead of a re-scan.

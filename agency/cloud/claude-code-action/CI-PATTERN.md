@@ -17,7 +17,7 @@ manual — every PR and every push gets a reviewer that never sleeps.
 1. **Automatic PR review** — every PR touching `agency/` gets a Claude review
    against the repo's own standards: white-label completeness (no
    brand-specific leakage into shared paths), attribution headers present on
-   borrowed material, license compliance (MIT/Apache-2.0 only — flag anything
+   borrowed material, license compliance (permissive licenses only — MIT, Apache-2.0, BSD, ISC; flag anything
    else), privacy grep (no emails/phones/secrets).
 2. **Scheduled repo health check** — weekly run: verify every link in
    `SOURCES.md` still resolves, flag stale docs, check that each agent's

@@ -37,7 +37,7 @@ clipping → captions → reels → publish. Runbooks an agent can follow
 step by step. Note: no automated long-video-to-shorts clipping engine
 is integrated yet (the open-source options had commercial carve-outs).
 This gap is documented at `agency/studio/clipping/NOT-INTEGRATED.md`
-— keep hunting for a clean MIT/Apache one.
+— keep hunting for a clean permissively-licensed one.
 
 **Skills library** (`agency/skills-library/`)
 Reusable markdown skills any agent can read and execute. Includes 4
@@ -99,7 +99,7 @@ URL, license. 19 sources and counting.
    kill criteria? Is revenue attribution honest?
 8. **Learnings loop** — does every workflow feed learnings.md?
 9. **Attribution & licenses** — every borrowed file: repo name, URL,
-   license. MIT/Apache-2.0 only. NOTHING GPL/AGPL/unlicensed/
+   license. Permissive licenses only (MIT, Apache-2.0, BSD, ISC). NOTHING GPL/AGPL/unlicensed/
    commercially carved-out gets copied in — ever. Rejections live in
    `NOT-INTEGRATED.md` files; respect them.
 

@@ -30,7 +30,7 @@
 |---|---|---|
 | mutonby/openshorts | https://github.com/mutonby/openshorts | LICENSE claims MIT but carves `cloud/` (api_keys, mcp_oauth, autopilot, billing) into a commercial license forbidding white-label/resale/redistribution; agent-control hooks live in the restricted dir; GitHub shows NOASSERTION. See `agency/studio/clipping/NOT-INTEGRATED.md`. |
 | vendure-ecommerce/vendure | https://github.com/vendure-ecommerce/vendure | GPLv3 Community Edition default (LICENSE.md read — third-party writeups claiming MIT are stale); copyleft incompatible with white-label. See `agency/cloud/vendure/NOT-INTEGRATED.md`. |
-| saleor/saleor | https://github.com/saleor/saleor | BSD 3-Clause (LICENSE read) — permissive, no copyleft risk, but outside the strict MIT/Apache-2.0 allow-list. Re-evaluate first if policy widens. See `agency/cloud/saleor/NOT-INTEGRATED.md`. |
+| saleor/saleor | https://github.com/saleor/saleor | BSD 3-Clause (LICENSE read) — permissive, no copyleft risk. Integrated 2026-09-27 after policy widened to all permissive licenses. See `agency/cloud/saleor/OVERVIEW.md`. |
 | loeiks/awesome-wix | https://github.com/loeiks/awesome-wix | No LICENSE file (unlicensed) — described, never copied. See `agency/cloud/awesome-wix/NOT-INTEGRATED.md`. |
 | amandamartin-dev/velo-tensorflow | https://github.com/amandamartin-dev/velo-tensorflow | No LICENSE file (unlicensed); same author's MIT repo integrated instead. See `agency/cloud/velo-tensorflow/NOT-INTEGRATED.md`. |
 ## Rules for future scans
