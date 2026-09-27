@@ -49,3 +49,6 @@ in particular.
 - A headline over a photo reads as a publication; the headline under the photo reads as a blog. Real photos only under an overlay.
 - Headless fetch tools don't run the custom renderer; they show the hidden native Wix layer. Don't report what they "see" as what readers see.
 - Email: 8 sends Sept. 25–27 each reached 1,807–1,816 delivered. The postgame reaction email (presser + column) drew the most clicks (150).
+
+## 2026-09-27 — Design Desk created
+Brenden: "A copy desk — go get yourself a graphics design team." The Design Desk (lead: blueprint) now does a visual pass on every post between the copy and the publish, then verifies the live page on a phone. Trigger case: Chris Spears' column went out with every mobile headline clipped by the template's full-bleed header. See brands/gator-bait-media/design-desk.md and skills-library/design/article-visual-qc.md.

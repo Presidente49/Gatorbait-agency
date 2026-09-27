@@ -34,6 +34,7 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 | [research/knowledge-base.md](./research/knowledge-base.md) | scout | Ingest sources (articles, transcripts, PDFs, stat sheets) → chunked index → cited answers; no citation, no claim (Tencent/WeKnora patterns, MIT) |
 | [editorial/copy-desk-audit.md](./editorial/copy-desk-audit.md) | scribe | Names, facts, copy, excerpt, cover and tag sweep across every live front-page story; fix-in-place rules (never over unpublished edits, no email) |
 | [design/hero-overlay.md](./design/hero-overlay.md) | blueprint + webmaster | Headline-over-photo lead spec (16:10 desktop, 4:5 phone, navy gradient); real photos only; specificity trap and render check |
+| [design/article-visual-qc.md](./design/article-visual-qc.md) | blueprint (Design Desk) | Cover, inline photo placement, captions and the phone/desktop render check on every post before and after publish; headline-clip and full-bleed trap |
 | [web/embed-patch.md](./web/embed-patch.md) | webmaster | Custom-embed patch loop: read live, unique-match replace, cap, revision PATCH, publish, byte-exact repo sync; headless-fetch trap |
 | [research/photo-sourcing.md](./research/photo-sourcing.md) | scout + blueprint | Find and verify credited photos (media library, staff galleries); unknown credit means don't publish; no AI art on news |
 | [marketing/email-delivery-check.md](./marketing/email-delivery-check.md) | wrench + scribe | Owner yes, dedupe, source gates, draft preview, publish, IN_DETECTION to DISTRIBUTED, delivered-count proof |
@@ -47,7 +48,7 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 - **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/competitive-brief, marketing/youtube-outliers, research/knowledge-base, research/photo-sourcing
 - **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/email-sequence, marketing/quality-gate, editorial/copy-desk-audit
 - **hype** (social publishing): pinned-comment
-- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan, design/hero-overlay
+- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan, design/hero-overlay, design/article-visual-qc
 - **rank** (SEO): marketing/seo-audit, marketing/keyword-clustering, marketing/link-prospecting, marketing/local-seo
 - **bridge** (outreach/partnerships): profile-optimizer, marketing/link-prospecting (outreach drafts)
 - **webmaster** (website/backend): web/embed-patch, design/hero-overlay (deploy)
