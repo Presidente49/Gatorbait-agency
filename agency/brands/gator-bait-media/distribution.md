@@ -39,7 +39,7 @@ only — never re-uploads. Gator-related groups only.
 | Metricool (brand 6946016) | No. Zero social networks connected | Brenden connects FB/IG/X/Threads at app.metricool.com/brands/connections. This is the #1 unlock for breaking max-share |
 | vidIQ Instagram | No. @thebuddymartinshow is linked manually (public data only, publishing off) | Reauthorize Instagram at app.vidiq.com |
 | OpusClip | No. MCP/API needs a Pro plan | Upgrade only if we're clipping video at volume |
-| Windsor.ai (can post IG images, boost FB) | Not used. The call was denied in-session | Approve if we want it as a backup IG poster |
+| Windsor.ai | Connected to the Gator Bait Media FB page (192930054063033) and IG @gatorbaitmedia (17841444573395911), but read-only. Posting the Brown story at 22:15Z failed: FB needs pages_manage_posts, IG needs instagram_content_publish | Brenden reauthorizes and grants publishing permissions: onboard.windsor.ai/connect?connector=facebook_organic and ?connector=instagram. Then breaking posts go out automatically: FB create_post with link, IG create_image_post with the 1080x1350 JPEG card from a public raw GitHub URL |
 | Wix site, Wix email, Gmail | Yes. Publish, pin, band, breaking email, tests all work | — |
 
 Until one of these is fixed, the desk delivers social as paste-ready copy plus a 1080x1350 card (see newsletter/breaking/brown-social-1080x1350.png).
