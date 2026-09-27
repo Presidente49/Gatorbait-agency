@@ -370,3 +370,38 @@ then integrated here. They are registered as SOURCES #20–26, listed in
 3. **The email footer has nowhere to get a postal address.** The newsletter
    footer needs one, but the `_template/about.md` brand template has no field
    for it.
+
+---
+
+# Four-repo scan integration, 2026-09-27 (Claude Code)
+
+The trending-repo scan sent four finds. I read each LICENSE in full, checked
+every sub-folder for a carve-out (the openshorts trap) and tested what could be
+run here. They are registered as SOURCES #27–30 and listed in
+`THIRD-PARTY-NOTICES.md`, and their lessons are in `agency/shared/learnings.md`.
+The skills were desk-run on the scratch brand (`zz-scratch-test`, not committed).
+
+| # | Repo | Lands in | Test verdict |
+|---|---|---|---|
+| 27 | browser-use/video-use (MIT) | `agency/studio/video-edit/VIDEO-EDIT-RUNBOOK.md` | Pass. 26/26 upstream tests. A real two-cut render with burned captions came out at the expected 4.54 s, normalized to −14 LUFS, and the frame check confirmed the cut timing. Not tested: transcription (it needs an ElevenLabs key). It upscales 720p to 1080p by default. |
+| 28 | every-app/open-seo (MIT) | 3 rank skills: keyword-clustering, link-prospecting, local-seo | Pass on a desk run: with no data provider, every volume stayed `unknown`, the grid cost warning fired, and a "buy links" request was refused. Not tested against live SEO data (it needs a paid DataForSEO key). |
+| 29 | coollabsio/shoutrrr (Apache-2.0) | `agency/cloud/shoutrrr/README.md` | Code read only. **Runtime UNVERIFIED**: Docker was unavailable. It becomes the second scheduler option, not a replacement: no YouTube, TikTok or Pinterest. |
+| 30 | darkzOGx/youtube-automation-agent (MIT) | `agency/growth/PACKAGING-TESTS.md` | Pass. The z-test rule was checked against computed numbers. The autonomous publish path is rejected. |
+
+**Rejected (AGPL-3.0, LICENSE read):** jub0t/Concat and calesthio/OpenMontage.
+
+**Flags recorded, not blocking (concepts only, no code copied):**
+- AgentTube's README headline carries a pump.fun crypto token address.
+- AgentTube's dependencies include one GPL-3.0 and several LGPL-3.0 npm packages.
+- OpenSEO's README links to DataForSEO through an affiliate link.
+
+**The clipping gap is still open.** video-use edits footage a person has picked;
+it does not find viral moments or reframe to 9:16 on its own.
+
+## Needs a human decision
+
+1. **Shoutrrr trial:** stand it up on a scratch server (one Discord test post)
+   before offering it to a client? It needs a server with Docker.
+2. **Paid SEO data:** the three new rank skills run on Search Console alone, but
+   volumes, backlinks and rank grids need a paid provider (DataForSEO through
+   OpenSEO, or another). Pick one, or stay free with the limits labeled.

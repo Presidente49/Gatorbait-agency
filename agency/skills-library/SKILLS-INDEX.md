@@ -1,7 +1,7 @@
 <!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Skills Index
 
-Top-level skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT); `marketing/` skills come from the sources named in each file's header (coreyhaines31/marketingskills and ericosiu/ai-marketing-skills, MIT; anthropics/knowledge-work-plugins, Apache-2.0) — all for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`about.md`, `brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
+Top-level skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT); `marketing/` skills come from the sources named in each file's header (coreyhaines31/marketingskills and ericosiu/ai-marketing-skills, MIT; anthropics/knowledge-work-plugins, Apache-2.0; every-app/open-seo, MIT) — all for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`about.md`, `brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
 
 ## Skill → Agent mapping
 
@@ -27,6 +27,9 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 | [marketing/campaign-plan.md](./marketing/campaign-plan.md) | blueprint | Goal → campaign brief, dated calendar, kill rule, and PROPOSED campaign-board rows (owner approves before anything runs) |
 | [marketing/competitive-brief.md](./marketing/competitive-brief.md) | scout | Evidence-logged competitor research → messaging matrix, gaps, review-complaint map, counter-positioning card |
 | [marketing/email-sequence.md](./marketing/email-sequence.md) | scribe | Multi-email flow (welcome/nurture/launch/win-back): drafts, branching, compliance check, sample-size gate, approval block |
+| [marketing/keyword-clustering.md](./marketing/keyword-clustering.md) | rank | Searches → intent clusters mapped to existing/new pages, cannibalization from Search Console; no invented volumes (every-app/open-seo, MIT) |
+| [marketing/link-prospecting.md](./marketing/link-prospecting.md) | rank + bridge | Link prospects from results pages and competitor backlinks, sourced contact paths, DRAFT outreach only (every-app/open-seo, MIT) |
+| [marketing/local-seo.md](./marketing/local-seo.md) | rank | Maps/local-pack audit: profile vs top competitors, reviews, rank grid (paid calls costed first), the one fix (every-app/open-seo, MIT) |
 | [marketing/seo-audit.md](./marketing/seo-audit.md) | rank | Read-only SEO + AI-visibility audit → top-5 paste-ready fixes (titles, robots, schema, llms.txt) for the site writer |
 | [research/knowledge-base.md](./research/knowledge-base.md) | scout | Ingest sources (articles, transcripts, PDFs, stat sheets) → chunked index → cited answers; no citation, no claim (Tencent/WeKnora patterns, MIT) |
 | [marketing/brand-first.md](./marketing/brand-first.md) | all | Read the active brand's context files before asking the user anything |
@@ -40,8 +43,8 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 - **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/email-sequence, marketing/quality-gate
 - **hype** (social publishing): pinned-comment
 - **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan
-- **rank** (SEO): marketing/seo-audit
-- **bridge** (outreach/partnerships): profile-optimizer
+- **rank** (SEO): marketing/seo-audit, marketing/keyword-clustering, marketing/link-prospecting, marketing/local-seo
+- **bridge** (outreach/partnerships): profile-optimizer, marketing/link-prospecting (outreach drafts)
 - **webmaster** (website/backend): none yet
 - **wrench** (ops/automation): marketing/revenue-attribution
 

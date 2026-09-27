@@ -4,6 +4,7 @@ Material in this repo adapted from the projects below is used under each
 project's license (MIT or Apache-2.0, as listed). Each upstream `LICENSE` file
 was read before integration. Only concepts, runbooks and short paraphrases are
 adapted — no upstream code is vendored. Excluded on license grounds:
+jub0t/Concat and calesthio/OpenMontage (AGPL-3.0), and
 mutonby/openshorts — see `agency/studio/clipping/NOT-INTEGRATED.md`.
 
 > **Follow-up:** sources #8–19 in `agency/docs/SOURCES.md` (added 2026-09-27
@@ -26,6 +27,10 @@ mutonby/openshorts — see `agency/studio/clipping/NOT-INTEGRATED.md`.
 | [thesysdev/openui](https://github.com/thesysdev/openui) | MIT | Copyright (c) 2011-2024 Thesys Inc. | `agency/studio/creative/GENERATIVE-UI-SPECS.md`, `agency/studio/newsletter/` (concepts + component-library structure) |
 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | MIT | Copyright (c) 2025 Nous Research | `agency/cloud/hermes/`, hygiene section of `agency/cloud/hindsight/AGENCY-MEMORY-MODEL.md` (concepts only) |
 | [stablyai/orca](https://github.com/stablyai/orca) | MIT | Copyright (c) 2026 Lovecast Inc. | `agency/cloud/orca/` (concepts only) |
+| [browser-use/video-use](https://github.com/browser-use/video-use) | MIT | Copyright (c) 2026 Browser Use | `agency/studio/video-edit/VIDEO-EDIT-RUNBOOK.md` (concepts only) |
+| [every-app/open-seo](https://github.com/every-app/open-seo) | MIT | Copyright (c) 2026 Ben Senescu | `agency/skills-library/marketing/keyword-clustering.md`, `link-prospecting.md`, `local-seo.md` (concepts only) |
+| [coollabsio/shoutrrr](https://github.com/coollabsio/shoutrrr) | Apache-2.0 | coollabsio (LICENSE has no copyright line; no NOTICE file) | `agency/cloud/shoutrrr/README.md` (concepts only) |
+| [darkzOGx/youtube-automation-agent](https://github.com/darkzOGx/youtube-automation-agent) | MIT | Copyright (c) 2025 YouTube Automation Agent Contributors | `agency/growth/PACKAGING-TESTS.md` (concepts only) |
 
 Fonts, logos and photos are separate assets under their own licenses —
 record them per brand (see `agency/studio/creative/BRAND-PACK.md`).

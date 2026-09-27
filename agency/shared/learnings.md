@@ -212,4 +212,20 @@ markdown-reading agent could run it, then integrated. Sources #20–26.
 - **Capture needs a trigger and curation needs a janitor;** keep a
   do-not-capture list; a lesson becomes a skill only as a proven, repeated
   procedure with human approval (hermes-agent).
-
+- **Test the numbers before you trust a "winner":** at 1,000 impressions per
+  arm, 5% vs 4% CTR is z = 1.08, noise. A one-point lift needs about 5,000 per
+  arm. Rotation on one video is not a true split test; match the time windows
+  (AgentTube, computed 2026-09-27).
+- **Plan approval is not adopt approval.** A yes to run a test lets the agent
+  rotate arms; changing the live package for good is a second yes (AgentTube).
+- **Give agents the draft half of a tool, not the publish half.** When an app
+  exposes both through MCP, allowlist create/update/share and keep
+  publish/schedule/delete human-only (shoutrrr).
+- **Video edits: approve the plan, then cut; check the render, not the
+  sources;** measure loudness, since an agent cannot listen. Default renders
+  upscale, so say so (video-use test, 2026-09-27).
+- **A paid data call gets a cost line first;** every rank-grid point is a paid
+  search (open-seo).
+- **Check the README for red flags as well as the LICENSE:** a crypto token in
+  a headline, affiliate links and GPL packages in the dependency tree don't block
+  a concepts-only integration, but they get recorded (AgentTube, open-seo).

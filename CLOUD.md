@@ -17,6 +17,8 @@ agency/cloud/
 │       ├── rss-to-social-drafts.json   # RSS → draft queue (Scout→Scribe)
 │       ├── comment-monitor.json        # comment watch → draft-reply queue
 │       └── weekly-analytics-digest.json# Monday metrics digest
+├── shoutrrr/
+│   └── README.md            # multi-client scheduler option (workspaces, share-link approval, MCP draft-only)
 └── scheduler/
     ├── README.md            # the white-label client dashboard option
     ├── DEPLOY.md            # VPS (Node) or Vercel+Postgres paths
@@ -30,7 +32,8 @@ agency/cloud/
 | n8n | Automation engine | Workflows: draft pipelines, comment watch, digests, publishing |
 | PostgreSQL | n8n's database | Named volume; healthcheck gates n8n startup |
 | Caddy | Reverse proxy | Automatic HTTPS; n8n port bound to loopback only |
-| Scheduler app | Client dashboard | Self-hosted social scheduler; one instance per client |
+| Scheduler app | Client dashboard | Self-hosted social scheduler; one instance per client (video-first default) |
+| Shoutrrr (option) | Multi-client scheduler | One instance, a workspace per brand; no YouTube/TikTok; see `agency/cloud/shoutrrr/` |
 
 ## Deploy (n8n)
 
