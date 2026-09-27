@@ -32,6 +32,11 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 | [marketing/local-seo.md](./marketing/local-seo.md) | rank | Maps/local-pack audit: profile vs top competitors, reviews, rank grid (paid calls costed first), the one fix (every-app/open-seo, MIT) |
 | [marketing/seo-audit.md](./marketing/seo-audit.md) | rank | Read-only SEO + AI-visibility audit → top-5 paste-ready fixes (titles, robots, schema, llms.txt) for the site writer |
 | [research/knowledge-base.md](./research/knowledge-base.md) | scout | Ingest sources (articles, transcripts, PDFs, stat sheets) → chunked index → cited answers; no citation, no claim (Tencent/WeKnora patterns, MIT) |
+| [editorial/copy-desk-audit.md](./editorial/copy-desk-audit.md) | scribe | Names, facts, copy, excerpt, cover and tag sweep across every live front-page story; fix-in-place rules (never over unpublished edits, no email) |
+| [design/hero-overlay.md](./design/hero-overlay.md) | blueprint + webmaster | Headline-over-photo lead spec (16:10 desktop, 4:5 phone, navy gradient); real photos only; specificity trap and render check |
+| [web/embed-patch.md](./web/embed-patch.md) | webmaster | Custom-embed patch loop: read live, unique-match replace, cap, revision PATCH, publish, byte-exact repo sync; headless-fetch trap |
+| [research/photo-sourcing.md](./research/photo-sourcing.md) | scout + blueprint | Find and verify credited photos (media library, staff galleries); unknown credit means don't publish; no AI art on news |
+| [marketing/email-delivery-check.md](./marketing/email-delivery-check.md) | wrench + scribe | Owner yes, dedupe, source gates, draft preview, publish, IN_DETECTION to DISTRIBUTED, delivered-count proof |
 | [marketing/brand-first.md](./marketing/brand-first.md) | all | Read the active brand's context files before asking the user anything |
 | [marketing/quality-gate.md](./marketing/quality-gate.md) | scribe | Expert-panel recursive scoring gate for drafts (90+ to ship) |
 | [marketing/revenue-attribution.md](./marketing/revenue-attribution.md) | wrench | Content→revenue attribution: first-touch/linear/time-decay + CPA by type |
@@ -39,14 +44,14 @@ Top-level skills are adapted from [charlie947/social-media-skills](https://githu
 
 ## By agent
 
-- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/competitive-brief, marketing/youtube-outliers, research/knowledge-base
-- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/email-sequence, marketing/quality-gate
+- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/competitive-brief, marketing/youtube-outliers, research/knowledge-base, research/photo-sourcing
+- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/email-sequence, marketing/quality-gate, editorial/copy-desk-audit
 - **hype** (social publishing): pinned-comment
-- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan
+- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan, design/hero-overlay
 - **rank** (SEO): marketing/seo-audit, marketing/keyword-clustering, marketing/link-prospecting, marketing/local-seo
 - **bridge** (outreach/partnerships): profile-optimizer, marketing/link-prospecting (outreach drafts)
-- **webmaster** (website/backend): none yet
-- **wrench** (ops/automation): marketing/revenue-attribution
+- **webmaster** (website/backend): web/embed-patch, design/hero-overlay (deploy)
+- **wrench** (ops/automation): marketing/revenue-attribution, marketing/email-delivery-check
 
 ## Notes
 

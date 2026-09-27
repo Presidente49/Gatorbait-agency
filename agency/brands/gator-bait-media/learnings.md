@@ -43,3 +43,9 @@ in particular.
 - Scott Burns (UF football communications): media credentials route.
 - Wix login is Google SSO — no password exists. Browser work rides the
   existing Google session.
+
+## 2026-09-27: The front page leads with the newest story, so every story is a potential cover
+- Loren's postgame piece went live with an AI cartoon cover and four misspelled names and became the front-page lead within minutes. Proven fix: desk review before publish (`editorial-desk.md` submission rules) plus the copy-desk audit after every publishing burst.
+- A headline over a photo reads as a publication; the headline under the photo reads as a blog. Real photos only under an overlay.
+- Headless fetch tools don't run the custom renderer; they show the hidden native Wix layer. Don't report what they "see" as what readers see.
+- Email: 8 sends Sept. 25–27 each reached 1,807–1,816 delivered. The postgame reaction email (presser + column) drew the most clicks (150).
