@@ -31,3 +31,15 @@ only — never re-uploads. Gator-related groups only.
 - Comment replies as the Gator Bait Media page: short, warm, one per comment. Playful clapbacks for rival fans; skip spam, hate, threats, genuine abuse. Never promise anything.
 - In-game stat posts stay live even if stale — explain in comments they went up during the game.
 - Never use coach/player likeness to sell merchandise.
+
+## Posting-tool check (Sept. 27, 2026, during the Vernell Brown breaking story)
+
+| Tool | Can it post for us today? | Fix |
+|---|---|---|
+| Metricool (brand 6946016) | No. Zero social networks connected | Brenden connects FB/IG/X/Threads at app.metricool.com/brands/connections. This is the #1 unlock for breaking max-share |
+| vidIQ Instagram | No. @thebuddymartinshow is linked manually (public data only, publishing off) | Reauthorize Instagram at app.vidiq.com |
+| OpusClip | No. MCP/API needs a Pro plan | Upgrade only if we're clipping video at volume |
+| Windsor.ai (can post IG images, boost FB) | Not used. The call was denied in-session | Approve if we want it as a backup IG poster |
+| Wix site, Wix email, Gmail | Yes. Publish, pin, band, breaking email, tests all work | — |
+
+Until one of these is fixed, the desk delivers social as paste-ready copy plus a 1080x1350 card (see newsletter/breaking/brown-social-1080x1350.png).
