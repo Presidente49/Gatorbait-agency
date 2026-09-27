@@ -23,6 +23,10 @@
 | 17 | greedychipmunk/medusa-plugin-printify | https://github.com/greedychipmunk/medusa-plugin-printify | MIT (LICENSE read, © 2026 Dawson Blackhouse) | Printify→Medusa v2 integration pattern; plugin structure (modules/providers/subscribers/workflows) | `agency/merch/PRINT-ON-DEMAND.md` | 2026-09-27 |
 | 18 | amandamartin-dev/pdfkit-demo-wixstudio | https://github.com/amandamartin-dev/pdfkit-demo-wixstudio | MIT (LICENSE read, © 2024 Amanda) | Velo backend web-module pattern (webMethod + Permissions), npm-in-backend, page↔backend async UX lifecycle | `agency/cloud/wix/VELO-PATTERNS.md` | 2026-09-27 |
 | 19 | cganh/openpage | https://github.com/cganh/openpage | MIT (LICENSE read, © 2026 Federico De Ponte) | JSON-first site documents (blocks/variants/themes), AI site-generation API pattern, agent-editable design formats | `agency/studio/web/WEB-DESIGN-TRENDS.md` | 2026-09-27 |
+| 20 | browser-use/video-use | https://github.com/browser-use/video-use | MIT (LICENSE read, © 2026 Browser Use) | **Candidate, integration pending** — edit-videos-with-coding-agents harness: transcript→EDL→render→self-eval pipeline, subtitle burn, HyperFrames/Remotion/Manim overlays; agent-driven editing patterns for studio reels/video | (pending) | 2026-09-27 |
+| 21 | every-app/open-seo | https://github.com/every-app/open-seo | MIT (LICENSE read, © 2026 Ben Senescu) | **Candidate, integration pending** — open Semrush/Ahrefs alt with MCP server + agent skills (keyword research, rank tracking, site audit, backlinks, AI visibility, strategy libraries); SEO-agent toolchain | (pending) | 2026-09-27 |
+| 22 | coollabsio/shoutrrr | https://github.com/coollabsio/shoutrrr | Apache-2.0 (LICENSE read, © 2026 coolLabs Solutions Kft) | **Candidate, integration pending** — self-hostable Buffer/Typefully/Hootsuite alt (X, Bluesky, LinkedIn, FB, IG, Threads, Discord) with workspaces, teams, analytics; ships `.claude/skills` + `.mcp.json`; white-label client-dashboard candidate | (pending) | 2026-09-27 |
+| 23 | darkzOGx/youtube-automation-agent | https://github.com/darkzOGx/youtube-automation-agent | MIT (LICENSE read, © 2025 YouTube Automation Agent Contributors) | **Candidate, integration pending** — autonomous YouTube channel operator: research→script→assemble→schedule→publish→analytics loop, approval-first gates, Shorts repurposing; studio→publish→learn reference | (pending) | 2026-09-27 |
 
 ## Evaluated and REJECTED
 
@@ -33,6 +37,8 @@
 | saleor/saleor | https://github.com/saleor/saleor | BSD 3-Clause (LICENSE read) — permissive, no copyleft risk. Integrated 2026-09-27 after policy widened to all permissive licenses. See `agency/cloud/saleor/OVERVIEW.md`. |
 | loeiks/awesome-wix | https://github.com/loeiks/awesome-wix | No LICENSE file (unlicensed) — described, never copied. See `agency/cloud/awesome-wix/NOT-INTEGRATED.md`. |
 | amandamartin-dev/velo-tensorflow | https://github.com/amandamartin-dev/velo-tensorflow | No LICENSE file (unlicensed); same author's MIT repo integrated instead. See `agency/cloud/velo-tensorflow/NOT-INTEGRATED.md`. |
+| jub0t/Concat | https://github.com/jub0t/Concat | AGPL-3.0 (GitHub license page, 2026-09-27) — network copyleft incompatible with white-label. Would have filled the clipping-engine gap. See `agency/studio/clipping/NOT-INTEGRATED-concat.md`. |
+| calesthio/OpenMontage | https://github.com/calesthio/OpenMontage | AGPL-3.0 (GitHub license page, 2026-09-27) — ~61k stars but AGPL network copyleft is excluded regardless of popularity. Described, never copied. See `agency/studio/NOT-INTEGRATED-openmontage.md`. |
 ## Rules for future scans
 
 1. Read the full LICENSE file after cloning — never trust the badge alone (openshorts rule).
