@@ -2,24 +2,27 @@
 
 The copy desk's reference file. It's read by `skills-library/editorial/copy-desk-audit.md`, and its submission rules match the staff message Brenden sent on Signal (Sept. 27, 2026).
 
-## How writers submit (effective Sept. 27, 2026)
+## How writers submit (effective Sept. 27, 2026, simplified by Brenden)
 
-1. **Write in Wix and click Save, not Publish.** Title the draft the way you want it to run. No Wix access? Email it to the desk inbox in Brenden's Signal message with the subject line `SUBMIT: <headline>`.
-2. **Put a one-sentence summary at the top.** It becomes the front-page and email blurb. Don't start it with your byline.
-3. **Photos: real ones with a credit, or none.**
-   - No AI-generated images; the desk will swap them out.
-   - Don't have a credited photo? Leave the cover empty and the desk adds a Chris Spears photo or a GatorBait graphic.
-4. **Names:** check every player and coach against the UF roster. The list below covers this season's most-missed names.
-5. **Facts:**
-   - Stats come from the box score (ESPN or floridagators.com).
-   - Quotes come only from the official ASAP transcripts or your own recorded interview; say which one in a note to the desk.
-   - Mark anything you're not sure of with `[CHECK]`.
-6. **Opinion is labeled:** columns and analysis say so in the headline or the kicker.
-7. **Writers never send emails or post alerts.** The desk decides what goes to subscribers.
-8. **Turnaround:**
-   - Game nights and breaking news: the desk edits and publishes within 30 minutes.
-   - Other days: within 2 hours, 8 a.m. to 11 p.m. ET.
-   - Want a change after it's live? Message the desk. Don't republish over a desk fix.
+Writers **email their story to the desk inbox** (the address is in Brenden's Signal message). That's the whole process for them. They send:
+- their copy
+- a subject line (their headline idea)
+- a photo request, if they want a specific photo
+
+Writers **do not post or save anything in Wix.** For a correction or change after publication, they email the desk or message Brenden.
+
+**The desk does everything else:**
+- builds the Wix draft
+- headline, summary line, credited cover photo, tags
+- names and facts check against the lists below; `[CHECK]` anything unverifiable and ask the writer
+- quotes match the official transcripts
+- labels opinion
+- publishes on the timelines below
+- decides on any email
+
+Turnaround targets:
+- game nights and breaking news: 30 minutes
+- other days: 2 hours, 8 a.m. to 11 p.m. ET
 
 ## Canonical names (2026 season)
 
