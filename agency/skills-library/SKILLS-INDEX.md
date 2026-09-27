@@ -1,4 +1,4 @@
-<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Skills Index
 
 All skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT) for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).

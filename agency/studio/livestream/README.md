@@ -1,4 +1,4 @@
-<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT, Copyright (c) 2026 xlip. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Livestream — OBS → relay → multi-platform RTMP, supervised
 
 One machine or VPS supervises the whole live chain: OBS publishes once to

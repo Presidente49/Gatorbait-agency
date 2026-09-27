@@ -81,7 +81,7 @@ white-label agency. The Meta best-practices research was compiled
 September 2026; Gator Bait Media (Florida Gators sports media) is the
 reference brand.
 
-## Borrowed with thanks (all MIT, attribution in each file)
+## Borrowed with thanks (all MIT — copyright lines + license text in [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md))
 
 - [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) — 17 agent skills → `agency/skills-library/`
 - [cgallic/visual-factory-kit](https://github.com/cgallic/visual-factory-kit) — creative engine concept → `agency/studio/creative/`

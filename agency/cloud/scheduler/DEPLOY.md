@@ -1,3 +1,4 @@
+<!-- Source: Anil-matcha/Free-AI-Social-Media-Scheduler (https://github.com/Anil-matcha/Free-AI-Social-Media-Scheduler) — MIT, Copyright (c) 2023 Anil Chandra Naidu Matcha. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Deploy — Free AI Social Media Scheduler
 
 Upstream: https://github.com/Anil-matcha/Free-AI-Social-Media-Scheduler
