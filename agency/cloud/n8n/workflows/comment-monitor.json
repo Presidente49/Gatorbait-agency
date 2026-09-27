@@ -1,1 +1,217 @@
-{"connections":{"Every 15 minutes":{"main":[[{"index":0,"node":"Fetch recent comments (stub)","type":"main"}]]},"Draft reply queue (stub)":{"main":[[{"index":0,"node":"Notify operator (stub)","type":"main"}]]},"Fetch recent comments (stub)":{"main":[[{"index":0,"node":"Dedupe handled (stub)","type":"main"}]]},"Dedupe handled (stub)":{"main":[[{"index":0,"node":"Draft reply queue (stub)","type":"main"}]]}},"name":"comment-monitor (starter)","nodes":[{"id":"cron-01","name":"Every 15 minutes","notes":"DETECTOR ONLY. This workflow never posts replies — it only queues comments for a human/agent to answer. Do not add a 'create comment' node without CEO sign-off.","parameters":{"rule":{"interval":[{"field":"minutes","minutesInterval":15}]}},"position":[240,300],"type":"n8n-nodes-base.scheduleTrigger","typeVersion":1.2},{"credentials":{},"id":"fetch-comments-01","name":"Fetch recent comments (stub)","notes":"STUB — Connect: add a Meta Graph API credential (Page access token) and replace the URL with real values: PAGE_ID from the client's Facebook Page, and a time window (e.g. since=<15 min ago unix ts>). Consider looping over the client's recent post IDs first; this node shows the per-post call.","parameters":{"method":"GET","options":{"queryParameters":{"parameters":[{"name":"access_token","value":"YOUR_PAGE_ACCESS_TOKEN"},{"name":"fields","value":"id,message,from,created_time"},{"name":"order","value":"reverse_chronological"},{"name":"since","value":"={{ $now.minus({minutes: 15}).toSeconds() }}"}]},"timeout":30000},"url":"https://graph.facebook.com/v21.0/YOUR_PAGE_ID/conversations"},"position":[460,300],"type":"n8n-nodes-base.httpRequest","typeVersion":4.2},{"id":"dedupe-01","name":"Dedupe handled (stub)","notes":"STUB — Connect: wire this to a real store (the draft-reply Sheet, a Postgres table, or n8n's static data) keyed on comment id. Anything already in 'handled' or already queued gets dropped here.","parameters":{"dedupeScope":"workflow","dedupeValue":"={{ $json.id }}","mode":"removeDuplicate"},"position":[680,300],"type":"n8n-nodes-base.removeDuplicates","typeVersion":2},{"credentials":{},"id":"reply-queue-01","name":"Draft reply queue (stub)","notes":"STUB — Connect: add a Google Sheets credential and real Sheet ID (tab 'ReplyQueue'), or swap for Notion/Airtable. The agency agent drafts the actual reply text later; this node only captures the raw comment + metadata.","parameters":{"columns":{"mappingMode":"defineBelow","value":{"comment_id":"={{ $json.id }}","comment_text":"={{ $json.message }}","commenter":"={{ $json.from.name }}","created_at":"={{ $json.created_time }}","handled":"=false","post_id":"={{ $json.post_id }}","suggested_reply":""}},"documentId":{"__rl":true,"mode":"id","value":"YOUR_SHEET_ID"},"options":{},"sheetName":{"__rl":true,"mode":"name","value":"ReplyQueue"}},"position":[900,300],"type":"n8n-nodes-base.googleSheets","typeVersion":4.5},{"credentials":{},"id":"notify-01","name":"Notify operator (stub)","notes":"STUB — Connect: add a Telegram bot credential and real chat ID, or swap for email/Slack. Batches are per comment; add an aggregation step if the volume gets noisy.","parameters":{"additionalFields":{},"chatId":"@your_operator_channel","text":"={{ 'New comment to triage from ' + $json.from.name + ': ' + $json.message.slice(0, 140) }}"},"position":[1120,300],"type":"n8n-nodes-base.telegram","typeVersion":1.2}],"settings":{"saveExecutionProgress":true,"saveManualExecutions":true,"timezone":"America/New_York"},"staticData":null}
+{
+  "connections": {
+    "Every 15 minutes": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Fetch recent comments (stub)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Draft reply queue (stub)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Notify operator (stub)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Fetch recent comments (stub)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Split out comments",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Dedupe handled (stub)": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Draft reply queue (stub)",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Split out comments": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Dedupe handled (stub)",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "name": "comment-monitor (starter)",
+  "nodes": [
+    {
+      "id": "cron-01",
+      "name": "Every 15 minutes",
+      "notes": "DETECTOR ONLY. This workflow never posts replies — it only queues comments for a human/agent to answer. Do not add a 'create comment' node without CEO sign-off.",
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 15
+            }
+          ]
+        }
+      },
+      "position": [
+        240,
+        300
+      ],
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2
+    },
+    {
+      "credentials": {},
+      "id": "fetch-comments-01",
+      "name": "Fetch recent comments (stub)",
+      "notes": "STUB — Connect: create a 'Query Auth' credential (name: access_token, value: the Page access token) in n8n's Credentials panel and select it here. Never paste the token into the URL or a parameter: exported workflow JSON is committed to the repo. Replace YOUR_POST_ID with a real post ID (loop over the Page's recent posts from GET /YOUR_PAGE_ID/posts first; this node shows the per-post call). Graph API returns {data:[...]} — the next node splits it.",
+      "parameters": {
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "method": "GET",
+        "url": "https://graph.facebook.com/v21.0/YOUR_POST_ID/comments",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "fields",
+              "value": "id,message,from,created_time"
+            },
+            {
+              "name": "order",
+              "value": "reverse_chronological"
+            },
+            {
+              "name": "since",
+              "value": "={{ $now.minus({minutes: 15}).toSeconds() }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "position": [
+        460,
+        300
+      ],
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2
+    },
+    {
+      "id": "split-comments-01",
+      "name": "Split out comments",
+      "notes": "Graph API wraps results in a 'data' array; this turns each comment into its own item so dedupe and the queue see one comment per item.",
+      "parameters": {
+        "fieldToSplitOut": "data",
+        "options": {}
+      },
+      "position": [
+        570,
+        300
+      ],
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1
+    },
+    {
+      "id": "dedupe-01",
+      "name": "Dedupe handled (stub)",
+      "notes": "Drops comment ids already seen by this workflow. Uses 'Remove items repeated within previous executions' — n8n stores seen keys between runs; within-run dedupe alone would re-queue the same items every poll. Optionally also check the ReplyQueue sheet for rows marked handled.",
+      "parameters": {
+        "operation": "removeItemsRepeatedWithinPreviousExecutions",
+        "logic": "removeItemsWithAlreadySeenKeyValues",
+        "dedupeValue": "={{ $json.id }}",
+        "options": {
+          "scope": "workflow"
+        }
+      },
+      "position": [
+        790,
+        300
+      ],
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {},
+      "id": "reply-queue-01",
+      "name": "Draft reply queue (stub)",
+      "notes": "STUB — Connect: add a Google Sheets credential and real Sheet ID (tab 'ReplyQueue'), or swap for Notion/Airtable. The agency agent drafts the actual reply text later; this node only captures the raw comment + metadata.",
+      "parameters": {
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "comment_id": "={{ $json.id }}",
+            "comment_text": "={{ $json.message }}",
+            "commenter": "={{ $json.from.name }}",
+            "created_at": "={{ $json.created_time }}",
+            "handled": "false",
+            "post_id": "YOUR_POST_ID",
+            "suggested_reply": ""
+          }
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "YOUR_SHEET_ID"
+        },
+        "options": {},
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "ReplyQueue"
+        },
+        "operation": "append"
+      },
+      "position": [
+        1010,
+        300
+      ],
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5
+    },
+    {
+      "credentials": {},
+      "id": "notify-01",
+      "name": "Notify operator (stub)",
+      "notes": "STUB — Connect: add a Telegram bot credential and real chat ID, or swap for email/Slack. Batches are per comment; add an aggregation step if the volume gets noisy.",
+      "parameters": {
+        "additionalFields": {},
+        "chatId": "@your_operator_channel",
+        "text": "={{ 'New comment to triage from ' + ($json.commenter || 'unknown') + ': ' + String($json.comment_text || '').slice(0, 140) }}"
+      },
+      "position": [
+        1230,
+        300
+      ],
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2
+    }
+  ],
+  "settings": {
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "timezone": "America/New_York"
+  },
+  "staticData": null,
+  "active": false
+}
