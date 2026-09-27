@@ -13,8 +13,7 @@ in particular.
   clap back playfully, never meanly.
 
 ## Content
-- Postgame presser clips are the highest-ROI content type — one Sumrall
-  clip earned ~$200.
+- Postgame presser clips are the highest-ROI content type.
 - Stat carousels after wins travel far; verify every number against the
   final box score before posting (Sep 26: caught a 2-TD vs 3-TD error
   pattern on in-game graphics).
@@ -30,10 +29,11 @@ in particular.
 - Instagram: only via the owner's approval taps — stage in small waves.
 
 ## Money
-- ~$450–$488/month from Meta Content Monetization (Sep 2026) on ~1.7M
-  views/28d. Reels are the earner (~$414 Sep 17–23), then photos (~$52).
-- Payouts can go on security hold after account changes (Sep 23 hold
-  until Sep 28) — earnings accrue, withdrawals pause. Not a suspension.
+- Meta Content Monetization: reels earn the most, then photos. Dollar
+  figures and payout status are private; they are kept in the owner's Drive,
+  not in this public repo.
+- A payout security hold after account changes pauses withdrawals, not
+  earnings. It is not a suspension.
 - Subject lines starting with "Buddy Martin" earn 60–67% open rates vs
   36–41% for generic subjects (Wix email, Sep 2026).
 
