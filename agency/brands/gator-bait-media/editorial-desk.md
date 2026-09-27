@@ -4,7 +4,7 @@ The copy desk's reference file. It's read by `skills-library/editorial/copy-desk
 
 ## How writers submit (effective Sept. 27, 2026)
 
-1. **Write in Wix and click Save, not Publish.** Title the draft the way you want it to run. No Wix access? Email the piece to brenden@gatorbaitmedia.com with the subject line `SUBMIT: <headline>`.
+1. **Write in Wix and click Save, not Publish.** Title the draft the way you want it to run. No Wix access? Email it to the desk inbox in Brenden's Signal message with the subject line `SUBMIT: <headline>`.
 2. **Put a one-sentence summary at the top.** It becomes the front-page and email blurb. Don't start it with your byline.
 3. **Photos: real ones with a credit, or none.**
    - No AI-generated images; the desk will swap them out.
