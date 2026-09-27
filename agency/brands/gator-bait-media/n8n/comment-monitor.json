@@ -1,0 +1,244 @@
+{
+  "name": "GatorBait - Comment monitor",
+  "active": false,
+  "nodes": [
+    {
+      "id": "cm-trigger",
+      "name": "Every 30 minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            }
+          ]
+        }
+      },
+      "notes": "DETECTOR ONLY. This workflow never replies. Do not add a comment-posting node without Brenden's sign-off."
+    },
+    {
+      "id": "cm-fetch",
+      "name": "Recent posts + comments",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v21.0/me/feed",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "fields",
+              "value": "id,permalink_url,comments.order(reverse_chronological).limit(25){id,message,from,created_time,permalink_url}"
+            },
+            {
+              "name": "limit",
+              "value": "10"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Credential: 'GatorBait Meta Page token' (Query Auth, name access_token, value = the Page access token). A Page token answers /me as the Page itself, so no Page ID is needed."
+    },
+    {
+      "id": "cm-flatten",
+      "name": "New comments only",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Flatten comments from the Page's recent posts. Only comments from the last\n// 45 minutes (runs are 30 apart); dedupe below drops any already queued.\nconst cutoff = Date.now() - 45 * 60 * 1000;\nconst out = [];\nfor (const post of ($input.first().json.data || [])) {\n  for (const c of ((post.comments || {}).data || [])) {\n    if (Date.parse(c.created_time) < cutoff) continue;\n    out.push({ json: {\n      comment_id: c.id, post_id: post.id,\n      commenter: (c.from && c.from.name) || 'Facebook user',\n      comment_text: c.message || '', comment_link: c.permalink_url || post.permalink_url || '',\n      created_at: c.created_time\n    }});\n  }\n}\nreturn out;"
+      }
+    },
+    {
+      "id": "cm-dedupe",
+      "name": "Dedupe comments",
+      "type": "n8n-nodes-base.removeDuplicates",
+      "typeVersion": 2,
+      "position": [
+        660,
+        300
+      ],
+      "parameters": {
+        "operation": "removeItemsRepeatedWithinPreviousExecutions",
+        "dedupeValue": "={{ $json.comment_id }}",
+        "options": {
+          "scope": "workflow"
+        }
+      }
+    },
+    {
+      "id": "cm-sheet",
+      "name": "Add to reply queue",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        880,
+        300
+      ],
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1tycM-ETkxcA30aUiyDFbaED3EpKyB7MGdU_CmINNMts"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gid=0",
+          "cachedResultName": "Sheet1"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "created_at": "={{ $json.created_at }}",
+            "commenter": "={{ $json.commenter }}",
+            "comment_text": "={{ $json.comment_text }}",
+            "comment_link": "={{ $json.comment_link }}",
+            "post_id": "={{ $json.post_id }}",
+            "comment_id": "={{ $json.comment_id }}",
+            "handled": "false",
+            "suggested_reply": "",
+            "notes": ""
+          }
+        },
+        "options": {}
+      },
+      "notes": "Credential: 'Google (GatorBait)'. Sheet: GatorBait n8n - Comment reply queue."
+    },
+    {
+      "id": "cm-summary",
+      "name": "One summary",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const rows = $input.all().map(i => i.json);\nconst lines = rows.map(r => `- ${r.commenter}: \"${String(r.comment_text).slice(0, 200)}\"\\n  ${r.comment_link}`);\nreturn [{ json: { count: rows.length, body:\n  `${rows.length} new comment(s) on the GatorBait Page. They're queued in \"GatorBait n8n - Comment reply queue\".\\n\\n` +\n  lines.join('\\n\\n') + `\\n\\nNothing was replied to automatically.` } }];"
+      }
+    },
+    {
+      "id": "cm-mail",
+      "name": "Email Brenden",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1320,
+        300
+      ],
+      "parameters": {
+        "sendTo": "SET_OWNER_EMAIL_IN_N8N",
+        "subject": "={{ 'GatorBait: ' + $json.count + ' new Page comment(s)' }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "notes": "Credential: 'Gmail (GatorBait)'. Set To = your own address after import."
+    }
+  ],
+  "connections": {
+    "Every 30 minutes": {
+      "main": [
+        [
+          {
+            "node": "Recent posts + comments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Recent posts + comments": {
+      "main": [
+        [
+          {
+            "node": "New comments only",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "New comments only": {
+      "main": [
+        [
+          {
+            "node": "Dedupe comments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dedupe comments": {
+      "main": [
+        [
+          {
+            "node": "Add to reply queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add to reply queue": {
+      "main": [
+        [
+          {
+            "node": "One summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "One summary": {
+      "main": [
+        [
+          {
+            "node": "Email Brenden",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "timezone": "America/New_York"
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}
