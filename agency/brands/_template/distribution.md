@@ -38,5 +38,5 @@ varied text each time, original Page posts only — never re-uploads.*
 ## Rules
 
 - Every post links to something (offer, article, store). No linkless posts.
-- Instagram: stage for Brenden's approval tap — never auto-post.
+- Instagram: stage for the approver's tap (see `about.md`) — never auto-post.
 - One reply per comment; clap back at rival smack talk, skip spam/hate/threats.

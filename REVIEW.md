@@ -327,3 +327,46 @@ decision is Brenden's.
    the compose file, a secret-pattern grep, and a test that `new-brand.sh`
    rejects `../x`.
 7. Refresh `shared/campaign-board.md` from live state before any agent reads it.
+
+---
+
+# Seven-repo integration, 2026-09-27 (Claude Code)
+
+Brenden asked for these seven repos to go through hunt → vet → test →
+integrate. Each LICENSE was read in full, even though they had already been
+verified. Each lane was drafted in a disposable copy of this repo and tested on
+a scratch brand (`zz-scratch-test`, "Scratch Pizza Co"), which is not committed.
+The drafts were fixed until an agent could run them from the markdown alone, and
+then integrated here. They are registered as SOURCES #20–26, listed in
+`THIRD-PARTY-NOTICES.md`, and their lessons are in `agency/shared/learnings.md`.
+
+| # | Repo | Lane | Lands in | Test verdict |
+|---|---|---|---|---|
+| 20 | anthropics/commerce-agents | Merch ops on Medusa/Saleor | `agency/merch/MERCH-OPS-RUNBOOK.md` | Pass. The over-cap markdown was refused, a customer "refund me" wasn't acted on, and the likeness tee was flagged. |
+| 21 | anthropics/knowledge-work-plugins | Marketing skills | 4 skills in `skills-library/marketing/` (rank's first skill) | Pass. The audit caught every planted defect, including the 404 offer link. |
+| 22 | Tencent/WeKnora | Scout knowledge base | `agency/cloud/weknora/` + `skills-library/research/knowledge-base.md` | Pass. Answers were cited, a planted conflict was caught, and it refused a question it couldn't source. |
+| 23 | bytedance/deer-flow | Controller run protocol | `agency/cloud/deer-flow/` | Pass. The run was unattended and ended BLOCKED with drafts staged; the path with an approver present was not tested. |
+| 24 | thesysdev/openui | Generative UI + newsletter | `studio/creative/GENERATIVE-UI-SPECS.md`, `studio/newsletter/` | Pass on 21 HTML checks. No real email-client test. |
+| 25 | NousResearch/hermes-agent | Learning-loop hygiene | `agency/cloud/hermes/` + memory model, protocols step 7, template learnings | Pass. The curate count added up, and the promoted skill stayed a DRAFT. |
+| 26 | stablyai/orca | Parallel-agent runs | `agency/cloud/orca/` | Pass. The claim race and fan-in caught a wrong fact; real simultaneous sessions were not tested. |
+
+**Rejected from these repos (on purpose):**
+- Every app, runtime, MCP server and hosted service.
+- Automated checks as a *replacement* for human approval.
+- Autonomous skill writing.
+- "Generate plausible data" prompts.
+- Agents spawning their own sub-agents.
+- WeKnora's bundled third-party components.
+
+## Needs a human decision
+
+1. **Old shared learnings have no evidence.** The new capture rule needs
+   evidence for every entry, but most existing entries in
+   `agency/shared/learnings.md` have none. They are grandfathered for now.
+   Choose one: keep them as-is, re-verify them, or archive the unproven ones.
+2. **The notices file is missing the older sources.** Sources #8–19 have no rows
+   in `THIRD-PARTY-NOTICES.md` yet. Their copyright lines should be read from
+   each upstream LICENSE before rows are added.
+3. **The email footer has nowhere to get a postal address.** The newsletter
+   footer needs one, but the `_template/about.md` brand template has no field
+   for it.

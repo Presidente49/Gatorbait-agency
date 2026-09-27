@@ -170,3 +170,5 @@ Best for: featuring one person per issue.
 - **Formatting**: Q and A or narrative with pull quotes, bold for the subject name on first mention only.
 - **Length**: 1,500 to 2,500 words.
 - **Never**: fawning, generic questions, skipping pushback on strong claims.
+
+To build the issue itself, follow `agency/studio/newsletter/NEWSLETTER-RUNBOOK.md` (typed newsletter spec → email-safe HTML → QA → human approval; never auto-send).
