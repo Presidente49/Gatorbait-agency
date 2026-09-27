@@ -1,5 +1,43 @@
 # Trending Repo Watch — log (append-only)
 
+## 2026-09-27 15:50 EDT — hourly scan
+
+Sources checked: GitHub search API across 10 lanes (agent skills, AI agent framework, social media scheduler, short video clipper, caption tool video, n8n workflow marketing, design system agent skills, agent learning loop analytics, youtube shorts automation, SEO agent skills — created >2026-08-20, sorted by stars, ~250 repos) + GitHub trending daily (fetched page text; top 7: paperclip, VoiceStudio, ai-engineering-from-scratch, PipePipe, openrig, univer, Madeira — all registered/rejected/off-lane, nothing new).
+Seen-list checked against `SOURCES.md` (#1–82 + rejections + prior-run notes) — the 5 qualifiers below are new to the registry.
+
+### QUALIFIED (5) — all MIT, LICENSE file read in full via GitHub contents API (openshorts rule; standard MIT text, zero carve-out hits)
+
+1. **wuyoscar/jev-skill** — https://github.com/wuyoscar/jev-skill — MIT (LICENSE read in full; © 2026 wuyoscar, no carve-outs) — ~507 stars — pushed 2026-09-27 (today).
+   Why: a curated collection of Jev use cases, workflows, and agent skills — fleet-efficiency pattern feed for the ops agent beside hermes-jev-skills (#40) and typed_evals.
+
+2. **kuhnhomeuk-cell/procedural-film** — https://github.com/kuhnhomeuk-cell/procedural-film — MIT (LICENSE read in full; © 2026 Dean Kuhn, no carve-outs) — ~446 stars — pushed 2026-09-25.
+   Why: agent skill turning a topic into a 30s vertical film drawn and scored entirely in JavaScript — code-drawn motion lane for studio reels beside hyperframes (#50), bang-motion (#43), no-slop-motion (#67), riso-windowseat (#77).
+
+3. **OrRon/EpicInfographics** — https://github.com/OrRon/EpicInfographics — MIT (LICENSE read in full; © 2026 epic-infographics contributors, no carve-outs) — ~430 stars — pushed 2026-08-27 (stable skill content).
+   Why: agent skill for generating polished infographics — static-visual lane for creative/design agents (carousels, social graphics, report visuals).
+
+4. **axelfreeman/marketing-mindset** — https://github.com/axelfreeman/marketing-mindset — MIT (LICENSE read in full; © 2026 Axel Freeman, no carve-outs) — ~33 stars — pushed 2026-09-22.
+   Why: open-source skill giving AI agents a marketer's mindset — volume floors, kill rules, positioning, offers, outreach, sale-timing judgment; decision-discipline feed for writing + outreach + ops agents (low traction — pattern reference, verify before core use).
+
+5. **deonmenezes/edit-ai** — https://github.com/deonmenezes/edit-ai — MIT (LICENSE read in full; © 2026 Deon Menezes + OpenCut, no carve-outs) — ~2 stars — pushed 2026-08-31.
+   Why: AI harness for video editing — describe the edit, an agent executes it on a real timeline through 16 MCP tools (silence removal, captions, etc.); agent-driven edit-console pattern for the studio video lane (low traction — pattern reference, verify before core use).
+
+### Checked, not qualified / skipped this round
+
+- Oldcircle/geo-sleuth (476★ MIT, pushed 2026-09-24) — agent skill finding where a photo was taken (OSINT/geolocation); not agency operational.
+- alchaincyf/huashu-report (426★ MIT) + alchaincyf/huashu-excel (424★ MIT) — institutional research-report and Excel-analysis agent skills, Chinese-language content; language mismatch for US white-label agency.
+- feitangyuan/motion-web (532★ NOASSERTION), feitangyuan/onetake (524★ NOASSERTION), tigerless-labs/seo-ops (486★ license null), HRuiCcc/RuiC-card-skill (422★ NOASSERTION), mcncarl/jianying-headless (2,821★ NOASSERTION) — excluded per policy (unlicensed).
+- agentic-spring-ai/agentic-spring-ai (67★ Apache-2.0) — Java/Spring enterprise framework; wrong runtime for the agency stack. d4ncboz/technocore (59★ MIT) — decentralized agent identity on Telegram; off-lane. Moeeryani/Vibe-Coding-Production-Kit (30★ MIT), AkashPriyadarshii/jev-superpowers (29★ MIT) — dev/coding frameworks, not agency operational. xieyulai/steer (26★ Apache-2.0) — AI-for-research experiment framework; overlaps registered SoL-Pi (#54). ElasticEmail/elasticemail-examples (22★ MIT) — vendor SDK examples, not agency software. LeonEvo1103/surfaceloom (21★ MIT), arifszn/seemore (21★ MIT), agent-cli-framework/aclif (20★ MIT) — testing/docs/CLI frameworks; marginal, lanes covered. fajrisilmi12-cyber/hermes-socmed-function (20★ MIT) — social posting + AI image gen but tightly coupled to Hermes/9Router/Zernio services; lane covered by shoutrrr (#22), cogsend (#25), socialfaktory-mcp (#80).
+- Video clipper lane: all entries ≤13★ (YusifMurad/ClipPulse-AI 13★ MIT local clip generator — below traction bar, no differentiation vs autoclip/verticlip/laya-clipper; egga-fx/xclips, red16124724/Aurum-Clipper, Teman-clipper and others 0–4★ mostly unlicensed) — no new traction; lane covered by #27/#33/#45/#46/#47/#48/#49.
+- Shorts-automation lane: all entries ≤4★ except ClipPulse-AI; mostly unlicensed n8n/YouTube-automation forks — covered by youtube-automation-agent (#23).
+- n8n marketing lane: thin as ever — 1★ or less, mostly "testing marketing workflow" spam forks; covered by YuriCrystal/n8n-marketing-flows (#57).
+- Social scheduler lane: fajrisilmi12 (20★, see above), Pinlyx/pinlyx-mcp (5★ MIT, DM-inbox MCP), profullstack/mynaposter (4★ MIT TUI) — no new standalone scheduler with traction; covered by cogsend (#25), shoutrrr (#22), Free-AI-Social-Media-Scheduler (#6).
+- All registered repos re-appearing in searches (sepia, scroll-craft, headcount, dream-loop, screenwriting-skills, golive-skill, hermes-jev-skills, linkedin-agent-skill,.typesafe-ai/skills, open-steps, etc.) — no re-evaluation.
+
+### License-policy notes this round
+- All 5 qualifiers' LICENSE files fetched from the GitHub contents API and read in full; each is standard MIT text, zero hits for carve-out keywords (agpl/gpl/noncommercial/polyform/elastic/commercial carve-outs). edit-ai carries dual copyright (Deon Menezes + OpenCut) but standard MIT grants.
+- NOASSERTION/null-license count keeps climbing in agent-skills and video lanes (motion-web, onetake, jianying-headless, seo-ops) — policy holds: described, never copied.
+
 ## 2026-09-27 09:50 EDT — hourly scan
 
 Sources checked: GitHub search API across 10 lanes (agent skills, AI agent framework, social media scheduler, short video clipper, caption tool video, n8n workflow marketing, design system agent skills, agent learning loop analytics, youtube shorts automation, SEO agent skills — created >2026-08-20, sorted by stars, 150 repos) + GitHub trending daily (JS-rendered list, API fallback used per prior runs).
