@@ -37,19 +37,22 @@ to that brand's `learnings.md`.
 
 **Option A — script:**
 ```bash
-./new-brand.sh <business-slug>
-# then fill in the files in agency/brands/<business-slug>/
+./new-brand.sh <business-slug> "Business Display Name"
+# then fill in the files in agency/brands/<business-slug>/ — about.md first
 ```
 
 **Option B — manual:**
 ```bash
-cp -r agency/brands/_template agency/brands/<business-slug>
+mkdir -p agency/brands/<business-slug>/outputs
+cp agency/brands/_template/*.md agency/brands/<business-slug>/
+rm agency/brands/<business-slug>/README.md   # template guidance, not brand facts
 echo "<business-slug>" > agency/brands/ACTIVE
 ```
 
-Then fill in: `brand-voice.md`, `brand-style.md`, `goals.md`,
-`audience.md`, `offers.md`. Leave `learnings.md` empty — the agency
-starts writing there on day one.
+Then fill in: `about.md` (facts, platforms, who approves what),
+`brand-voice.md`, `brand-style.md`, `goals.md`, `audience.md`,
+`offers.md`. Leave `learnings.md` empty — the agency starts writing
+there on day one. Outputs and the run log go in `outputs/`.
 
 ## Switching brands
 
@@ -91,5 +94,5 @@ campaigns in the same session without switching ACTIVE first.
 2. Read every .md file in agency/brands/<slug>/.
 3. Read agency/shared/playbook.md, protocols.md, learnings.md, roster.md.
 4. Read the identity.md + tasks.md of whichever agents you're deploying.
-5. Work. Log to the brand's log. Append learnings to the brand's learnings.md.
+5. Work. Log to agency/brands/<slug>/outputs/log.md. Append learnings to the brand's learnings.md.
 ```

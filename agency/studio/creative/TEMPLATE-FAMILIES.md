@@ -1,4 +1,4 @@
-<!-- Source: cgallic/visual-factory-kit (https://github.com/cgallic/visual-factory-kit) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: cgallic/visual-factory-kit (https://github.com/cgallic/visual-factory-kit) — MIT, Copyright (c) 2026 Visual Factory Kit contributors. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 
 # Template Families
 

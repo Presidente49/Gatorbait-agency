@@ -1,7 +1,7 @@
-<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Skills Index
 
-All skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT) for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
+All skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT) for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`about.md`, `brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
 
 ## Skill → Agent mapping
 
@@ -41,6 +41,10 @@ All skills are adapted from [charlie947/social-media-skills](https://github.com/
 - **wrench** (ops/automation): marketing/revenue-attribution
 
 ## Notes
+
+- **Where outputs go:** every saved artifact lands in `agency/brands/<slug>/outputs/<skill-name>/` (dated filenames), and every run adds one line to `agency/brands/<slug>/outputs/log.md` — date, skill, agent, output path, QC result. "Brand workspace" in any skill means this folder.
+- **Learnings loop:** `analytics-dashboard` and `post-scorer` write proven patterns to the brand's `learnings.md` (and transferable ones to `agency/shared/learnings.md`). Other skills read `learnings.md`; they do not write hypotheses into it.
+- **Drafts, not publishing:** no skill publishes, sends email or spends money. Output goes to the approval path in the brand's `about.md`.
 
 - Each skill reads the active brand's files from `agency/brands/<slug>/` before personalised work and never inherits another client's identity, accounts, or private files.
 - No credentials, API keys, emails, or personal data anywhere in this library. Integrations (scraping, video analysis) are described as capabilities the client authorises, with cost confirmation before paid runs.

@@ -21,8 +21,8 @@
 - Invite post reactors to follow the page.
 
 ## Cadence
-- Page posts: 4-6/week is the studied optimum. **Game days are the exception — post freely.**
-- Group shares: ~1/hour, Gator groups only, share original Page posts (never re-uploads), vary the share text.
+- Page posts: 4-6/week is the studied optimum. **Game/event days are the exception — post freely.**
+- Group shares: ~1/hour, the brand's niche groups only, share original Page posts (never re-uploads), vary the share text.
 
 ## A/B Testing
 - Test stat-led hooks vs quote-led hooks; headline-overlay images vs clean photos.

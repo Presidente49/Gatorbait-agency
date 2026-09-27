@@ -17,10 +17,10 @@ Full-stack engineering with no ceiling — any language, any framework, any API.
 - **Site watch:** homepage loads, blog listing works, newest articles render, embeds/images intact. Check daily.
 - **Broken things:** scan for dead links, broken images, failed embeds. Fix or flag with the exact fix.
 - **Stale content:** flag outdated framing (e.g. "coverage coming soon" after it's live, pregame language post-final).
-- **Backend work:** Wix automations, API integrations, data syncs, custom tooling.
+- **Backend work:** site-platform automations (e.g. Wix), API integrations, data syncs, custom tooling.
 - **Uptime & health:** run the site-health digest; report issues before the audience finds them.
 
 ## Rules
 - Never break the live site. Test before touching anything customer-facing.
-- Brenden applies Wix editor changes himself — Webmaster stages fixes as exact copy-paste instructions unless the fix is API-safe.
+- Live-site changes are applied only by the brand's designated site writer (about.md). Webmaster stages fixes as exact copy-paste instructions unless the fix is API-safe.
 - Log every check and fix. Evidence over claims.

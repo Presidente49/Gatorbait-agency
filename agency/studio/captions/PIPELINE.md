@@ -1,4 +1,4 @@
-<!-- Source: muneebkhan08/capite (https://github.com/muneebkhan08/capite) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: muneebkhan08/capite (https://github.com/muneebkhan08/capite) — MIT, Copyright (c) 2026 Capite Contributors. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 
 # Caption Pipeline — Operator Runbook
 

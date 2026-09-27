@@ -1,4 +1,4 @@
-<!-- Source: cgallic/visual-factory-kit (https://github.com/cgallic/visual-factory-kit) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: cgallic/visual-factory-kit (https://github.com/cgallic/visual-factory-kit) — MIT, Copyright (c) 2026 Visual Factory Kit contributors. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 
 # QA + Provenance
 
@@ -27,6 +27,7 @@ filename prefix. It records:
 | `brand catalog SHA-256` + `brand_variant_key` | Prove which pack and which identity variant |
 | `font stack` | The type actually used |
 | `proof source` | Where the claim on the graphic came from |
+| `photo credit` | Photographer + source for every real photo (credit rules in the brand's `about.md`) |
 | `render timestamp` | When it was produced |
 | `AI assistance notes` | What (if anything) AI did in the loop |
 | `approval status` | Who signed it off and when |
@@ -67,6 +68,8 @@ For every creative job, before anything ships to a platform, confirm:
 - [ ] Brand variant key matches the intended client surface (no cross-surface leak)
 - [ ] Copy is free of banned terms and unapproved claims
 - [ ] Text is fully legible in a mobile-size preview
+- [ ] Every real photo carries its `photo credit`; the same photo is not reused across covers in one campaign
+- [ ] Logo comes from the pack's supplied files (not retyped or redrawn)
 - [ ] Approval status in provenance is set (who approved, when)
 
 ## Retention

@@ -49,8 +49,8 @@ agency — not copied from any n8n template collection.
 | Workflow | What it does | Agency role |
 |----------|--------------|-------------|
 | `rss-to-social-drafts.json` | RSS poll (2h) → dedupe → keyword filter → AI summarizer stub → draft queue (Sheet/Notion stub) → notify | Feeds the Scout → Scribe handoff: raw stories become queued drafts |
-| `comment-monitor.json` | Every 15 min → fetch recent post comments (Meta Graph API stub) → dedupe handled → reply-draft queue → notify | **Detector only.** Never auto-replies — a human/agent drafts each reply |
-| `weekly-analytics-digest.json` | Monday 8am → FB/IG/site metrics stubs → compile markdown digest → send to operator | Data source for Scout's weekly performance report |
+| `comment-monitor.json` | Every 15 min → fetch recent post comments (Meta Graph API stub) → split `data` array → dedupe across runs → reply-draft queue → notify | **Detector only.** Never auto-replies — a human/agent drafts each reply |
+| `weekly-analytics-digest.json` | Monday 8am → FB → IG → site metrics stubs (sequential) → compile markdown digest → send to operator | Data source for Scout's weekly performance report |
 
 ### Wiring a workflow for a client
 
@@ -91,8 +91,12 @@ agency — not copied from any n8n template collection.
 
 - `.env` never enters the repo (`.gitignore` it). Real secrets live on
   the server + password manager only.
-- Basic auth guards the editor; Caddy forces HTTPS.
-- Keep n8n updated: `docker compose pull && docker compose up -d`.
+- The n8n owner account (long password + 2FA) guards the editor; Caddy
+  forces HTTPS. n8n 1.x ignores the old `N8N_BASIC_AUTH_*` variables.
+- Tokens and API keys go in n8n Credentials (Query Auth / Header Auth),
+  never in node URLs or parameters — exported workflow JSON is committed here.
+- Keep n8n updated deliberately: bump `N8N_VERSION` in `.env`, then
+  `docker compose pull && docker compose up -d`.
 - The `comment-monitor` workflow is deliberately detector-only —
   auto-replying from n8n bypasses the agency's comment rules; don't add
   a create-comment node without CEO sign-off.

@@ -1,0 +1,11 @@
+# Secrets never enter the repo (CLOUD.md, agency/cloud/n8n/README.md).
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Livestream / platform key files (agency/studio/livestream/)
+keys/
+# Local scratch
+.DS_Store
+*.bak
