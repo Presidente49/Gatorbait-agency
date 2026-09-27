@@ -70,3 +70,5 @@ Manual route:
 
 *Where content goes: owned pages, groups, other channels, and the share*
 *rules. Hype reads this before every share — fill in real URLs/handles.*
+
+Optional: a `knowledge/` subfolder holds the brand knowledge base scout builds (sources, chunks, index, Q&A log) — see `agency/skills-library/research/knowledge-base.md`.

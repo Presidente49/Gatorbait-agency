@@ -16,6 +16,10 @@ agency/studio/clipping/     — long video → candidate shorts
     │  see clipping/NOT-INTEGRATED.md. This stage is currently
     │  a documented gap: manual clipping or a clean-room build.
     ▼
+agency/studio/video-edit/   — picked footage → finished cut
+    │  (transcript-led cuts, plan approved before any cut, 30 ms
+    │  fades, captions burned last, loudness measured; video-use, MIT)
+    ▼
 agency/studio/captions/     — transcription + animated captions
     │  (offline faster-whisper, word-level review, brand-locked styles,
     │  MP4/SRT/VTT/ASS export — zero per-video cost)

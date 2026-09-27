@@ -41,6 +41,10 @@ Skeletons are structures, not scripts — the content inside must be genuinely g
 
 Log per video: video ID, title, thumbnail concept, hook, topic bucket, retention devices, publish date. Then run the readback (`ANALYTICS-LOOP.md`): promote the pattern to the playbook only if the candidate beats baseline.
 
+## Testing a new package on a live video
+
+Swapping titles or thumbnails on a live video is an experiment: follow `agency/growth/PACKAGING-TESTS.md` (control arm, minimum volume per arm, 95% z-test, retention guardrail, separate yes to adopt). At 1,000 impressions per arm, a 5% vs 4% CTR gap is noise (z = 1.08).
+
 ## Performance learning rule
 
 When a title/thumbnail package wins, the win belongs to the **pattern**, not the video: "stat-led question titles + 3-word thumbnails beat narrative titles on this channel." Log the pattern in the brand's `learnings.md` with the numbers that proved it — that's what compounds across videos and across brands.

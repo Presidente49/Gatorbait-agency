@@ -41,6 +41,9 @@ Score 1–10 on three dimensions. **ICE = (Impact + Confidence + Ease) / 3.** Ru
 
 ## Design rules
 
+> Title and thumbnail tests on live videos and posts follow `PACKAGING-TESTS.md`: control arm, all arms at minimum volume, 95% z-test, retention and traffic-mix guardrails, and a separate yes to adopt the winner.
+
+
 - **Test one thing.** One variable per test — otherwise you don't know what worked.
 - **Bold enough to detect.** Testing a 2px padding change is measuring noise.
 - **Pre-determine sample size.** Quick reference (95% confidence, 80% power, per variant):

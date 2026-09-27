@@ -7,14 +7,15 @@
 |------|-----|-------|
 | Gator Orange | #FA4616 | Headlines, CTAs, accents |
 | Gator Blue | #0021A5 | Backgrounds, secondary |
+| Navy | #081B35 | Headline panels, stat boxes, dark backgrounds |
 | White | #FFFFFF | Text on dark, clean backgrounds |
 | Black | #000000 | Text on light |
 
 ## Typography
 | Role | Font | Notes |
 |------|------|-------|
-| Headlines | **Anton** (Google Fonts, free) | All-caps, bold, condensed. Every graphic headline. |
-| Body/captions | System/natural | Keep it readable, don't over-style |
+| Headlines | **Barlow Condensed** 800 (free) | All-caps, bold, condensed. Every graphic, cover and site headline (live on article pages since 2026-09-27). Replaces Anton. |
+| Body/captions | **Barlow** 400–800 | Site-wide body face; keep it readable, don't over-style |
 
 ## Image Specs (Meta 2026)
 | Use | Size | Ratio |

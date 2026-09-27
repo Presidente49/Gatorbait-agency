@@ -1,0 +1,308 @@
+{
+  "name": "GatorBait - Weekly numbers digest",
+  "active": false,
+  "nodes": [
+    {
+      "id": "wd-trigger",
+      "name": "Monday 8 a.m.",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * 1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "wd-ids",
+      "name": "Page + Instagram IDs",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        220,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v21.0/me",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "fields",
+              "value": "id,name,followers_count,instagram_business_account{id,followers_count}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Credential: 'GatorBait Meta Page token' (Query Auth, name access_token, value = the Page access token). A Page token answers /me as the Page itself, so no Page ID is needed.",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "wd-fb",
+      "name": "Facebook insights (7 days)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://graph.facebook.com/v21.0/me/insights",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "metric",
+              "value": "page_post_engagements,page_media_view"
+            },
+            {
+              "name": "period",
+              "value": "day"
+            },
+            {
+              "name": "since",
+              "value": "={{ $now.minus({days: 7}).startOf('day').toSeconds() }}"
+            },
+            {
+              "name": "until",
+              "value": "={{ $now.startOf('day').toSeconds() }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Meta retires Page Insights metrics from time to time. If this errors, the digest still sends and names the error.",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "wd-ig",
+      "name": "Instagram insights (7 days)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "={{ 'https://graph.facebook.com/v21.0/' + (($('Page + Instagram IDs').first().json.instagram_business_account || {}).id || 'missing-instagram-link') + '/insights' }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpQueryAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "metric",
+              "value": "reach,profile_views"
+            },
+            {
+              "name": "period",
+              "value": "day"
+            },
+            {
+              "name": "metric_type",
+              "value": "total_value"
+            },
+            {
+              "name": "since",
+              "value": "={{ $now.minus({days: 7}).startOf('day').toSeconds() }}"
+            },
+            {
+              "name": "until",
+              "value": "={{ $now.startOf('day').toSeconds() }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Instagram account ID comes from the Page (instagram_business_account); nothing to fill in.",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "wd-wix",
+      "name": "Wix site traffic (7 days)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://www.wixapis.com/analytics/v2/site-analytics/data",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "wix-site-id",
+              "value": "18fb3a4e-d7f6-414a-aeb9-3047db3ea115"
+            }
+          ]
+        },
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "dateRange.startDate",
+              "value": "={{ $now.minus({days: 7}).toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "name": "dateRange.endDate",
+              "value": "={{ $now.minus({days: 1}).toFormat('yyyy-MM-dd') }}"
+            },
+            {
+              "name": "measurementTypes",
+              "value": "TOTAL_SESSIONS"
+            },
+            {
+              "name": "measurementTypes",
+              "value": "TOTAL_UNIQUE_VISITORS"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "notes": "Credential: 'Wix API key (read-only analytics)' (Header Auth, name Authorization, value = a Wix API key with only Site Analytics read permission).",
+      "onError": "continueRegularOutput"
+    },
+    {
+      "id": "wd-compile",
+      "name": "Write the digest",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Weekly numbers in plain English. Any source that failed shows as\n// \"unavailable\" instead of stopping the report.\nconst get = (n) => { try { return $(n).first().json; } catch (e) { return {}; } };\nconst page = get('Page + Instagram IDs');\nconst fb = get('Facebook insights (7 days)');\nconst ig = get('Instagram insights (7 days)');\nconst wix = get('Wix site traffic (7 days)');\nconst n = (v) => (typeof v === 'number' ? v.toLocaleString('en-US') : 'unavailable');\nconst fbSum = (name) => { const m = (fb.data || []).find(x => x.name === name); return m ? (m.values || []).reduce((a, v) => a + (Number(v.value) || 0), 0) : undefined; };\nconst igVal = (name) => { const m = (ig.data || []).find(x => x.name === name); return m && m.total_value ? m.total_value.value : undefined; };\nconst wixTot = (t) => { const m = (wix.data || []).find(x => x.type === t); return m ? m.total : undefined; };\nconst errs = [fb, ig, wix].filter(x => x.error).map(x => (x.error.message || JSON.stringify(x.error)).slice(0, 160));\nconst week = $now.minus({ days: 7 }).toFormat('MMM d') + ' - ' + $now.minus({ days: 1 }).toFormat('MMM d, yyyy');\nconst body = [\n  `GatorBait weekly numbers, ${week}`, '',\n  `WEBSITE (Wix)`,\n  `  Sessions: ${n(wixTot('TOTAL_SESSIONS'))}`,\n  `  Unique visitors: ${n(wixTot('TOTAL_UNIQUE_VISITORS'))}`, '',\n  `FACEBOOK (${page.name || 'Page'})`,\n  `  Followers: ${n(page.followers_count)}`,\n  `  Post engagements: ${n(fbSum('page_post_engagements'))}`,\n  `  Views: ${n(fbSum('page_media_view'))}`, '',\n  `INSTAGRAM`,\n  `  Followers: ${n((page.instagram_business_account || {}).followers_count)}`,\n  `  Reach: ${n(igVal('reach'))}`,\n  `  Profile views: ${n(igVal('profile_views'))}`, '',\n  errs.length ? 'Sources with errors (numbers above show \"unavailable\"):\\n  ' + errs.join('\\n  ') : 'All sources reported.',\n  '', 'Read-only report. Nothing was posted or changed.'\n].join('\\n');\nreturn [{ json: { body, week } }];"
+      }
+    },
+    {
+      "id": "wd-mail",
+      "name": "Email Brenden",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1320,
+        300
+      ],
+      "parameters": {
+        "sendTo": "SET_OWNER_EMAIL_IN_N8N",
+        "subject": "={{ 'GatorBait weekly numbers, ' + $json.week }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "notes": "Credential: 'Gmail (GatorBait)'. Set To = your own address after import."
+    }
+  ],
+  "connections": {
+    "Monday 8 a.m.": {
+      "main": [
+        [
+          {
+            "node": "Page + Instagram IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Page + Instagram IDs": {
+      "main": [
+        [
+          {
+            "node": "Facebook insights (7 days)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Facebook insights (7 days)": {
+      "main": [
+        [
+          {
+            "node": "Instagram insights (7 days)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Instagram insights (7 days)": {
+      "main": [
+        [
+          {
+            "node": "Wix site traffic (7 days)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wix site traffic (7 days)": {
+      "main": [
+        [
+          {
+            "node": "Write the digest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write the digest": {
+      "main": [
+        [
+          {
+            "node": "Email Brenden",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": true,
+    "saveManualExecutions": true,
+    "timezone": "America/New_York"
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

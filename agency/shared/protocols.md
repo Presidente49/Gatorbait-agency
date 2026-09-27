@@ -13,7 +13,7 @@
 4. Read the active brand's folder (`agency/brands/$(cat agency/brands/ACTIVE)/`) and `agency/shared/playbook.md`
 5. Execute. Write outputs to `agency/brands/<slug>/outputs/` and add one line to `outputs/log.md` (date, agent, task, output path, QC result).
 6. Update `tasks.md`, `memory/short-term.md`.
-7. Close the loop: append what was learned to the brand's `learnings.md`; if it would hold for any business, also to `agency/shared/learnings.md`.
+7. Close the loop: append what was learned to the brand's `learnings.md`; if it would hold for any business, also to `agency/shared/learnings.md`. Use the entry format and capture rules in `agency/cloud/hermes/CURATE-REFLECT-RUNBOOK.md` (evidence required; refine an existing entry before adding a new one).
 
 ## Content Waterfall
 ```

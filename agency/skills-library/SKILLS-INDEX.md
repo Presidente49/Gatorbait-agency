@@ -1,7 +1,7 @@
 <!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Skills Index
 
-All skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT) for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`about.md`, `brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
+Top-level skills are adapted from [charlie947/social-media-skills](https://github.com/charlie947/social-media-skills) (MIT); `marketing/` skills come from the sources named in each file's header (coreyhaines31/marketingskills and ericosiu/ai-marketing-skills, MIT; anthropics/knowledge-work-plugins, Apache-2.0; every-app/open-seo, MIT) — all for Gator Bait Agency white-label use. Every skill file carries the attribution header. Brand files referenced live in `agency/brands/<slug>/` (`about.md`, `brand-voice.md`, `audience.md`, `brand-style.md`, `goals.md`, `offers.md`, `learnings.md`).
 
 ## Skill → Agent mapping
 
@@ -24,6 +24,14 @@ All skills are adapted from [charlie947/social-media-skills](https://github.com/
 | [reels-scripting.md](./reels-scripting.md) | scribe | Reverse-engineer a reference Reel into a 30-45s script with a 95/100 QA gate |
 | [voice-builder.md](./voice-builder.md) | scribe | Brand interview + sample analysis → `brand-voice.md` + `about.md` |
 | [video-thumbnail.md](./video-thumbnail.md) | blueprint | Thumbnail brief + image prompt (16:9 and 9:16) from a video title |
+| [marketing/campaign-plan.md](./marketing/campaign-plan.md) | blueprint | Goal → campaign brief, dated calendar, kill rule, and PROPOSED campaign-board rows (owner approves before anything runs) |
+| [marketing/competitive-brief.md](./marketing/competitive-brief.md) | scout | Evidence-logged competitor research → messaging matrix, gaps, review-complaint map, counter-positioning card |
+| [marketing/email-sequence.md](./marketing/email-sequence.md) | scribe | Multi-email flow (welcome/nurture/launch/win-back): drafts, branching, compliance check, sample-size gate, approval block |
+| [marketing/keyword-clustering.md](./marketing/keyword-clustering.md) | rank | Searches → intent clusters mapped to existing/new pages, cannibalization from Search Console; no invented volumes (every-app/open-seo, MIT) |
+| [marketing/link-prospecting.md](./marketing/link-prospecting.md) | rank + bridge | Link prospects from results pages and competitor backlinks, sourced contact paths, DRAFT outreach only (every-app/open-seo, MIT) |
+| [marketing/local-seo.md](./marketing/local-seo.md) | rank | Maps/local-pack audit: profile vs top competitors, reviews, rank grid (paid calls costed first), the one fix (every-app/open-seo, MIT) |
+| [marketing/seo-audit.md](./marketing/seo-audit.md) | rank | Read-only SEO + AI-visibility audit → top-5 paste-ready fixes (titles, robots, schema, llms.txt) for the site writer |
+| [research/knowledge-base.md](./research/knowledge-base.md) | scout | Ingest sources (articles, transcripts, PDFs, stat sheets) → chunked index → cited answers; no citation, no claim (Tencent/WeKnora patterns, MIT) |
 | [marketing/brand-first.md](./marketing/brand-first.md) | all | Read the active brand's context files before asking the user anything |
 | [marketing/quality-gate.md](./marketing/quality-gate.md) | scribe | Expert-panel recursive scoring gate for drafts (90+ to ship) |
 | [marketing/revenue-attribution.md](./marketing/revenue-attribution.md) | wrench | Content→revenue attribution: first-touch/linear/time-decay + CPA by type |
@@ -31,12 +39,12 @@ All skills are adapted from [charlie947/social-media-skills](https://github.com/
 
 ## By agent
 
-- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/youtube-outliers
-- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/quality-gate
+- **scout** (research/analytics): analytics-dashboard, niche-research, post-scorer, marketing/competitive-brief, marketing/youtube-outliers, research/knowledge-base
+- **scribe** (writing): content-matrix, hook-generator, newsletter-voice, post-formatter, post-writer, reels-scripting, voice-builder, marketing/email-sequence, marketing/quality-gate
 - **hype** (social publishing): pinned-comment
-- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail
-- **rank** (SEO): none yet
-- **bridge** (outreach/partnerships): profile-optimizer
+- **blueprint** (creative/design): carousel-builder, infographic-builder, graphic-designer, quote-post, video-thumbnail, marketing/campaign-plan
+- **rank** (SEO): marketing/seo-audit, marketing/keyword-clustering, marketing/link-prospecting, marketing/local-seo
+- **bridge** (outreach/partnerships): profile-optimizer, marketing/link-prospecting (outreach drafts)
 - **webmaster** (website/backend): none yet
 - **wrench** (ops/automation): marketing/revenue-attribution
 
@@ -48,4 +56,4 @@ All skills are adapted from [charlie947/social-media-skills](https://github.com/
 
 - Each skill reads the active brand's files from `agency/brands/<slug>/` before personalised work and never inherits another client's identity, accounts, or private files.
 - No credentials, API keys, emails, or personal data anywhere in this library. Integrations (scraping, video analysis) are described as capabilities the client authorises, with cost confirmation before paid runs.
-- Common skill chains: `niche-research` → `post-writer`/`post-formatter` → `post-scorer` → `graphic-designer`/`carousel-builder` → `pinned-comment`.
+- Common skill chains: `niche-research` → `post-writer`/`post-formatter` → `post-scorer` → `graphic-designer`/`carousel-builder` → `pinned-comment`. Campaign chain: `marketing/competitive-brief` + `marketing/seo-audit` → `marketing/campaign-plan` → `marketing/email-sequence` + post skills → `marketing/quality-gate` → owner approval.

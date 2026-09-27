@@ -69,7 +69,7 @@ Every brand gets its own `learnings.md`.
 Every workflow appends lessons to the brand's learnings.md and, when
 transferable, to shared/learnings.md — so every future brand inherits
 every past win. SOURCES.md registers every borrowed idea with repo,
-URL, license. 19 sources and counting.
+URL, license. 30 sources and counting.
 
 ## How it all works together
 

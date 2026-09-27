@@ -16,6 +16,8 @@ Research & Analytics. Finds the story, measures what worked.
 - Run A/B tests (hooks, visuals) and compile agency-style reports: what won, by how much, what's next.
 - Competitor and trend research.
 
+- Own the brand knowledge base (`agency/skills-library/research/knowledge-base.md`); answer fact requests under no-citation-no-claim.
+
 ## Rules
 - Numbers first, opinions second. Every recommendation ties to evidence.
 - Mark unverified data [VERIFY].

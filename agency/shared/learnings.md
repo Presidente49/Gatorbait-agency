@@ -180,3 +180,52 @@ in each brand's own `learnings.md`.
 - Lesson: write rejections as reversible. The Saleor NOT-INTEGRATED
   file said "re-evaluate first if policy widens" — because it did,
   integration took minutes instead of a re-scan.
+
+## 2026-09-27 — Seven-repo integration (hunt → vet → test → integrate)
+Each lane was drafted in a disposable copy, tested on a scratch brand
+(`zz-scratch-test`, "Scratch Pizza Co", never committed), fixed until a
+markdown-reading agent could run it, then integrated. Sources #20–26.
+- **Licenses: read the file, again.** Two Anthropic Apache-2.0 repos carry no
+  copyright line or NOTICE; WeKnora is MIT only for Tencent's own code and
+  bundles "nolicense"/"unknown" components — borrow the owner's patterns,
+  never the bundle.
+- **"Completed" is not "accepted"; a worker's "pass" is a claim.** Grade every
+  criterion holds / does not hold / UNVERIFIED against the artifact; the
+  controller's fan-in caught wrong hours a worker had marked passing
+  (deer-flow, orca).
+- **Unattended runs never guess owned facts.** Stage drafts and return a
+  BLOCKED report naming the missing decision; an empty approver means blocked
+  (deer-flow).
+- **Parallelize only on disjoint write sets and zero live writes;** one writer
+  per surface, claims via create-if-absent, silence is not failure (orca).
+- **Unknown is not zero.** Missing cost, revenue, volume or benchmark stays
+  `unknown (reason)`; an invented threshold slipped into a draft and was caught
+  only against the experiment runbook (commerce-agents, knowledge-work-plugins).
+- **A margin floor beats a discount cap:** max safe depth =
+  1 − (unit_cost / (1 − floor)) / price — check both (commerce-agents).
+- **Check every offer link first;** a 404 on a live offer page was the most
+  expensive defect in the test (knowledge-work-plugins).
+- **No citation, no claim;** a newer secondary source can still be stale, and
+  retrieval scores are ordering, not confidence (WeKnora).
+- **Models fill specs; renderers draw** — and schemas can't see invented prose:
+  only the human read caught made-up backstory in a newsletter (openui).
+- **Capture needs a trigger and curation needs a janitor;** keep a
+  do-not-capture list; a lesson becomes a skill only as a proven, repeated
+  procedure with human approval (hermes-agent).
+- **Test the numbers before you trust a "winner":** at 1,000 impressions per
+  arm, 5% vs 4% CTR is z = 1.08, noise. A one-point lift needs about 5,000 per
+  arm. Rotation on one video is not a true split test; match the time windows
+  (AgentTube, computed 2026-09-27).
+- **Plan approval is not adopt approval.** A yes to run a test lets the agent
+  rotate arms; changing the live package for good is a second yes (AgentTube).
+- **Give agents the draft half of a tool, not the publish half.** When an app
+  exposes both through MCP, allowlist create/update/share and keep
+  publish/schedule/delete human-only (shoutrrr).
+- **Video edits: approve the plan, then cut; check the render, not the
+  sources;** measure loudness, since an agent cannot listen. Default renders
+  upscale, so say so (video-use test, 2026-09-27).
+- **A paid data call gets a cost line first;** every rank-grid point is a paid
+  search (open-seo).
+- **Check the README for red flags as well as the LICENSE:** a crypto token in
+  a headline, affiliate links and GPL packages in the dependency tree don't block
+  a concepts-only integration, but they get recorded (AgentTube, open-seo).

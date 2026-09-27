@@ -52,3 +52,9 @@ White-labeling any part of this into the agency's white-label repo carries a lic
 - **Treat openshorts as inspiration-only.** Its pipeline architecture (ingest → moment detection → ranking → face-tracked 9:16 reframe → subtitle → QC → hand-off to reels) is a sound design to reimplement clean-room in the agency's own code, under the agency's own license. No source from openshorts enters the repo.
 - **Do not self-host `cloud/`** in any client-facing or white-labeled offering without a written commercial agreement with the copyright holder.
 - **If this changes:** the author would need to (a) relicense `cloud/` under a clean MIT/Apache-2.0 grant, or (b) grant Gator Bait Media a written white-label/redistribution agreement. Either would be grounds to reopen this file and do the integration.
+
+## Update 2026-09-27: partial coverage from video-use (MIT)
+
+[browser-use/video-use](https://github.com/browser-use/video-use) (MIT, © 2026 Browser Use) is now the agency's **edit** step: `agency/studio/video-edit/VIDEO-EDIT-RUNBOOK.md`. With a word-level transcript, an agent can propose which moments of a long video to cut, but a person approves the plan before any cut. It does **not** detect viral moments automatically, track faces or reframe to 9:16 on its own. So the automatic long-video-to-shorts engine is still a gap. Keep hunting.
+
+Also evaluated 2026-09-27 and rejected (AGPL-3.0, LICENSE read): jub0t/Concat (a CapCut replacement with MCP) and calesthio/OpenMontage (agentic video production). See `agency/docs/SOURCES.md`.

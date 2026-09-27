@@ -327,3 +327,81 @@ decision is Brenden's.
    the compose file, a secret-pattern grep, and a test that `new-brand.sh`
    rejects `../x`.
 7. Refresh `shared/campaign-board.md` from live state before any agent reads it.
+
+---
+
+# Seven-repo integration, 2026-09-27 (Claude Code)
+
+Brenden asked for these seven repos to go through hunt → vet → test →
+integrate. Each LICENSE was read in full, even though they had already been
+verified. Each lane was drafted in a disposable copy of this repo and tested on
+a scratch brand (`zz-scratch-test`, "Scratch Pizza Co"), which is not committed.
+The drafts were fixed until an agent could run them from the markdown alone, and
+then integrated here. They are registered as SOURCES #20–26, listed in
+`THIRD-PARTY-NOTICES.md`, and their lessons are in `agency/shared/learnings.md`.
+
+| # | Repo | Lane | Lands in | Test verdict |
+|---|---|---|---|---|
+| 20 | anthropics/commerce-agents | Merch ops on Medusa/Saleor | `agency/merch/MERCH-OPS-RUNBOOK.md` | Pass. The over-cap markdown was refused, a customer "refund me" wasn't acted on, and the likeness tee was flagged. |
+| 21 | anthropics/knowledge-work-plugins | Marketing skills | 4 skills in `skills-library/marketing/` (rank's first skill) | Pass. The audit caught every planted defect, including the 404 offer link. |
+| 22 | Tencent/WeKnora | Scout knowledge base | `agency/cloud/weknora/` + `skills-library/research/knowledge-base.md` | Pass. Answers were cited, a planted conflict was caught, and it refused a question it couldn't source. |
+| 23 | bytedance/deer-flow | Controller run protocol | `agency/cloud/deer-flow/` | Pass. The run was unattended and ended BLOCKED with drafts staged; the path with an approver present was not tested. |
+| 24 | thesysdev/openui | Generative UI + newsletter | `studio/creative/GENERATIVE-UI-SPECS.md`, `studio/newsletter/` | Pass on 21 HTML checks. No real email-client test. |
+| 25 | NousResearch/hermes-agent | Learning-loop hygiene | `agency/cloud/hermes/` + memory model, protocols step 7, template learnings | Pass. The curate count added up, and the promoted skill stayed a DRAFT. |
+| 26 | stablyai/orca | Parallel-agent runs | `agency/cloud/orca/` | Pass. The claim race and fan-in caught a wrong fact; real simultaneous sessions were not tested. |
+
+**Rejected from these repos (on purpose):**
+- Every app, runtime, MCP server and hosted service.
+- Automated checks as a *replacement* for human approval.
+- Autonomous skill writing.
+- "Generate plausible data" prompts.
+- Agents spawning their own sub-agents.
+- WeKnora's bundled third-party components.
+
+## Needs a human decision
+
+1. **Old shared learnings have no evidence.** The new capture rule needs
+   evidence for every entry, but most existing entries in
+   `agency/shared/learnings.md` have none. They are grandfathered for now.
+   Choose one: keep them as-is, re-verify them, or archive the unproven ones.
+2. **The notices file is missing the older sources.** Sources #8–19 have no rows
+   in `THIRD-PARTY-NOTICES.md` yet. Their copyright lines should be read from
+   each upstream LICENSE before rows are added.
+3. **The email footer has nowhere to get a postal address.** The newsletter
+   footer needs one, but the `_template/about.md` brand template has no field
+   for it.
+
+---
+
+# Four-repo scan integration, 2026-09-27 (Claude Code)
+
+The trending-repo scan sent four finds. I read each LICENSE in full, checked
+every sub-folder for a carve-out (the openshorts trap) and tested what could be
+run here. They are registered as SOURCES #27–30 and listed in
+`THIRD-PARTY-NOTICES.md`, and their lessons are in `agency/shared/learnings.md`.
+The skills were desk-run on the scratch brand (`zz-scratch-test`, not committed).
+
+| # | Repo | Lands in | Test verdict |
+|---|---|---|---|
+| 27 | browser-use/video-use (MIT) | `agency/studio/video-edit/VIDEO-EDIT-RUNBOOK.md` | Pass. 26/26 upstream tests. A real two-cut render with burned captions came out at the expected 4.54 s, normalized to −14 LUFS, and the frame check confirmed the cut timing. Not tested: transcription (it needs an ElevenLabs key). It upscales 720p to 1080p by default. |
+| 28 | every-app/open-seo (MIT) | 3 rank skills: keyword-clustering, link-prospecting, local-seo | Pass on a desk run: with no data provider, every volume stayed `unknown`, the grid cost warning fired, and a "buy links" request was refused. Not tested against live SEO data (it needs a paid DataForSEO key). |
+| 29 | coollabsio/shoutrrr (Apache-2.0) | `agency/cloud/shoutrrr/README.md` | Code read only. **Runtime UNVERIFIED**: Docker was unavailable. It becomes the second scheduler option, not a replacement: no YouTube, TikTok or Pinterest. |
+| 30 | darkzOGx/youtube-automation-agent (MIT) | `agency/growth/PACKAGING-TESTS.md` | Pass. The z-test rule was checked against computed numbers. The autonomous publish path is rejected. |
+
+**Rejected (AGPL-3.0, LICENSE read):** jub0t/Concat and calesthio/OpenMontage.
+
+**Flags recorded, not blocking (concepts only, no code copied):**
+- AgentTube's README headline carries a pump.fun crypto token address.
+- AgentTube's dependencies include one GPL-3.0 and several LGPL-3.0 npm packages.
+- OpenSEO's README links to DataForSEO through an affiliate link.
+
+**The clipping gap is still open.** video-use edits footage a person has picked;
+it does not find viral moments or reframe to 9:16 on its own.
+
+## Needs a human decision
+
+1. **Shoutrrr trial:** stand it up on a scratch server (one Discord test post)
+   before offering it to a client? It needs a server with Docker.
+2. **Paid SEO data:** the three new rank skills run on Search Console alone, but
+   volumes, backlinks and rank grids need a paid provider (DataForSEO through
+   OpenSEO, or another). Pick one, or stay free with the limits labeled.

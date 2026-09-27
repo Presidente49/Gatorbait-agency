@@ -59,6 +59,12 @@ Printful-template merch and dies.
 
 ## Phase 5 — Operate
 
+Day-to-day store operation — the daily digest, catalog audits,
+fulfillment exceptions, slow movers, price moves, promotions and
+merch campaigns — runs from `MERCH-OPS-RUNBOOK.md`: agents stage
+every change, the brand's named approver approves, webmaster applies
+and reads back. The cadence below is the minimum.
+
 - Weekly: margins per SKU (POD cost drift happens), dead-SKU
   pruning, new design drops tied to brand moments (wins, events,
   launches).

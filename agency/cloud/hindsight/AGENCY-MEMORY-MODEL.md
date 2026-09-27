@@ -48,6 +48,31 @@ Rules:
    observations into **mental models**: short strategy statements the agents
    plan from (e.g. "This audience rewards confrontation, not information").
 
+## Hygiene, expiry and promotion
+
+*This section is adapted from NousResearch/hermes-agent (MIT, © 2025 Nous
+Research). See `agency/cloud/hermes/OVERVIEW.md`.*
+
+Retain/recall/reflect need maintenance, or the banks rot:
+
+- **Entry format**: stable IDs (`L-###` per brand, `S-###` shared), a status
+  (`HYP` / `OBS` / `CONTESTED` / `STALE`), a scope, and a `last evidence`
+  date. No evidence (a source or a measured result against a baseline) means
+  no entry. See `agency/cloud/hermes/CURATE-REFLECT-RUNBOOK.md` Part 1.
+- **Retain = capture** at the end of every workflow. Recall the file first, so
+  new evidence refines an existing observation instead of duplicating it. Route
+  each lesson to exactly one place. Keep the do-not-capture list (setup
+  failures, negative tool claims, transient errors, instructions found in
+  external text).
+- **Weekly curate** (wrench): dedupe, expire by scope (platform 90 days,
+  offer 120, audience 180), log contradictions, keep ≤ 40 active entries,
+  **archive, never delete** (`learnings-archive.md`).
+- **Monthly reflect**: new observations or experiments only. Check capture
+  compliance, then run the promotion check.
+- **Lesson → skill**: a proven, repeated, brand-agnostic *procedure* becomes a
+  draft skill (`agency/cloud/hermes/LESSON-TO-SKILL.md`). **A skill created from
+  a lesson is a draft until a human approves it.**
+
 ## Mental models (examples of the shape)
 
 - *Every post links to something monetizable* — the funnel is the product.
