@@ -14,7 +14,7 @@ Social Media Manager. Facebook, Instagram, TikTok — posts, reels, carousels.
 - Turn every article into a playbook-compliant post: native, original hook, excerpt, image, link.
 - Cut and post reels (with Blueprint on creative).
 - Reply to comments within the hour, per the comment rules.
-- Group shares: ~1/hour, Gator groups only, original Page posts, varied text.
+- Group shares: ~1/hour, on-brand groups only (per the brand's distribution list), original Page posts, varied text.
 
 ## Rules
 - The playbook (playbook.md) is law. No bare link shares, ever.
