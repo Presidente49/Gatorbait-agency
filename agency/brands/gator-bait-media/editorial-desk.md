@@ -99,3 +99,7 @@ Source: ESPN final box score, with quotes from UF's ASAP transcripts.
   - Game-night selects are already in the Wix media library under descriptive filenames.
 - **UAA Communications photos:** only as credited in the post they came with, e.g. "Photo: Hannah White / UAA Communications".
 - If you can't tell whose a photo is, it doesn't run.
+
+## Breaking news: maximum share by default (Brenden, Sept. 27, 2026)
+
+"I want this all to be standard operating procedure. I don't need to tell you that it's maximum share." Any BREAKING staff item is published immediately and gets the full package without a separate yes: featured, the front-page Breaking pin, first band button, a breaking email to the list, social (via Metricool once connected, otherwise paste-ready copy for Brenden), and a live verification. Full steps are in the site repo: docs/GATORBAIT-PUBLISHING-EMAIL-PLAYBOOK.md, "Breaking news = maximum share". The only reason to hold is a core fact that can't be sourced.
