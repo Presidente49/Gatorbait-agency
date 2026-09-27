@@ -11,8 +11,9 @@
 2. Read `agency/agents/{codename}/tasks.md`
 3. Read `agency/agents/{codename}/memory/short-term.md`
 4. Read the active brand's folder (`agency/brands/$(cat agency/brands/ACTIVE)/`) and `agency/shared/playbook.md`
-5. Execute. Write outputs to the designated location.
+5. Execute. Write outputs to `agency/brands/<slug>/outputs/` and add one line to `outputs/log.md` (date, agent, task, output path, QC result).
 6. Update `tasks.md`, `memory/short-term.md`.
+7. Close the loop: append what was learned to the brand's `learnings.md`; if it would hold for any business, also to `agency/shared/learnings.md`.
 
 ## Content Waterfall
 ```
@@ -32,9 +33,10 @@ Each handoff fires automatically. No CMO approval needed between steps.
 | L0 | Within agent's domain | Handle autonomously |
 | L1 | Needs another agent | CMO coordinates |
 | L2 | Strategy/priority question | CMO decides |
-| L3 | Money, credentials, legal, first public post | Escalate to CEO (Brenden) |
+| L3 | Money, credentials, legal, first public post | Escalate to the brand owner named in `about.md` (Gator Bait Media: Brenden) |
 
-## Standing Rules (Brenden's)
+## Standing Rules (reference brand: Gator Bait Media)
+*Per-brand approval rules live in each brand's `about.md`; these are Brenden's for Gator Bait Media.*
 - Instagram posts need his approval tap — stage them, don't auto-post.
 - Video files go to him in chat as phone-sized files, never file-share links.
 - QC everything: facts, spelling, links, from a customer's perspective.

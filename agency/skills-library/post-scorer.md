@@ -30,7 +30,7 @@ If data is missing, offer:
 2. Fetch post bodies and aggregate counts through an available authorised scraping integration, after confirming account, scope, and cost with the client.
 3. An editorial review now, with performance comparison marked unavailable.
 
-Request post bodies and aggregate counts only. Never scrape comments or replies. Save permitted post data under an outputs folder in the brand workspace with the account and collection date. If no fetch capability exists, do not claim the history was fetched.
+Request post bodies and aggregate counts only. Never scrape comments or replies. Save permitted post data to `agency/brands/<slug>/outputs/post-scorer/<account>-<YYYY-MM-DD>.json` (account + collection date in the name). If no fetch capability exists, do not claim the history was fetched.
 
 ## Step 3. Analyse the top performers
 
@@ -107,3 +107,4 @@ For editorial-only review, omit the top-performer comparison and give specific c
 - Be honest. A generous scorer is useless.
 - If data is stale (14+ days old), suggest a refresh before scoring.
 - Inform the client before running any paid scrape.
+- History-based patterns that hold across 2+ scoring runs go into the brand's `learnings.md` (dated, with sample size); cross-brand ones also into `agency/shared/learnings.md`.

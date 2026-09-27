@@ -19,7 +19,7 @@ colors, fonts, and logos can never leak between identities.
 |---|---|---|
 | **Brand identity** | `brand.json`: name, variant key, allowed templates, canonical/provenance URLs | The variant key is required on every render request and must match the pack exactly. Older packs only render when explicitly named — never as implicit fallback. |
 | **Palette** | `tokens.css`: named CSS color tokens (e.g. `--brand-primary`) | Real brand colors, with enough contrast for small mobile previews. |
-| **Logo (typed)** | `assets/` + `brand.json`: role (primary/icon/wordmark), color mode (light/dark/mono), orientation | Transparent PNG. No baked-in white backgrounds, no circular badge wrappers around transparent assets, no low-resolution logos. |
+| **Logo (role-tagged)** | `assets/` + `brand.json`: role (primary/icon/wordmark), color mode (light/dark/mono), orientation | Supplied logo files only — never retyped as text or redrawn. Transparent PNG. No baked-in white backgrounds, no circular badge wrappers around transparent assets, no low-resolution logos. |
 | **Brand visuals** | `assets/` + `brand.json`: typed imagery — mascot, product art, portrait, photography | Approved, real brand art. No generic AI imagery. |
 | **Fonts** | `brand.json`: each family with local font file, weight, style, format, and **license** | Fonts are third-party assets under their own licenses — the license must be declared per font. |
 | **Voice notes** | `brand.json` / sidecar: tone rules that shape CTA and headline wording | Voice informs *copy choices*, not layout. See "How the brand folder feeds it" below. |
@@ -66,7 +66,8 @@ Rules:
 ## Creating a pack for a new client
 
 1. Copy the `_template` brand folder to `agency/brands/<new-slug>/` and fill in
-   the six docs (audience, style, voice, goals, learnings, offers).
+   the seven docs (about, audience, style, voice, goals, learnings, offers) —
+   or run `./new-brand.sh <new-slug>`.
 2. Gather the brand assets: transparent logo PNGs, brand visuals, licensed font
    files. Verify every font's license and record it.
 3. Write `tokens.css` from the palette in `brand-style.md`.

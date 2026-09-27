@@ -19,7 +19,7 @@ agency/cloud/
 │       └── weekly-analytics-digest.json# Monday metrics digest
 └── scheduler/
     ├── README.md            # the white-label client dashboard option
-    ├── DEPLOY.md            # VPS+Docker or Vercel+Postgres paths
+    ├── DEPLOY.md            # VPS (Node) or Vercel+Postgres paths
     └── WHITE-LABEL-NOTES.md # per-client rebrand checklist
 ```
 

@@ -41,7 +41,7 @@ Before presenting, review the draft against the supplied facts, voice, and reque
 
 Ask: "How does this feel? Tell me what to change, or say 'ship it' and I will save the final version."
 
-Maximum 3 revision rounds. When approved, save the final post as a markdown file in the brand workspace.
+Maximum 3 revision rounds. When approved, save the final post to `agency/brands/<slug>/outputs/posts/<YYYY-MM-DD>-<topic-slug>.md` and add a line to `agency/brands/<slug>/outputs/log.md`.
 
 Then: "Post saved. Say 'design a graphic' to create a visual, or 'score my post' to get feedback before publishing."
 

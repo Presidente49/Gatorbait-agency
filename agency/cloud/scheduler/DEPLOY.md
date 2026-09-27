@@ -5,9 +5,10 @@ Upstream: https://github.com/Anil-matcha/Free-AI-Social-Media-Scheduler
 License: MIT. Deploy from the upstream repo (or your per-client fork);
 nothing is vendored here.
 
-## Option A — VPS with Docker (recommended)
+## Option A — VPS with Node.js (recommended)
 
-Any $6+/mo VPS with Docker installed.
+Any $6+/mo VPS with Node.js (LTS) installed. Upstream is a Next.js app
+run with npm; Docker is only needed if you run Postgres locally.
 
 ```bash
 # 1. Clone
