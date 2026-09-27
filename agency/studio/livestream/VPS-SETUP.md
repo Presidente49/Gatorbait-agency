@@ -1,4 +1,4 @@
-<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT, Copyright (c) 2026 xlip. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # VPS Setup — 24/7-ready livestream relay
 
 Run the relay and supervisor on a small VPS so the chain is always up,

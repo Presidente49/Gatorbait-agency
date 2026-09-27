@@ -1,3 +1,4 @@
+<!-- Source: Anil-matcha/Free-AI-Social-Media-Scheduler (https://github.com/Anil-matcha/Free-AI-Social-Media-Scheduler) — MIT, Copyright (c) 2023 Anil Chandra Naidu Matcha. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # White-Label Notes — Client Dashboard Rebrand
 
 The scheduler is the client's visible dashboard, so it must look like

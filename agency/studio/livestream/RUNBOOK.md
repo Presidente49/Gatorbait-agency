@@ -1,4 +1,4 @@
-<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: arifyaman/multistream (https://github.com/arifyaman/multistream) — MIT, Copyright (c) 2026 xlip. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Livestream Runbook — show day, step by step
 
 The full procedure for a live production (talk show, game-day show).

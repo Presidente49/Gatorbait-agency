@@ -19,7 +19,7 @@ agency/cloud/
 │       └── weekly-analytics-digest.json# Monday metrics digest
 └── scheduler/
     ├── README.md            # the white-label client dashboard option
-    ├── DEPLOY.md            # VPS+Docker or Vercel+Postgres paths
+    ├── DEPLOY.md            # VPS (Node) or Vercel+Postgres paths
     └── WHITE-LABEL-NOTES.md # per-client rebrand checklist
 ```
 
@@ -37,8 +37,9 @@ agency/cloud/
 ```bash
 cd agency/cloud/n8n
 cp .env.example .env
-# Edit .env: set N8N_HOST, N8N_ENCRYPTION_KEY (generate once, back it up),
-# GENERIC_TIMEZONE, Postgres passwords, basic-auth credentials.
+# Edit .env: set N8N_HOST, N8N_VERSION, N8N_ENCRYPTION_KEY (generate once,
+# back it up), GENERIC_TIMEZONE, Postgres password. Create the n8n owner
+# account (long password + 2FA) on first open.
 docker compose up -d
 ```
 
@@ -52,9 +53,10 @@ credential is orphaned) and the named volumes. Workflows live as JSON in
   replies for a human/agent to approve. Nothing auto-replies, ever.
 - The scheduler **never creates content**. It schedules what Hype
   approved. Creation and publishing are separate gates.
-- No credentials in the repo. `.env` is gitignored by convention; only
-  `.env.example` (placeholders) is committed.
-- n8n's editor UI sits behind basic auth + HTTPS. Webhook URLs are
+- No credentials in the repo. `.env` is gitignored (root `.gitignore`); only
+  `.env.example` (placeholders) is committed. Tokens live in n8n Credentials,
+  never in workflow node parameters.
+- n8n's editor UI sits behind the owner login + HTTPS. Webhook URLs are
   unguessable tokens.
 
 ## Scaling later

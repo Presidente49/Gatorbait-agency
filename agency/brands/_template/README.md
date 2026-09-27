@@ -1,9 +1,24 @@
 # Brand Template — copy this folder to onboard a new business
 
-1. Copy this entire `_template` folder to `../<your-business-slug>/`.
+Preferred: from the repo root run `./new-brand.sh <your-business-slug> "Business Name"`
+(it validates the slug, skips this README, fills in the name and sets ACTIVE).
+
+Manual route:
+1. Copy every file in this folder **except this README** to `../<your-business-slug>/`
+   (agents read every `.md` in the brand folder — this guidance must not come along).
 2. Fill in each file below — delete the guidance in italics as you go.
+   Start with `about.md`: it says who approves what.
 3. Set your slug as the active brand: `echo "<your-business-slug>" > ../ACTIVE`
-4. Done. Every agent reads the active brand folder at startup.
+4. Done. Every agent reads the active brand folder at startup. Agent outputs
+   and the run log go in `../<your-business-slug>/outputs/`.
+
+---
+
+## about.md
+
+*The facts: what the business is, location/hours, which platforms it uses,*
+*who approves posts / site changes / email sends / spend, where facts are*
+*verified, photo-credit and logo rules. No credentials.*
 
 ---
 

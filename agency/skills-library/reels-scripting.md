@@ -1,4 +1,4 @@
-<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Reels Scripting
 
 **Owner:** scribe (writing)
@@ -33,7 +33,7 @@ Read the brand's voice, audience, and content files so the script matches the br
 
 ## Step 3. Scrape and download the Reel (if authorised)
 
-Save to a brand workspace outputs folder. For the single requested Reel:
+Save to `agency/brands/<slug>/outputs/reels-scripting/<YYYY-MM-DD>-<reel-slug>/`. For the single requested Reel:
 
 1. Use the authorised scraping route to fetch the Reel. Verify the provider supports video-only collection before calling; do not guess actor inputs.
 2. Extract the video URL and download the video file.

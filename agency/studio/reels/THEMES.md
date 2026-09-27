@@ -1,4 +1,4 @@
-<!-- Source: ronin1770/reel-quick (https://github.com/ronin1770/reel-quick) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: ronin1770/reel-quick (https://github.com/ronin1770/reel-quick) — MIT, Copyright (c) 2026 ronin1770. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Theme System — on-brand reels automatically
 
 Upstream (reel-quick) provides the **mechanics**: a named transition

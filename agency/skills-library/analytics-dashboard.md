@@ -1,4 +1,4 @@
-<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT. Adapted for Gator Bait Agency. -->
+<!-- Source: charlie947/social-media-skills (https://github.com/charlie947/social-media-skills) — MIT, Copyright (c) 2026 Charlie Hills. Adapted for Gator Bait Agency. Full notice: THIRD-PARTY-NOTICES.md -->
 # Analytics Dashboard
 
 **Owner:** scout (research/analytics)
@@ -74,7 +74,11 @@ Best days for impressions, best days for engagement, and an optimal posting sche
 ### 5 specific content recommendations
 Each includes: content angle, why the data supports it, target audience segment, evidence, and a testable hypothesis (never a guaranteed outcome).
 
-## Step 5. Offer the next move
+## Step 5. Record the learnings
+
+Save the dashboard and analysis to `agency/brands/<slug>/outputs/analytics/<YYYY-MM-DD>/`. Then append each finding the data supports (not the hypotheses) to the brand's `learnings.md` under a dated heading with the window and sample size. If a finding would hold for any business (not just this brand), also append it to `agency/shared/learnings.md`. Add a line to `agency/brands/<slug>/outputs/log.md`.
+
+## Step 6. Offer the next move
 
 Offer to draft one of the 5 recommendations as a full post using `post-writer.md` or `post-formatter.md`.
 
