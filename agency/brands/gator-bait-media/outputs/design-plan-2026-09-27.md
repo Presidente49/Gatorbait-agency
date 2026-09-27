@@ -1,5 +1,15 @@
 # GatorBait design plan: Blueprint + Webmaster + Rank (2026-09-27)
 
+> **Status, Sept. 27:** Brenden said "Deploy" and to optimize rather than take the plan as gospel.
+> - **Post template v1 is live** as embed `14a887e3`. It was improved before shipping:
+>   - the headline comes first, with the cover under it inside the panel;
+>   - the kicker comes from the URL.
+> - **Decisions 1–3 are applied:**
+>   - Barlow Condensed replaces Anton in `brand-style.md`;
+>   - the template is live;
+>   - the kicker is on.
+> - **Decision 4 is settled by the layout:** the cover sits under the real headline.
+
 This is the plan from the three design roles for the next two game weeks:
 **Missouri (Sat., Oct. 3)** and the week after. It is built on what's live
 now: the sports-news homepage, the separate Magazine, and the Buddy Martin
