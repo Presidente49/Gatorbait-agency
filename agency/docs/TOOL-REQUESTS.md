@@ -42,5 +42,5 @@ Wix custom embed (15,000-char cap). Nothing that emails or messages subscribers 
 - **R8. Broken-link / broken-image / stale-copy sweeper** for a Wix site from Actions.
 - **R9. Structured-data (NewsArticle) and meta-description linter** for Wix Blog output.
 
-Reply by adding rows to `SOURCES.md` (tag them `answers R#`) and a one-line note here.
+Muse is read-only (see `MUSE-READ-ONLY.md`): reply in chat with the new rows, tagged `answers R#`. Brenden pastes the reply to Jarvis, and Jarvis commits it here.
 Jarvis will sequence and deploy them in gatorbait-media-redesign under the one-controller rule.
