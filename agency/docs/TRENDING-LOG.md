@@ -1,5 +1,95 @@
 # Trending Repo Watch — log (append-only)
 
+## 2026-09-27 22:50 EDT — hourly scan
+
+Sources checked: GitHub search API via curl/python3 (URL-encoded qualifiers; unauthenticated, 8s pacing) across 12 lanes (agent skills marketing, ai agent framework orchestration, social media scheduler selfhosted, short video clipper ai, n8n workflow marketing, video caption tool agent, design system agent skill, agent learning loop memory, youtube shorts automation, seo agent skill, new-repo sweep created >2026-09-26 stars >20 as trending fallback, marketing automation agent — 561 unique repos, 546 new to registry) + core API /repos probes (1 call/candidate, remaining core quota unused) + raw.githubusercontent LICENSE reads (all HTTP 200) + carve-out grep.
+Seen-list checked against `SOURCES.md` (#1–123 + rejections) — the 18 qualifiers below are new to the registry (registered as #124–141).
+
+### QUALIFIED (18) — all MIT/Apache-2.0, LICENSE file read in full via raw.githubusercontent.com (openshorts rule; carve-out grep clean in all 18)
+
+1. **fancyism/hyperremoedit-toolkit** — https://github.com/fancyism/hyperremoedit-toolkit — MIT — 0★, pushed 2026-09-24.
+   Why: 7-skill vertical-video production pipeline (research → assets → single-file HTML clip → captions → voice-over → editing → orchestrator) with no npm/ffmpeg/build step — the zero-build reel path; orchestrator becomes the render contract for the motion lane.
+
+2. **retrogtx/ai-marketing-videos** — https://github.com/retrogtx/ai-marketing-videos — MIT — ~4★, pushed 2026-09-24.
+   Why: agent skills + free toolkit (Blender, MakeHuman, Remotion, local TTS) for short-form video ads for any app — the zero-cost client-ad production lane.
+
+3. **808enzo/chappie** — https://github.com/808enzo/chappie — MIT — ~2★, pushed 2026-09-18.
+   Why: 35 agent skills for lifecycle/CRM/retention marketing (deliverability, lapse-and-winback, promo-calendar) with steps, thresholds, timing, edge cases — the agency's retention lane; npx-installable.
+
+4. **matt-j-penny/ai-video-marketing** — https://github.com/matt-j-penny/ai-video-marketing — MIT — ~2★, pushed 2026-09-26.
+   Why: video-marketing skills — hooks + UGC ad scripts in brand voice, creative-testing loop, YouTube SEO, repurposing map — the agency's video-copy system.
+
+5. **zaferayan/app-store-screenshot-skill** — https://github.com/zaferayan/app-store-screenshot-skill — MIT — ~29★, pushed 2026-09-21.
+   Why: raw app screenshots → premium App Store/Google Play marketing images, UI pixel-exact — the app-client store-presence lane.
+
+6. **Sachindu-sankalpa/Social-media-skills** — https://github.com/Sachindu-sankalpa/Social-media-skills — MIT — 0★, pushed 2026-09-24.
+   Why: 17 standalone voice-first social skills (voice-builder: about-me.md + voice.md every skill reads; post-scorer gate; hook-gen; reels-scripting) — a complementary set to charlie947 (#1); post-scorer becomes the pre-publish gate.
+
+7. **pripanggalih/antislop-copywriting** — https://github.com/pripanggalih/antislop-copywriting — MIT — 0★, pushed 2026-09-05.
+   Why: register-aware anti-slop filter (marketing, product UI, docs, editorial) with fabrication + numeric-threshold hard rules — mandatory pre-publish QC for the writing agent.
+
+8. **Hiberius/competitor-ad-intelligence** — https://github.com/Hiberius/competitor-ad-intelligence — MIT — ~1★, pushed 2026-09-08.
+   Why: competitor ad analysis without spend data — Winner Score (longevity, variants, geo spread, velocity, recency) + lineage grouping; research-agent lane.
+
+9. **Hiberius/incrementality-testing** — https://github.com/Hiberius/incrementality-testing — MIT — 0★, pushed 2026-09-08.
+   Why: causal-measurement skill (SRM checks, always-valid sequential testing, CUPED) — the experiment-readout standard for the learning loop.
+
+10. **Hiberius/hiberius-skills** — https://github.com/Hiberius/hiberius-skills — MIT — 0★, pushed 2026-09-08.
+    Why: 10 skills from 15 years of performance marketing (CPA profit maths, affiliate tracking, lead reconciliation) — the paid-media decision layer.
+
+11. **Axel-freeman-marketing-framework/agent-stack-starter** — https://github.com/Axel-freeman-marketing-framework/agent-stack-starter — MIT — 0★, pushed 2026-09-04 (default branch master).
+    Why: self-hosted AI marketing agent in one evening (docker-compose + skills + scheduled jobs, ≤$20/mo, one job live on day one) — the reference white-label self-host recipe; same author family as #86, #131.
+
+12. **shy-tangerine/publicist-skills** — https://github.com/shy-tangerine/publicist-skills — MIT — 0★, pushed 2026-09-27.
+    Why: evidence-based media research + market-specific PR + outreach drafting (multilingual EN/DE/ZH/JA) — the agency's earned-media practice for the outreach agent.
+
+13. **maxchiguz/seo-master** — https://github.com/maxchiguz/seo-master — MIT — 0★, pushed 2026-09-02.
+    Why: the daily agentic SEO loop as a portable methodology skill (measurements → fix regressions → improve positions 4–15 → at most one new page → dated readout) — the SEO agent's operating rhythm.
+
+14. **RaliqID/cheat-clip-pro-2** — https://github.com/RaliqID/cheat-clip-pro-2 — MIT — 0★, pushed 2026-09-27.
+    Why: AI YouTube clipper — 9:16 viral shorts, karaoke captions, face tracking, NVENC GPU batch rendering (React 19 + FastAPI + FFmpeg) — newest A/B contender for the clipping-engine gap.
+
+15. **xtenekelersizix-boop/omni-social-agent** — https://github.com/xtenekelersizix-boop/omni-social-agent — MIT — 0★, pushed 2026-09-07.
+    Why: zero/low-cost social automation POC (HF/local LLM → script, Coqui TTS, Unsplash/picsum, ffmpeg) with a local-fallback ladder at every step — the cost-free content-assembly reference.
+
+16. **yxxrn/youtube-studio-uploader** — https://github.com/yxxrn/youtube-studio-uploader — MIT — 0★, pushed 2026-09-02.
+    Why: browser-driven YouTube Studio uploader via persistent Chrome profiles (no YouTube Data API quota, no OAuth review) — the API-free publish lane for white-label channels.
+
+17. **sohmc77/gtm-agent-pipeline** — https://github.com/sohmc77/gtm-agent-pipeline — MIT — 0★, pushed 2026-09-25.
+    Why: multi-agent pipeline (business idea → audience hypotheses, positioning, channel copy, 4-week calendar) with Pydantic-validated handoffs + eval harness — the client-onboarding kit generator.
+
+18. **ufo-ai/ufo-core** — https://github.com/ufo-ai/ufo-core — Apache-2.0 — ~37★ in one day, pushed 2026-09-27.
+    Why: "business agent operating system" — self-hostable tenant runtime: chat surfaces, durable DBOS turns, grants-in-chat authorization, extension system, spec.md; pattern reference for the multi-tenant white-label control plane beside paperclip (#7), ruflo (#51), openrig (#69).
+
+### Evaluated and REJECTED (added to rejections table)
+
+- Edward-J-create/aident-brand-visual-production (MIT per API but NO LICENSE file on main/master — raw 404) — excluded per no-license policy; described, never copied.
+- agencystew/postclick-mcp (MIT) — "Hosted Postclick MCP" = hosted vendor coupling (PPC.io); clipmivo precedent; described, never copied.
+- demovela/agent-skill (MIT) — requires the Demovela vendor platform; vendor coupling; described, never copied.
+- AY-kkk/ad-gtm (MIT) — ad-production step bound to Seedance (ByteDance vendor API); vendor coupling; described, never copied.
+- mailercloud-com/mailercloud-plugin (MIT) — official Mailercloud vendor plugin; vendor coupling; described, never copied.
+- escarletdesign/copy-psych-auditor (MIT) — Spanish-primary corpus; language mismatch (huashu/sealeap precedent); concept covered by antislop (#130). Described, never copied.
+- yasinozmeen/animasyon-stil-katalogu (109★, no LICENSE, Turkish-primary) — language mismatch + unlicensed. Described, never copied.
+
+### Checked, not qualified / skipped this round
+
+- RankSpotAI/awesome-seo-agent-skills (66★ CC0-1.0) — curated SEO-skill list; CC0 outside MIT/Apache policy (awesome precedent). Skipped.
+- Gaiant-bill/hormozi-skills (MIT) — Hormozi offer skills; covered by marketingskills (#13). Skipped.
+- Appllama/liquid-glass-chat-ui (103★ MIT) — chat-UI exploration; off-lane.
+- MaximeRivest/tiny-classifiers (42★ MIT) — tiny text-classifier recipe; ML tooling, no direct agency lane fit. Skipped.
+- SkylarKitchen/skills (MIT), JuniorXcoder/hermes-virtual-office (MIT), agentik-os/claude-code-skills (MIT) — noted/skipped in earlier runs; no re-evaluation.
+- 0-star marketing-skill mirrors of coreyhaines31/marketingskills (samsakian4, miguelangelchavezmiranda639-arch) — duplicates of registered #13. Skipped.
+- Sub-bar n8n/marketing stubs (jayeshmahawer/n8n-ai-automation-templates etc.) — template forks, YuriCrystal (#122) remains the registered n8n marketing pack.
+- Off-lane giants (spiderbench NOASSERTION, InjectSetConsole, Clash-Client, quant-vault, lain-psx-decompiled, rust/casita object store) — no agency relevance.
+- Malware-adjacent (TwoSevenOneT/InjectSetConsole — process-code-injection POC) — off-lane, excluded.
+- All registered repos re-appearing in searches (paperclip, ruflo, hermes-jev-skills, shoutrrr, cogsend, scheduler, marketingskills, second-brain-os, tin, etc.) — no re-evaluation.
+
+### License-policy notes this round
+
+- All 18 qualifiers' LICENSE files fetched from raw.githubusercontent (main/master branch, HTTP 200) and read in full; case-insensitive grep for (agpl|gpl-2|gpl-3|noncommercial|polyform|elastic license|proprietary|commercial license|white.?label|resale|all rights reserved|paid|vendor) — zero hits in all eighteen. Seventeen carry standard ~1,062–1,093-byte MIT text; ufo-core carries the standard ~11.3KB Apache-2.0 boilerplate.
+- Edward-J-create/aident-brand-visual-production shows why the openshorts rule is badge-never: GitHub API reported MIT, but no LICENSE file exists on any branch — unlicensed, rejected.
+- Vendor coupling is this round's pattern: 4 MIT repos (postclick-mcp, demovela, ad-gtm, mailercloud-plugin) had clean licenses but mandatory hosted/commercial dependencies — described, never copied, per the clipmivo precedent.
+
 ## 2026-09-27 16:50 EDT — hourly scan
 
 Sources checked: GitHub search API via curl (URL-encoded qualifiers; unauthenticated, 8s pacing) across 12 lanes (agent skills, ai agent framework orchestration, social media scheduler selfhosted, short video clipper ai, n8n workflow marketing, video caption tool agent, design system agent skill, agent learning loop memory, youtube shorts automation, seo agent skill, new-repo sweep created >2026-09-26 stars >20 as trending fallback, marketing automation agent — 274 results, 271 unique repos) + direct repo API + raw.githubusercontent LICENSE reads.
@@ -976,3 +1066,21 @@ Two of the 7 registered "qualifiers" were duplicates of existing registry entrie
 - elisaterumi-ai/agent-skills-in-practice renumbered #123 → #122; 852wa/JIZURA renumbered #124 → #123.
 
 Registry now stands at #123. Genuine new qualifiers this round: 5 — obra/superpowers (#119), supermemoryai/company-brain (#120), kwakseongjae/oh-my-design (#121), elisaterumi-ai/agent-skills-in-practice (#122), 852wa/JIZURA (#123). The GPL-3.0 rejection (eracle/OpenOutreach) stands. Lesson logged: dedupe must compare against BOTH the full-name list and owner/repo tail, not rely on search-result memory — the same repo can surface fresh in searches when it gains stars.
+
+## trending-repo-watch — 2026-09-27 23:50 EDT run
+
+- Task: hourly scan of GitHub trending + 12 targeted search lanes for agency-relevant repos. Read SOURCES.md (#1–141 + rejections) first. Note: trending daily checked via github.com/explore — today's agency-relevant trenders (agent-manager app = paperclip #7, hindsight #8, openrig #69, univer #9, VoiceStudio AGPL — rejected) all already known.
+- Actions: 12-lane search API scan (URL-encoded, unauthenticated, 8s pacing) — 71 repos new to registry after dedupe against the 196-entry seen list; raw LICENSE probes on 15 finalists (carve-out grep clean, all standard MIT); git-tree verification on the 7 with substantive claims (file counts checked, not badge claims); full README/skill-file checks on uncertain ones.
+- Outputs: 8 qualifiers registered in SOURCES.md as #142–149, each with DESIGN DIRECTIVE (owner, direction, acceptance):
+  - #142 agentik-os/claude-code-skills (MIT) — 223 production-ready skills, 1,453 files (tree-verified); ops bulk skill quarry feeding skillbox (#93), beside claude-plugins-official (#56).
+  - #143 Shayanthn/skills (MIT) — 74–83 marketing/SEO/GEO skills, 837 files + .claude-plugin + MCP + tests; feeds SEO agent audit toolchain (#115) and writing agent copy lane.
+  - #144 jayeshmahawer/n8n-ai-automation-templates (MIT) — 49 real workflow JSONs in 8 categories (AI-marketing-agents, content-social, lead-gen, SEO/SERP, voice…); curated AI-agent layer between #57 and #109.
+  - #145 jdsadminllc/awesome-design-skills (MIT) — 67 SKILL.md files VENDORED (not links, tree-verified); creative/design style quarry feeding brand-DNA (#107) + taste gate (#104).
+  - #146 mmakosiewicz/query-match-audit (MIT) — query-match pre-publish gate (title/meta/headings/URL/body); pairs with #147.
+  - #147 mmakosiewicz/ai-extractability-audit (MIT) — AI-search chunking/citability audit; two-gate GEO stack with #146 for the SEO agent.
+  - #148 vyntizs-dev/website-style-miner (MIT) — reference site → evidence-backed design system + motion specs + coding-agent handoff; beside tinte (#107), copycat (#70).
+  - #149 Pageree/landing-page-guru-skill (MIT) — full landing-page build/audit/improve skill (105 files, evals, CI, templates); webmaster pre-launch standard. Maintainer is a company but "no account or runtime dependency needed" — no vendor coupling.
+- 19 new rejections: duplicates (tomascupr/product-film = rebranded copy of #65; vaaniijones22/MarketingSkills = third-party mirror of #13); stub (tharusanjay Social Hub, 5 files under a 254-line README); language-mismatch (black-minimal-deck ZH, tasmeem AR, edu-design-system RU+other); CC-BY-4.0 (Canlah-AI/geo-playbook — not MIT/Apache per policy); AGPL-3.0 (postiz-app, ProSEO); unlicensed/other (ibraheem4/marketing-skills, Orange-OpenSource/ouds-web-skills, nicolamaglio-tlg/empco-skills, tinymindkin/architecture-distilled, Ahadfahim/reddit-story-video-generator, 123hkbimboamin ai-crypto-shorts, ILEMONAcodes GTM platform, WangYuyanyan customer-service-agent, ekajaya740/skills).
+- Skipped as below-bar/off-lane: kid7st/agenticseo (SEO lane saturated), agentik-os sub-singles, single-commit 0-star design-skill singletons, fancyism/system-design-bytebytego (off-lane), amaan-j12/support-copilot (fictional portfolio project), caption-tools lane returned 0 results.
+- Registry now at #149; rejections table at 73.
+- QC: dedupe run against full registry + rejections before registering (both full-name list and owner/repo tail); all 15 finalist LICENSE files read in full via raw.githubusercontent, carve-out grep zero hits; design directive present on every new row per Brenden's standing rule. No API rate-limit hits (core quota respected, ~14 calls used).
