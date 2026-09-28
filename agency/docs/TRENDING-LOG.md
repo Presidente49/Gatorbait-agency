@@ -1099,3 +1099,16 @@ Registry now stands at #123. Genuine new qualifiers this round: 5 — obra/super
 - Owner's NO-MORE-STATIC mandate recorded: every web-facing build must move; static = failed QC. Follow-up motion-design hunt dispatched.
 - Registry now at #156. All 7 repos shallow-cloned to vendor/ (gitignored).
 - QC: 0 matches against the 222-URL seen list; all 7 LICENSE files read in full; design directive + mentor note on every row per standing rule.
+
+## 2026-09-28 — Gator GBT hunt: 6 winners registered (#162–167)
+- Owner's order: a Gator AI ("Gator GBT") on the site — answers fan questions, spits facts, drives engagement.
+- #162 vercel/ai (Apache-2.0) — the chat engine: streaming chat + tool calls (getArticle, getFact, captureEmail).
+- #163 assistant-ui/assistant-ui (MIT) — branded widget UI primitives; navy/orange skin, not a default theme.
+- #164 run-llama/llama_index (MIT) — knowledge ingestion: gazette articles → chunked/embedded, metadata on every chunk. The anti-hallucination layer.
+- #165 deepset-ai/haystack (Apache-2.0) — production RAG pipeline: retrieve → rerank → generate + answer validator + Q&A logging (the logs become content strategy).
+- #166 qdrant/qdrant (Apache-2.0) — vector memory: millisecond filtered retrieval, one collection per brand.
+- #167 danny-avila/LibreChat (MIT) — deploy-today v0 + permanent internal prompt-testing console.
+- Deliberately not registered: trivia/fact bots (no qualifier — covered by #165 pipeline + "Gator Fact of the Day" prompt rule), personality frameworks (personality is a spec for the writing agent, not software).
+- Rejections: chatwoot/chatwoot (ee/ carve-out), lobehub/lobe-chat (NOASSERTION), n4ze3m/dialoqbase (archived), MintplexLabs/anything-llm (404, unverifiable).
+- Wix embed: widget deploys on agency infra, embeds via standard Embed/iframe element; RAG backend never touches Wix.
+- Registry now at #167. QC: 0 seen-list matches; all 6 LICENSE files read in full; directive + mentor note per row.
