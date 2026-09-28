@@ -1175,3 +1175,35 @@ Sources checked: GitHub search API (unauthenticated, ~9s pacing) across 12 lanes
 - Off-lane curiosities: gulelmatthews/Polymarket-Perpetual-Bot (trading), jaydendavisnc/inkwave (browser shooter), BagasRizkyHarySaputra/MLBB-waydroid-LinuxCloudMLBB, ZacharyZhang-NY/OmaPhoto (image editor), sv-number/skills (phone numbers).
 - Marginal, noted not registered: aaron-he-zhu/seo-geo-claude-skills (signpost → aaron-marketing-skills noted for future quarry pass), yan-labs/yan-skills, content-designer/ux-writing-skill, openvetta/open-vetta, jiabaobei/skills-constitution, it235/multica-best-practices, Awesome-AI-Pedia (list, not a tool), kennyzir/7deer_skills (Roblox), kutchenguid/huashu-report, Verlintas/BetterAIChat (Android agent), AdScanPro/Claude-AD (pentest).
 - Registry now at #175. QC: 0 seen-list matches; all 8 LICENSE files read in full; design directive + mentor note per row; 1 rejection row added (Bhanunamikaze).
+
+## 2026-09-28 02:50 EDT — hourly scan
+
+Sources checked: GitHub search API (unauthenticated, ~9s pacing) across 12 lanes (agent skills, agent framework, scheduler, clipper, n8n, caption, design skill, learning loop, shorts, seo skill, new-repo sweep created>2026-09-27 stars>20 [trending fallback], late-traction created>2026-09-25 stars>80) — 287 rows, 229 repos new to registry.
+
+### QUALIFIED (14) — registered #176–189, all LICENSE files read in full
+- #176 nowork-studio/notfair-plugin (MIT, © 2026 Toprank Contributors, ~3,872★, pushed 2026-09-25) — open-source SEO, GEO, and marketing skills; first GEO (AI-search visibility) lane for the SEO agent.
+- #177 jipraks/yt-short-clipper (MIT, © 2026 Aji Prakoso, ~1,009★, pushed 2026-09-20) — AI highlight detection + face-tracked 9:16 clips; 7th clean-MIT contender in the clipping-engine A/B (patterns, not the Windows app).
+- #178 dzhng/jevgrep (MIT, © 2026 David Zhang, ~902★, created 2026-09-26, pushed 2026-09-28) — Jev semantic code-discovery CLI for coding agents; start-of-work routine for webmaster/ops agents.
+- #179 framerslab/agentos (Apache-2.0, ~673★, pushed 2026-09-27) — TS agent framework with cognitive memory + runtime tool forging; control-plane pattern vs paperclip (#7)/openrig (#69).
+- #180 chandra447/pi-hermes-memory (MIT, © 2025 Chandra Teja, ~463★, pushed 2026-09-27) — Jev persistent memory/learning-loop pattern; distillation discipline for the learning loop.
+- #181 eat-pray-ai/yutu (Apache-2.0, ~694★, pushed 2026-09-25) — YouTube channel autopilot toolkit; triage vs #23/#90, merged not stacked.
+- #182 kostja94/marketing-skills (MIT, © 2025 kostja94, ~998★, pushed 2026-09-25) — 160+ marketing skills; 4th bulk quarry; influencer-outreach skills are the unique seam (same author as #92).
+- #183 huytieu/COG-second-brain (MIT, © 2025 Huy Tieu, ~1,232★, pushed 2026-09-18) — self-evolving second brain: V-model worker/verifier QC pattern + people-CRM for outreach.
+- #184 wondelai/skills (MIT, © 2025 Wondel.ai, ~2,272★, pushed 2026-09-10) — 50 book-framework skills + 12 guided journeys; 5th bulk quarry; journeys are the new format to evaluate.
+- #185 Lifecycle-Innovations-Limited/claude-ops (MIT, © 2026 Lifecycle Innovations, ~528★, pushed 2026-09-27) — business OS: 57 skills, 21 agents, unified inbox; skill-vs-agent design rules + white-label inbox pattern.
+- #186 educlopez/ui-craft (MIT, © 2026 Eduardo Calvo, ~360★, pushed 2026-09-03) — design-engineering system for AI agents; craft checklist for the webmaster build flow.
+- #187 Affitor/affiliate-skills (MIT, © 2026 Affitor, ~679★, pushed 2026-09-15) — 50 affiliate-marketing skills; seeds the agency's missing affiliate lane.
+- #188 ReScienceLab/opc-skills (Apache-2.0, ~1,827★, pushed 2026-09-27) — agent skills for solopreneurs; 6th bulk quarry; ranked by operator-hours saved.
+- #189 rushindrasinha/youtube-shorts-pipeline (MIT, © 2026 Rushindra Sinha, ~2,302★, pushed 2026-06-09, older/stable) — news→script→visuals→voice→captions→upload pipeline contract; pattern reference, verify before core use.
+
+### Checked, rejected / not registered this round
+- NOASSERTION exclusions: Doriandarko/make-it-heavy, feitangyuan/onetake (prior-round pattern ref, still no license), lemomo-ai/lemo-opuscar, DanFessler/trellis, moguzbulbul/blueprint-animation, davidpc007/openclaw-marketing-skills, demml/opsml, programming-pupil/aos, shreefentsar/remotion-video-toolkit, jasontang-ai/ralph-zero — described, never copied.
+- Vendor coupling: seranking/seo-skills (SE Ranking MCP), aaddrick/building-with-typesafe-jev (TypeSafe AI), breakstageaxe61/genspark-claw (Genspark/OpenClaw-specific) — quarantined per clipmivo precedent.
+- GPL: yohannesgk/blacksmith (GPL-3.0, offsec), jinmanji/jinmanji-app (GPL-3.0) — copyleft, excluded.
+- Lane saturated (covered by registered entries): mysticaltech/marketingskills (fork of #13), OneWave-AI/claude-skills (quarry #6 would be bloat vs #182/#184/#188), dembrandt/dembrandt-skills + MohtashamMurshid/getdesign (design-skill saturation vs #24/#26/#42/#58/#186), growthack88/growth-marketing-os (#13 quarry covers), Houseofmvps/ultraship (dev-ops off-lane), JeffLi1993/seo-audit-skill (again — #111/#115/#136 cover).
+- Chinese-primary pattern refs (describe, never copy): toki-plus/ai-ttv-workflow (MIT, 135★, Douyin/Bilibili-first short-video workflow).
+- Too opaque to vet (null description, single-digit/low substance): Leonxlnx/claude-launchvideo (MIT, 92★, created 2026-09-26, no README/description at scan time) — watch for next run.
+- Stale or low-substance shorts generators: FujiwaraChoki/MoneyPrinter (Mar 2026, thin), Dark2C/Viral-Faceless-Shorts-Generator (null license), Yacineooak/clippy-ai-agent (Aug 2025), Hazy019/youtube-shorts-automation (27★), Chamanrajragu/purffle-shorts (17★) — none beat the registered clipping A/B contenders.
+- Off-lane: AgentSystemLabs/agent-office (cartoon 3D office novelty), ZacharyZhang-NY/OmaPhoto (image editor), jaydendavisnc/inkwave (game), gulelmatthews/Polymarket-Perpetual-Bot (trading), BagasRizkyHarySaputra/MLBB-waydroid (streaming), ScottieFox/caustic-volume, Appllama/liquid-glass-chat-ui (demo curiosities), sciaschi/CBFD-Recompiled (ROM), IBM/AssetOpsBench + Azure-Samples/azure-ai-travel-agents (enterprise samples), kelos-dev/kelos (k8s coding agents), dynamiq-ai/dynamiq, crewAIInc/crewAI, microsoft/agent-framework, kyegomez/swarms, SolaceLabs/solace-agent-mesh, ageerle/ruoyi-ai (enterprise frameworks — conceptually known, no new agency pattern).
+- Marginal learning-loop refs (pattern reference only, not registered): BioInfo/claudelicious (7★), lamenting-hawthorn/SkillLoop (9★), liwala/sheal, chandra447 covered by #180.
+- Registry now at #189. QC: 0 seen-list matches; all 14 LICENSE files read in full; design directive + mentor note per row; no AGPL/GPL contamination.
