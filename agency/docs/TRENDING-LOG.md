@@ -905,3 +905,65 @@ Seen-list checked against `SOURCES.md` (#1–110 + rejections + all prior log no
 - Hao0321/video-autopilot-kit language check: README is 33% CJK by character count but the repo ships README.en.md + SETUP.en.md English mirrors — bilingual like Mck-ppt-design-skill (#108) → qualified with verify-before-core-use caveat, not rejected (huashu/sealeap rejects were Chinese-ONLY corpora).
 - claude-seo ships a dual distribution (public MIT repo vs paid community mirror) — the public repo is what was evaluated; the private mirror is irrelevant to integration.
 - Registry now at #118; rejections table at 39 entries.
+
+## 2026-09-27 21:50 EDT — hourly scan
+
+Sources checked: GitHub search API via `gh-api.py get search/repositories` (authenticated, fresh 30/min budget, 10 queries: recent-created, recent-pushed-stars>100, agent skills claude, social media scheduler self-hosted, short video clipper AI, video caption tool agent, n8n workflow templates marketing, design system agent skills, agent learning loop memory, AI marketing automation — 215 raw hits, 214 unique) + direct repo API for the 8 shortlisted candidates + raw.githubusercontent LICENSE reads (all HTTP 200, main branch) + README reads.
+Seen-list checked against `SOURCES.md` (#1–118 + rejections + all prior log notes) — the 7 qualifiers below are new to the registry (registered as #119–125).
+
+### QUALIFIED (7) — 5× MIT + 2× Apache-2.0, LICENSE files read in full via raw.githubusercontent.com (HTTP 200, main branch, openshorts rule; carve-out grep zero hits in all seven)
+
+1. **obra/superpowers** — https://github.com/obra/superpowers — MIT (LICENSE read in full; © 2025 Jesse Vincent; standard MIT, no carve-outs) — 292,194 stars, 26,150 forks — created 2025-10-09, pushed 2026-09-27.
+   Why: agentic skills framework + complete software-development methodology (spec-first, plan sign-off, red/green TDD, YAGNI, subagent-driven development with per-task review). The agency's first disciplined internal build standard — autonomous subagents stay on-plan instead of drifting; its composable auto-triggering skill structure templates the 17-skill library's expansion.
+
+2. **supermemoryai/company-brain** — https://github.com/supermemoryai/company-brain — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 672 stars, 99 forks — created 2026-09-25, pushed 2026-09-28 (today).
+   Why: a Slack teammate that absorbs a company's decisions/projects/owners, answers from the company's own history, acts in tools via MCP, and speaks up proactively when a conversation needs something it knows. Turns scattered brand knowledge into a teammate that remembers and acts — the learning loop becomes proactive. Verify the Cloudflare Workers self-host deploy before core use.
+
+3. **kwakseongjae/oh-my-design** — https://github.com/kwakseongjae/oh-my-design — MIT (LICENSE read in full; © 2026 oh-my-design; standard MIT, no carve-outs) — 523 stars, 49 forks — created 2026-04-13, pushed 2026-09-26.
+   Why: "a design system your coding agent can actually hold" — declared philosophy → tokens and component contracts → NUMBERED GATES for the failures AI design work repeats (the novel part) → `omd book` to read the system back; 28 skills, 20 specialist roles, 93 preset contracts, 500+ quality-graded references, no API key needed. The agency's first failure-proofed design system for the creative agent. Verify English docs fully before core use (ko/ja/zh-TW mirrors exist).
+
+4. **YuriCrystal/n8n-marketing-flows** — https://github.com/YuriCrystal/n8n-marketing-flows — MIT (LICENSE read in full; © 2026 Yuri (@yuri.learns); standard MIT, no carve-outs) — 178 stars, 51 forks — created 2026-06-26, pushed 2026-06-27.
+   Why: 10 verified import-JSON n8n flows for marketing automation (weekly AI news digest, per-platform hashtag generation, sensitive-word check, PTT sentiment monitoring, topic→multi-platform drafts, AI image/video generation). The agency's first ready-to-import marketing workflow pack for n8n cloud — download JSON → wire brand-owned credentials → activate. Pushed 2026-06-27 (3 months quiet) — verify each flow on the current n8n version before brand use.
+
+5. **elisaterumi-ai/agent-skills-in-practice** — https://github.com/elisaterumi-ai/agent-skills-in-practice — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 133 stars, 33 forks — created 2026-04-27, pushed 2026-05-16.
+   Why: practical guide to building reusable AI skills (skill anatomy, how they trigger, where they live, skill-vs-prompt decision rules, use cases) in English + pt-BR + es. The authoring standard for the agency's 17-skill library — skills stop being one-off prompts and become a real library.
+
+6. **852wa/JIZURA** — https://github.com/852wa/JIZURA — MIT (LICENSE read in full; © 2026 hakoniwa; standard MIT, no carve-outs) — 802 stars, 124 forks — created 2026-09-23, pushed 2026-09-26.
+   Why: lyric-motion auto-composer — 860 composable micro-parts × 27 styles, seed-varied compositions, beat-synced cuts, 9:16/16:9/4:5 outputs, all rendered in-browser, After Effects panel export (ScriptUI + CEP) for pro finishing. The caption pipeline's first true motion-graphics engine — typographic motion for reel hook cards and quote cards. Japanese-primary repo with a full English edition (README.en.md) — bilingual-qualified like video-autopilot-kit (#117), verify before core use.
+
+7. **samyost1/3dicon** — https://github.com/samyost1/3dicon — MIT (LICENSE read in full; © 2026 Sam Yost; standard MIT, no carve-outs) — 487 stars, 43 forks — created 2026-09-23, pushed 2026-09-23.
+   Why: agent skill — one prompt in, looping animated 3D icon out with real transparency (animated WebP, drop-straight-into-UI); installs as a Claude Code plugin; runs on one OpenRouter key. On-demand thumb-stopping animated icons for posts, thumbnails, story stickers, web CTAs — no designer in the loop. Key is agency-owned, costed per batch.
+
+### Evaluated and REJECTED (added to rejections table)
+
+- eracle/OpenOutreach (~3,102 stars, GPL-3.0 per GitHub API license field) — open-source outreach-automation toolkit; copyleft incompatible with white-label. Described, never copied.
+
+### Checked, not qualified / skipped this round
+
+- mattpocock/skills (MIT) — "Skills for Real Engineers," TS/dev coding skills; dev-lane, off-lane for the marketing agency; skills methodology now covered by superpowers (#119).
+- yetone/magpie (MIT) — menu-bar model-switcher/gateway for coding agents (Codex/Claude Code/Gemini CLI/etc.); dev infra, off-lane.
+- deepopen-com/deepopen (Apache-2.0) — System 1 decision-engine for structured decisions; ML infra, Chinese-primary, off-lane.
+- ollaya-dev/ollaya (Apache-2.0) — "run open decision models locally"; ML infra, off-lane.
+- Rizzo-AI-Academy/rizzo-flow (Apache-2.0) — local typed-decision implementation of the Jev idea; ML infra, off-lane.
+- nokia-applied-research/AnyJev (Apache-2.0) — Nokia research Jev implementation; ML infra, off-lane.
+- anishfn/shapeshift (MIT) — morphing-input UI demo; creative-UI, off-lane.
+- fallow-rs/fallow-skills (MIT) — TS/JS codebase-intelligence skills; dev-lane, off-lane.
+- dembrandt/dembrandt-skills (63★ MIT) — UX/design-system skills; in-lane but low traction; the stronger pick in this lane is oh-my-design (#121).
+- asokurasu/text-humanizer (739★ MIT) — AI-text humanizer whose headline feature is bypassing AI detectors; off-mission for the agency.
+- wisdom-pan/claude-code-learning (88★ Apache-2.0) — Claude Code source-code architecture analysis, but Chinese-only corpus — excluded per the huashu/sealeap precedent.
+- dgreenheck/tidewater (824★ MIT) — an island fishing game; off-lane.
+- mexicat/pdoom-video (1,160★ MIT) — one-off generative music-video project (not reusable tooling); off-lane.
+- yukitorido/short-video-generator-AI (724★ MIT) — already in the seen-list (clipper A/B set); no re-evaluation.
+- ritik-prog/n8n-automation-templates-5000 (510★ MIT) — already evaluated in the 20:50 round ("substantive prize," deliberately not registered); no re-evaluation.
+- Off-lane giants from the fresh-repo sweeps (react, linux, tensorflow, vscode, ohmyzsh, freeCodeCamp, yt-dlp, markitdown, awesome-* lists, developer-roadmap, public-apis) — no agency relevance.
+- deepseek-ai/deepseek-harness (MIT), anomalyco/opencode (MIT), openclaw/openclaw (NOASSERTION) — coding-agent harnesses; harness lane covered (paperclip, ruflo, omnigent, metaharness, openrig, sno-station).
+- trypostit/trypost (AGPL-3.0), realchandan/post-scheduler (AGPL-3.0), postmill-ai/postmill-app (AGPL-3.0) — scheduler lane, AGPL; already in the rejections table or skipped.
+- Zero-star / sub-bar n8n template stubs (Utsav699/n8n-enterprise-workflows, jayeshmahawer/n8n-ai-automation-templates, astrodevit-creator/n8n-workflow-templates, antoine-lbo/n8n-automation-templates, jettbrains, etc.) — below the traction bar; YuriCrystal (#122) is the registered n8n marketing pack.
+- All registered repos re-appearing in searches (metaharness #116, ruflo #51, hermes-agent, chandra447/pi-hermes-memory, coreyhaines31/marketingskills #13, Anil-matcha/Free-AI-Social-Media-Scheduler #6, deepakness/cogsend #25, kepano/obsidian-skills, affaan-m/ECC) — no re-evaluation.
+
+### License-policy notes this round
+
+- All 7 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; case-insensitive grep for (agpl|gpl-2|gpl-3|noncommercial|polyform|elastic license|proprietary|commercial license|white.?label|resale|all rights reserved) — zero hits in all seven. Five carry standard ~1,065–1,076-byte MIT text; company-brain and agent-skills-in-practice carry standard ~11.3KB Apache-2.0 boilerplate.
+- obra/superpowers' "Commercial Services" section (sales@primeradiant.com) is a standard commercial-support offering, not a license carve-out — repo LICENSE is clean MIT.
+- JIZURA is the second bilingual-qualified repo (Japanese-primary + full English edition), following the video-autopilot-kit (#117) precedent.
+- Registry now at #125; rejections table at 40 entries.
