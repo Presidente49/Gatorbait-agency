@@ -1,5 +1,45 @@
 # Trending Repo Watch — log (append-only)
 
+## 2026-09-27 16:50 EDT — hourly scan
+
+Sources checked: GitHub search API via curl (URL-encoded qualifiers; unauthenticated, 8s pacing) across 12 lanes (agent skills, ai agent framework orchestration, social media scheduler selfhosted, short video clipper ai, n8n workflow marketing, video caption tool agent, design system agent skill, agent learning loop memory, youtube shorts automation, seo agent skill, new-repo sweep created >2026-09-26 stars >20 as trending fallback, marketing automation agent — 274 results, 271 unique repos) + direct repo API + raw.githubusercontent LICENSE reads.
+Seen-list checked against `SOURCES.md` (#1–87 + rejections) — the 5 qualifiers below are new to the registry (registered as #88–92).
+
+### QUALIFIED (5) — all MIT/Apache-2.0, LICENSE file read in full via raw.githubusercontent.com (openshorts rule; carve-out grep clean in all five)
+
+1. **bestagentkits/motion-video-skill** — https://github.com/bestagentkits/motion-video-skill — MIT (LICENSE read in full; © 2026 BestAgentKits; standard MIT, no carve-outs) — ~87 stars, 29 forks — created+pushed 2026-09-25; ships `.claude-plugin` + `skills/` (npx skills add).
+   Why: agent skill producing beat-synced 1080p/30fps motion-graphic videos — cuts land on music beats, reveals land on spoken words, broadcast-clean audio — the most directed-feeling motion skill in the lane; studio reels motion lane beside bang-motion (#43), hyperframes (#50), ghost-editor (#63).
+
+2. **Changroro/code-video** — https://github.com/Changroro/code-video — MIT (LICENSE read in full; © 2026 Bae-ChangHyun; standard MIT, no carve-outs) — ~41 stars — created 2026-09-23, pushed 2026-09-26.
+   Why: agent skill turning a researched topic into a short video drawn entirely in code (HTML canvas frames → headless Chrome capture → ffmpeg, music/SFX synthesized in code — deterministic re-renders), multiple styles (hand-drawn + 8-bit default); code-drawn motion lane beside procedural-film (#84), hyperframes (#50).
+
+3. **tubeai-app/tubeai-skills** — https://github.com/tubeai-app/tubeai-skills — MIT (LICENSE read in full; © 2026 TubeAI; standard MIT, no carve-outs) — ~39 stars — created 2026-09-24, pushed 2026-09-26.
+   Why: Claude Code plugin for YouTube creators — Remotion animated scenes, per-channel style presets (colors/fonts/logo), local Qwen3-TTS voiceovers + CrisperWhisper transcripts, per-channel project memory; YouTube/video lane beside youtube-automation-agent (#23), video-use (#20). Caveat: optional research hooks the tubeai.app vendor — skills core is MIT.
+
+4. **builtbycyun/journeyman-agents** — https://github.com/builtbycyun/journeyman-agents — Apache-2.0 (LICENSE read in full; standard Apache-2.0, only §4 NOTICE-file boilerplate hits) — 7 stars — created+pushed 2026-08-06 (~7 weeks quiet).
+   Why: eval-gated learning loop — tracing + graph memory + evals, "two lines" to make any agent self-learning; pattern reference for the learning loop beside hermes-agent, hindsight (#8), reef (#52). Low traction and quiet — verify before core use.
+
+5. **kostja94/openblog** — https://github.com/kostja94/openblog — MIT (LICENSE read in full; © 2026 OpenBlog contributors; standard MIT, no carve-outs) — 6 stars — created 2026-08-29, pushed 2026-09-25.
+   Why: agent-native Git-based blog CMS module for product sites — mount /blog, Markdown in Git, Next.js render; webmaster-agent lane for client content hubs (low traction — pattern reference, verify before core use).
+
+### Checked, not qualified / skipped this round
+
+- xjli360/sealeap-ecommerce-skills (21★ MIT, LICENSE read in full — clean MIT, © 2026 SeaLeap) — 170 agent skills for Shopify/Etsy/eBay/TikTok Shop/Walmart/Mercado Libre/OZON — skipped: entire skill corpus is Chinese-language (huashu-report precedent) AND the 26 new OZON skills take MPstats vendor data as mandatory input (vendor coupling); lanes covered. Described, never copied.
+- breakstageaxe61/genspark-claw (106★ MIT) — already evaluated and skipped 11:50 run (generic productivity; lanes covered by claude-plugins-official + genoffice + knowledge-work-plugins); no re-evaluation.
+- farhan-syah/motion-video-skill (29★ MIT) — directed motion-graphics MP4 from a brief; covered by bestagentkits (#88) qualified this round; no double registration.
+- SkylarKitchen/skills (37★ MIT), agentik-os/claude-code-skills (1★ MIT), feimacode/open-design-agent-kit (1★ MIT, noted 14:50) — design lane saturated; skipped.
+- tomascupr/reelql (27★ MIT) — video-link → typed JSON video-understanding skill; marginal, no agency publishing lane fit; skipped. AgriciDaniel/gatekeeper (17★ MIT) — agent/skill router; overlaps hermes-jev-skills (#40); skipped. GreyforgeLabs/slopbrake (11★ MIT) — dev-quality checks; dev tooling, not agency operational; skipped.
+- leter/zh-tech-writing (291★ MIT) — Chinese-language tech-writing skill; language mismatch, huashu precedent; skipped.
+- RankSpotAI/awesome-seo-agent-skills (66★ CC0-1.0) — curated SEO-skill list; CC0 is outside the MIT/Apache-2.0 policy scope (awesome-ai-agent-platforms precedent); skipped.
+- Sub-4★ sweep (seo/shorts/framework/design/n8n/learn lanes, ~120 entries): all 0–3★, mostly NOASSERTION/null — clipper: Aurum-Clipper (4★ null — excluded per policy); shorts: 10× 1★ automation stubs (youtube-shorts-ai-studio, ReelSmith, shorts-autopilot, etc. — covered by youtube-automation-agent #23); n8n: 0–1★ spam/template forks (covered by YuriCrystal #57); seo: 0–3★ skill stubs (covered by open-seo #21 + open-seo-mcp-skills #55); design: thin/niche (ui-craft "other", system-design-compass, astra-frontend null); learn: journeyman qualified above, rest educational/null; scheduler lane: no fresh standalone scheduler with traction (cogsend #25, shoutrrr #22 still cover).
+- New-repo sweep: yihui-dev/awesome-opus5-5-videos (277★ null — already noted 14:50, excluded per policy), xikhar/spiderbench (208★ "other" — already noted 14:50, excluded), Appllama/liquid-glass-chat-ui (66★ MIT — chat-UI exploration, not agency operational), BkashJEE/hermes-agent-archive (32★ MIT — archive, lane covered), JuniorXcoder/hermes-virtual-office (26★ MIT — 3D office novelty, covered/skipped like agent-office 14:50), www222fff/muse2api (24★ MIT — API gateway dev infra), NaiveAI-Labs model (off-lane), cachix/casita (Apache-2.0 — Rust object store, off-lane), Flash-Loan bot (AGPL + off-lane), www222fff + InjectSetConsole + RVG_REFLEX (off-lane/malware-adjacent).
+- GitHub trending daily page remains JS-rendered (no repo entries via text fetch, documented since the 13:50 run); the created>2026-09-26 + stars>20 new-repo sweep serves as the trending fallback. Registered repos re-appearing in searches (golive-skill #39, logo-design-skill #66, hermes-jev-skills #40, etc.) — no re-evaluation.
+
+### License-policy notes this round
+- All 5 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; grep for (agpl|gpl-3|noncommercial|polyform|elastic license|proprietary|commercial license) — zero hits in the four MIT files; journeyman's 3 grep hits are standard Apache §4 NOTICE-file boilerplate, not carve-outs (tin #44 precedent).
+- sealeap-ecommerce-skills shows the other side of the policy: clean MIT license but language-mismatch + vendor-coupled content → described, never copied.
+- Note for future runs: `created:>DATE` qualifiers in GitHub search URLs must be percent-encoded (`%3A%3E`); unencoded `+`/angle brackets return empty results silently.
+
 ## 2026-09-27 15:50 EDT — hourly scan
 
 Sources checked: GitHub search API across 10 lanes (agent skills, AI agent framework, social media scheduler, short video clipper, caption tool video, n8n workflow marketing, design system agent skills, agent learning loop analytics, youtube shorts automation, SEO agent skills — created >2026-08-20, sorted by stars, ~250 repos) + GitHub trending daily (fetched page text; top 7: paperclip, VoiceStudio, ai-engineering-from-scratch, PipePipe, openrig, univer, Madeira — all registered/rejected/off-lane, nothing new).
@@ -645,3 +685,223 @@ Seen-list checked against `SOURCES.md` (#1–80 + rejections) and all prior log 
 ### License-policy notes this round
 - Both qualifiers had LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; carve-out keyword grep (agpl|gpl|noncommercial|polyform|elastic|proprietary|commercial license|all rights reserved) — zero hits in both.
 - Easel's platform limitation (China-only publishers) is a fit note, not a license issue; worth flagging for the integration pass.
+
+## 2026-09-27 17:50 EDT — hourly scan
+
+Sources checked: GitHub search API via curl (URL-encoded qualifiers, unauthenticated, ~5s pacing) across 10 lanes — agent skills, ai agent framework, social media scheduler, short video clipper, youtube shorts automation, video caption tool, n8n workflow marketing, seo agent skill, agent learning loop memory, + new-repo sweep created >2026-09-26 stars >20 (23 repos, trending fallback) — ~340 results triaged.
+Seen-list checked against `SOURCES.md` (#1–92 + rejections + all prior runs today) — the 4 qualifiers below are new to the registry (registered as #93–96).
+
+### QUALIFIED (4) — all MIT, LICENSE file read in full via raw.githubusercontent.com (openshorts rule; standard MIT text, zero carve-out hits)
+
+1. **kitze/skillbox** — https://github.com/kitze/skillbox — MIT (LICENSE read in full; © 2026 Skillbox contributors; standard MIT, no carve-outs) — ~248 stars — created 2026-09-17, pushed 2026-09-19.
+   Why: self-hosted, versioned skills library for AI agents — MCP + scoped clients + optional Jev recommendations; the distribution plane for the agency's skills library (ops-agent lane). Design directive on registry: version every agency skill in skillbox, scope 8 agents as clients, Jev recommendation feeds fleet-efficiency.
+
+2. **ashutoshsinghpr7/wikiskill** — https://github.com/ashutoshsinghpr7/wikiskill — MIT (LICENSE read in full; © 2026 Ashutosh Singh; standard MIT, no carve-outs) — ~251 stars — created 2026-08-29, pushed 2026-09-15.
+   Why: self-evolving agent skills via a persistent knowledge wiki — faithful production implementation of WikiSkill (arXiv:2608.27454, Google Research); agent-agnostic, Hermes is the reference backend, Claude Code/Codex/Copilot CLI ship in the box; learning-loop lane beside hindsight (#8), reef (#52).
+
+3. **techjanitor/botmaker** — https://github.com/techjanitor/botmaker — MIT (LICENSE read in full; © 2026 techjanitor; standard MIT, no carve-outs) — ~282 stars — created 2026-09-01, single commit (quiet since — pattern reference, verify depth before core use).
+   Why: a Hermes Agent skill + SOUL for a bot whose only job is minting other specialist bots — interview → one-screen SOUL draft → human sign-off → scaffold (pinned brain, file-level skill links) → certification → vault documentation; the agency's standard white-label brand-agent minting loop (ops-agent lane).
+
+4. **jasonku09/grill-with-ui** — https://github.com/jasonku09/grill-with-ui — MIT (LICENSE read in full; © 2026 Jason Ku; standard MIT, no carve-outs) — ~209 stars — created 2026-09-16, pushed 2026-09-27.
+   Why: agent-agnostic skill moving a "grilling" design interview off the terminal onto a local browser page — questions as cards with lettered options + highlighted recommendation, answer in any order, defer/reopen, per-question threads, one "Send to Agent" ships everything, agent writes an exhaustive design doc; the agency's standard creative-intake surface for creative/design (+writing) agents.
+
+### Evaluated and REJECTED
+
+- **BarneyD66/clipmivo-tools** (~193 stars) — LICENSE is clean MIT (© 2026 ClipmivoAI contributors, read in full) BUT the entire toolset is vendor-coupled: REST API + CLI + MCP server + skill all call clipmivoai.com/api/v1 on the user's ClipmivoAI API key + account balance — commercial API dependency incompatible with white-label self-host (sealeap / fajrisilmi12 vendor-coupling precedent). Described, never copied.
+
+### Checked, not qualified / skipped this round
+
+- papergraph-mcp (269★ MIT) — math-paper → evidence-grounded reading maps for agents; research niche, off-lane for a marketing agency.
+- threejs-architecture-effects (309★ MIT) — bilingual/Chinese-content architecture-specific 3D skill; language mismatch + niche (huashu precedent).
+- xiaomoBoy/pi-bluebook (290★ MIT) — Chinese-language learning bluebook; language mismatch (huashu precedent).
+- SkylarKitchen/skills (45★ MIT) — design-work skills incl 3D build guides; design lane saturated (#24/#26/#29/#58/#71 + ui-ux-pro-max-skill).
+- hiroqt/PixelCrew (10★ Apache-2.0) — pixel-art multi-agent dashboard novelty; lanes covered by orca/paperclip/ruflo concepts.
+- LetMeHappyCode/auto-video-agent (216★, license null) — excluded per policy (no license file).
+- New-repo sweep (23 repos): all unlicensed/NOASSERTION/off-lane/security-adjacent or already noted/skipped (awesome-opus5-5-videos null, spiderbench NOASSERTION, Animasyon Turkish null, hermes-virtual-office — noted 16:50, skipped; cachix/casita off-lane, liquid-glass-chat-ui off-lane, InjectSetConsole security/malware-adjacent, Flash-Loan-Arbitrage-Bot AGPL + off-lane, muse2api gateway dev-infra, Naive-N0.5-Flash model off-lane).
+- Clipper lane: nothing new with traction (Aurum-Clipper 4★ unlicensed, xclips 1★, dakshityaad 0★) — covered by #27/#33/#45/#46/#47/#48/#49.
+- Shorts-automation lane: all ≤1★ or unlicensed (dozens of youtube-shorts-automation stubs) — covered by youtube-automation-agent (#23).
+- n8n lane: 0–1★ spam/template forks + abandoned-cart MIT 1★ — covered by YuriCrystal/n8n-marketing-flows (#57); Kiiaara/automation-portfolio (0★ MIT, n8n marketing/finance workflows) — below traction bar, lane covered.
+- Caption-tool lane: nothing new with traction (registered edit-ai #87 re-appeared; L4K5HM1/framecut 0★, jahatesu/ai-video-tool 0★, hyperremoedit-toolkit 0★ MIT — below bar; lane covered by capite #3, video-use #20).
+- SEO-skill lane: jahidulislamseo/antigravity-ai-skills (4★ MIT, 127 skills), agentik-os/claude-code-skills (1★ MIT, 223 skills), RouterGrowth/skills (2★ MIT, GTM workflows), matt-j-penny/ai-video-marketing (2★ MIT), kid7st/agenticseo (2★) — below traction bar; covered by open-seo (#21) + open-seo-mcp-skills (#55).
+- Learning-loop lane: all 0–1★ educational stubs — covered by hermes-agent, hindsight (#8), reef (#52).
+- Agent-framework lane: Tongyi-MAI/Qwen-Planner-Agent (89★, license null — excluded), phpclaw-php/phpclaw-monorepo (11★ MIT, dev tooling), all else dev/infra/security/CC-lists already skipped.
+- Scheduler lane: mountainview German starter (27★ null), hookpost (1★ AGPL-3.0 — excluded), social0-oss (3★ AGPL-3.0 — excluded); cogsend (#25) still covers.
+
+### License-policy notes this round
+- All 4 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full — standard MIT grants, zero hits for (agpl|gpl|noncommercial|polyform|elastic|proprietary|commercial license) in all four.
+- clipmivo-tools demonstrates the second-order check: clean MIT text ≠ integrable when the software is a commercial-API wrapper (vendor coupling) — same as sealeap and fajrisilmi12 precedents.
+
+## 2026-09-27 18:50 EDT — hourly scan
+
+Sources checked: GitHub search API via curl (unauthenticated, 8s pacing) across 11 lanes (agent skills, ai agent framework orchestration, social media scheduler selfhosted, short video clipper ai, n8n workflow marketing, video caption tool agent, design system agent skill, agent learning loop memory, youtube shorts automation, seo agent skill, new-repo sweep created >2026-09-26 stars >20 — 85 results, 84 unique repos) + direct repo API for the 6 shortlisted candidates + raw.githubusercontent LICENSE reads.
+Seen-list checked against `SOURCES.md` (#1–96 + rejections + all prior log notes) — the 6 qualifiers below are new to the registry (registered as #97–102).
+
+### QUALIFIED (6) — 5× MIT + 1× Apache-2.0, LICENSE files read in full via raw.githubusercontent.com (HTTP 200, openshorts rule; carve-out grep zero hits in all six)
+
+1. **Jakeschincariol/youtube-agent-skill** — https://github.com/Jakeschincariol/youtube-agent-skill — MIT (LICENSE read in full; © 2026 Jake Schincariol; standard MIT, no carve-outs) — 173 stars, 30 forks — created+pushed 2026-09-16.
+   Why: 11 Claude skills running a YouTube channel — scripts off 21 hook formulas with a scored hook, title + thumbnail linted as one pairing, an edit decision list from transcript, a retention reader finding where viewers leave, a Shorts cutter, a virality engine; same author as linkedin-agent-skill (#41).
+
+2. **jtydhr88/music-composition-skills** — https://github.com/jtydhr88/music-composition-skills — MIT (LICENSE read in full; © 2026 Terry Jia; standard MIT, no carve-outs) — 133 stars, 17 forks — created 2026-09-17, pushed 2026-09-22.
+   Why: professional agent skills for composing and arranging popular music — a NEW original-music audio lane: original jingles/hype beds/brand audio signatures with zero licensed-music risk for client reels; same author as screenwriting-skills (#38).
+
+3. **jtydhr88/lyric-writing-skills** — https://github.com/jtydhr88/lyric-writing-skills — MIT (LICENSE read in full; © 2026 Terry Jia; standard MIT, no carve-outs) — 93 stars, 13 forks — created 2026-09-17, pushed 2026-09-22.
+   Why: professional agent skills for writing song lyrics — the words half of the original-music lane, pairs with #98 (lyrics → composition pipeline).
+
+4. **iamyoki/qwen-image-2.1-skill** — https://github.com/iamyoki/qwen-image-2.1-skill — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 115 stars, 6 forks — created 2026-09-21, pushed 2026-09-22.
+   Why: agentic skill rewriting/optimizing text-to-image and multi-image-editing prompts using official Alibaba specs — prompt-optimization pre-step for all AI image generation in the studio (reproducible per-brand style guides).
+
+5. **jiemianduan/poster-style-transfer** — https://github.com/jiemianduan/poster-style-transfer — MIT (LICENSE read in full; © 2026 jiemianduan; standard MIT, no carve-outs) — 48 stars, 4 forks — created+pushed 2026-08-07 (quiet, stable content).
+   Why: open agent skill extracting a poster's design system and transferring it to original poster concepts — reference-style engine for the creative/design static lane, with an originality checklist (system, not pixels). Low traction — pattern reference, verify before core use.
+
+6. **Turki-Sh/Foreman** — https://github.com/Turki-Sh/Foreman — MIT (LICENSE read in full; © 2026 Turki Alshuaibi; standard MIT, no carve-outs) — 28 stars, 2 forks — created 2026-08-10, pushed 2026-08-25 (quiet, markdown-only).
+   Why: build playbook turning a coding agent into the foreman of a website build — interview → locked design/scope → build brief → verify/ship/index (Claude Code plugin + Agent Skill, markdown only) — the webmaster agent's standard intake→ship loop. Low traction — pattern reference, verify before core use.
+
+### Evaluated and REJECTED (added to rejections table)
+
+- yaojingang/GEOHub (~161 stars, AGPL-3.0) — evidence-bounded GEO/SEO agent skills for AI Search; AGPL network copyleft incompatible with white-label. Described, never copied.
+- JoinArtisanVent/x-scraper-no-api (~116 stars, GPL-3.0) — self-hosted X scraper via own browser session; copyleft incompatible. Described, never copied.
+- Dicklesworthstone/skillranker (~123 stars, license "other"/NOASSERTION) — Jev skill-ranking CLI; no verified permissive license, excluded per policy.
+- zhuyansen/awesome-claude-video-skills (~35 stars, "other") — curated video-skill list; not software + unlicensed, excluded.
+- mirage-hq/Tesseract (~88 stars, license null) — video CLI + agent skills; unlicensed, excluded per policy.
+
+### Checked, not qualified / skipped this round
+
+- lhlGitHub/threejs-architecture-effects (310★ MIT) — Three.js 3D architecture skill, Chinese-language content; language mismatch (zh-tech-writing precedent); skipped.
+- yasinozmeen/animasyon-stil-katalogu (93★ null) — unlicensed Turkish animation-style catalog; excluded per policy.
+- RankSpotAI/awesome-seo-agent-skills (66★ CC0-1.0) — curated SEO-skill list; CC0 outside MIT/Apache policy scope (noted 16:50, skipped).
+- wdobry/laya-playground (166★ MIT) — Laya decision-model playground/benchmark; model-eval tooling, off-lane; skipped.
+- breakstageaxe61/genspark-claw (106★ MIT) — already evaluated and skipped 16:50 run (generic productivity); no re-evaluation.
+- kishormorol/cli-faq-shortcuts (110★ Apache-2.0) — CLI shortcut miner from agent history; dev tooling, not agency operational; skipped.
+- egma-ai/jev-code-reviewer (84★ MIT), ScriptedAlchemy/pstack-codex (62★ MIT), aaddrick/building-with-typesafe-jev (82★ MIT), tihanyin/REx-skill (96★ MIT), Mayuqi-crypto/everything-search-skill (68★ MIT), majidmanzarpour/blender-game-skills (93★ MIT) — dev/coding/security/game tooling, not agency operational; skipped.
+- SkylarKitchen/skills (47★ MIT, pushed 2026-09-27) — already noted and skipped 16:50 run (design lane saturated); no re-evaluation.
+- Appllama/liquid-glass-chat-ui (79★ MIT), JuniorXcoder/hermes-virtual-office (27★ MIT), MaximeRivest/tiny-classifiers (38★ MIT), sauravgoel/autosreguard (30★ MIT), seialmonodkw/Flash-Loan-Arbitrage-Bot (AGPL + off-lane) — chat-UI exploration / 3D office novelty / ML dev infra / empty description / MEV bot; off-lane or already noted; skipped.
+- All registered repos re-appearing in searches (golive-skill #39, hermes-jev-skills #40, jev-skill #83, grill-with-ui #96, logo-design-skill #66, seo-landing #62, marketing-mindset #86, sno-station #76, skillbox #93, procedural-film #84, motion-video-skill #88, no-slop-motion #67, ux-skills #26, scroll-craft #58, video-talkcraft (rejected), QingYunA/agent-html (rejected), Oldcircle/geo-sleuth (noted 15:50), feitangyuan/onetake (unlicensed, noted), tigerless-labs/seo-ops (unlicensed, noted), leter/zh-tech-writing (skipped 16:50)) — no re-evaluation.
+- n8n marketing lane: no fresh repos with traction in this sweep; still covered by YuriCrystal/n8n-marketing-flows (#57). Social scheduler lane: nothing new; covered by cogsend (#25), shoutrrr (#22), Free-AI-Social-Media-Scheduler (#6). Clipper lane: no new MIT entries this round; still the autoclip/yukitorido/verticlip/laya-clipper/jevcut/Youtube-Shorts-Generator/NaufalRizqullah A/B set.
+
+### License-policy notes this round
+- All 6 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; case-insensitive grep for (agpl|gpl-3|noncommercial|polyform|elastic license|proprietary|commercial license) — zero hits in all six. Five carry standard MIT copyright headers (Schincariol, Terry Jia ×2, jiemianduan, Alshuaibi); qwen-image-2.1-skill carries standard Apache-2.0 boilerplate.
+- This round's new audio lane (music-composition + lyric-writing skills) is a first for the registry — worth noting for the learning-loop: it closes the licensed-music risk gap for client reels.
+
+## 2026-09-27 19:50 EDT — hourly scan
+
+Sources checked: GitHub trending daily (page read — all relevant entries already registered: paperclip #7, univer #9, openrig #69; VoiceStudio rejected-AGPL re-appearing) + GitHub search API via curl (unauthenticated, ~8-9s pacing) across 7 lanes (claude agent skill, social media scheduler self-hosted, ai short video clipper shorts, n8n workflow marketing automation, ai video caption tool, design system agent skill, marketing agent orchestration framework — ~54 results) + direct repo API for the 7 shortlisted candidates + raw.githubusercontent LICENSE reads (all HTTP 200, main branch).
+Seen-list checked against `SOURCES.md` (#1–102 + rejections + all prior log notes, incl. the 18:50 run's #97–102) — the 8 qualifiers below are new to the registry (registered as #103–110).
+
+### QUALIFIED (8) — 7× MIT + 1× Apache-2.0, LICENSE files read in full (openshorts rule; carve-out grep zero hits in all eight)
+
+1. **mvanhorn/last30days-skill** — https://github.com/mvanhorn/last30days-skill — MIT (© 2026 Matt Van Horn) — 63,019 stars, 5,484 forks — pushed 2026-09-27.
+   Why: cross-platform trend-research skill (Reddit, X, YouTube, HN, Polymarket, web → grounded summary) — the research agent's always-on trend radar; NEW lane for the agency.
+2. **Leonxlnx/taste-skill** — https://github.com/Leonxlnx/taste-skill — MIT (© 2026 Leonxlnx) — 90,637 stars, 6,168 forks — pushed 2026-09-26.
+   Why: anti-slop taste layer — becomes the mandatory pre-ship taste gate ("good" definition) every other design skill gets judged against; two biggest-star qualifiers this scan.
+3. **Owl-Listener/designer-skills** — https://github.com/Owl-Listener/designer-skills — MIT (© 2026 MC Dean) — 2,783 stars — pushed 2026-09-05.
+   Why: agentic design skill collection from research → systems → UI → interaction → delivery; the creative/design agent's end-to-end workflow backbone.
+4. **plugin87/ux-ui-agent-skills** — https://github.com/plugin87/ux-ui-agent-skills — MIT (© 2026 Thientan Soparat) — 1,479 stars — pushed 2026-09-16.
+   Why: senior design-architect skills with DTCG tokens + WCAG 2.2 AA-AAA — the tokens+accessibility lane none of the existing design entries own.
+5. **Railly/tinte** — https://github.com/Railly/tinte — MIT (© 2023-present Railly Hugo) — 621 stars — pushed 2026-08-08.
+   Why: compile a design system into an Agent Plugin — extract identity from any reference → SKILL.md + tokens.css; the brand-identity extraction pipeline (brand DNA) for new client onboarding.
+6. **likaku/Mck-ppt-design-skill** — https://github.com/likaku/Mck-ppt-design-skill — Apache-2.0 — 289 stars — pushed 2026-05-10.
+   Why: consulting-style PPT design system (70 layout patterns, python-pptx) — fills the DECK lane gap left by dashi-ppt-skill's AGPL rejection. Quiet repo, bilingual; verify content depth before core use.
+7. **ritik-prog/n8n-automation-templates-5000** — https://github.com/ritik-prog/n8n-automation-templates-5000 — MIT (© 2025 ritik-prog) — 510 stars — pushed 2026-07-10.
+   Why: 5,000+ production-ready n8n workflow templates (AI/CRM/finance/e-com/marketing/RAG) — the deep catalog beside #57's curated 79-template starter set.
+8. **cbsshekhawat18-lab/social-stats-social-media-manager** — https://github.com/cbsshekhawat18-lab/social-stats-social-media-manager — MIT (© 2026 Chandrabhan Shekhawat — Gigai Kripa Services) — 10 stars — pushed 2026-09-20.
+   Why: RETRO-REGISTRATION — qualified in the 01:50 run but lost before registration; self-hostable Django+React social management platform, client-dashboard candidate beside #6/#22/#25. Low traction; pattern reference.
+
+### Evaluated and REJECTED (added to rejections table)
+
+- brightbeanxyz/brightbean-studio (~2,382 stars, AGPL-3.0) — self-hostable social management platform; AGPL network copyleft incompatible with white-label.
+- trypostit/trypost (~656 stars, AGPL-3.0) — social media scheduling; AGPL incompatible.
+- WEIFENG2333/VideoCaptioner (~16,115 stars, GPL-3.0) — LLM subtitle tool; copyleft incompatible despite huge traction.
+- debarch777/AI-Video-Editor (~33 stars, license null) — AI talking-head editor; unlicensed, excluded.
+- ADITYATALEKAR/AI-Video-Editor-and-Clipper-with-Auto-Captions (~11 stars, license null) — clipper; unlicensed, excluded.
+- costaruitiago/open-clip (~4 stars, NOASSERTION) — automated clipper; unlicensed, excluded.
+- JuliusBrussee/caveman (~108k stars, NOASSERTION) — viral coding-agent skill; unlicensed despite traction, excluded per policy.
+- hesreallyhim/awesome-claude-code (~54.7k stars, NOASSERTION) — curated list, not software + unlicensed, excluded.
+- carmahhawwari/ui-design-brain (~892 stars, license null) — UI design skill; unlicensed, excluded.
+
+### Checked, not qualified / skipped this round
+
+- Design lane saturation calls: educlopez/ui-craft (359★ MIT), kwakseongjae/oh-my-design (523★ MIT) — component/design-engineering lanes already covered by #24/#26/#29/#42/#58/#66/#70/#71/#100/#101/#104–107.
+- Awaisali36/FaceBook-Ad-Manager-System (26★ MIT, 2025) — AI FB-ad generator; stale, ad-creative lane covered by brewreel (#68).
+- ShadowSlayer03/Post4U-Schedule-Social-Media-Posts (124★ MIT, X-only, pushed 2026-03-28) — stale; scheduler lane covered by #6/#22/#25.
+- shreesha345/AI-short-creator (185★ MIT, pushed 2025-06-01) — stale; clipping lane saturated (#27/#33/#45/#46/#47/#48/#49).
+- kirat11X/video--clipper-vizard-AI-replica (18★ MIT, pushed 2025-12-30) — stale, low traction; same lane.
+- felipfr/awesome-n8n-workflows (411★ MIT) — curated list, not software; ritik-prog's 5,000 real templates is the substantive prize.
+- kepano/obsidian-skills (48,947★ MIT) — personal knowledge-base skills; off-lane for a marketing agency.
+- affaan-m/ECC (268k★ MIT) — agent-harness performance optimization; dev infra, skipped (02:50 precedent).
+- calesthio/OpenMontage — already rejected (AGPL). rohitg00/ai-engineering-from-scratch — educational, off-lane.
+- coreyhaines31/marketingskills (#13), Anil-matcha/Free-AI-Social-Media-Scheduler (#6), deepakness/cogsend (#25) re-appearing in searches — no re-evaluation.
+- Marketing orchestration lane: all 0–1★ stubs (MarketMuse, crowdwisdom-marketing-agents, etc.) — below bar; covered by tin-computer/tin (#44), marketing-as-code (#64).
+- Clipper lane: nothing new with traction — the autoclip/yukitorido/verticlip/laya-clipper/jevcut/Youtube-Shorts-Generator/opensource-clipping A/B set stands.
+- Caption lane: nothing new with traction — covered by capite (#3), video-use (#20), edit-ai (#87).
+
+### License-policy notes this round
+
+- All 8 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; case-insensitive grep for (agpl|gpl|noncommercial|polyform|elastic|proprietary|commercial license|white.?label|resale|api_?key|account balance) — zero hits in all eight. Seven carry standard ~1,070-byte MIT text; Mck-ppt-design-skill carries standard 11,358-byte Apache-2.0 boilerplate ("Redistribution" hit is standard Apache grant vocabulary, not a carve-out).
+- Design lane now owns taste (#104), workflow (#105), standards (#106), brand-DNA extraction (#107) — plus the earlier component/UI feeds; this is the agency's first full design stack.
+- Registry now at #110; rejections table at 28 entries.
+
+## 2026-09-27 20:50 EDT — hourly scan
+
+Sources checked: GitHub search API via curl (unauthenticated, 9s pacing) across 11 lanes (agent skills, ai agent framework orchestration, social media scheduler selfhosted, short video clipper ai, n8n workflow marketing, video caption tool agent, design system agent skill, agent learning loop memory, youtube shorts automation, seo agent skill, new-repo sweep created >2026-09-26 stars >20 — 285 results, ~285 triaged) + direct repo API for the 8 shortlisted candidates + raw.githubusercontent LICENSE reads (all HTTP 200, main branch) + README reads.
+Seen-list checked against `SOURCES.md` (#1–110 + rejections + all prior log notes) — the 8 qualifiers below are new to the registry (registered as #111–118).
+
+### QUALIFIED (8) — 6× MIT + 2× Apache-2.0, LICENSE files read in full via raw.githubusercontent.com (HTTP 200, openshorts rule; carve-out grep zero hits in all eight)
+
+1. **AgriciDaniel/claude-seo** — https://github.com/AgriciDaniel/claude-seo — MIT (LICENSE read in full; © 2026 agricidaniel; standard MIT, no carve-outs) — 17,806 stars, 2,612 forks — created 2026-02-07, pushed 2026-09-23.
+   Why: universal SEO skill for Claude Code — 26 sub-skills + 19 specialist agents (technical SEO, E-E-A-T, Schema.org, GEO/AI-search, local, e-commerce, international); AI-search-first (question-based citability scoring, llms.txt, IPTC TrainedAlgorithmicMedia, /seo agentic readiness); parallel agents fan out so a site audit completes in minutes; every recommendation falsifiable (first-principle observation + "how would we know this failed?" check + leading indicator). The agency's SEO audit standard for the SEO agent.
+
+2. **elvisun/newsjack** — https://github.com/elvisun/newsjack — MIT (LICENSE read in full; © 2026 Elvis Sun; standard MIT, no carve-outs) — 1,447 stars, 140 forks — created 2026-05-19, pushed 2026-09-19.
+   Why: open-source skills turning an agent into a full PR team — detect lane (monitor setup, opportunity detector, news search, story-origin check, triage, coverage tracker) + act lane (angle generator, headline generator, meanest-editor rubric roast). A NEW PR lane for the agency — outreach agent's per-brand newsjacking loop; the meanest-editor rubric becomes the pitch QA gate.
+
+3. **omnigent-ai/omnigent** — https://github.com/omnigent-ai/omnigent — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 10,300 stars, 1,635 forks — created 2026-06-11, pushed 2026-09-28 (today).
+   Why: open-source meta-harness over Claude Code, Codex, Cursor, OpenCode, Hermes, Pi + custom YAML agents — supervise multiple agents in one session with cross-agent review, policy enforcement + sandboxing, sessions that follow the user (terminal→browser→phone→desktop app), cloud sandboxes. The phone-follow session model maps directly onto Brenden monitoring from his phone. Ops control-plane pattern beside openrig (#69), sno-station (#76), ruflo (#51). Status alpha — pattern reference, verify before core use.
+
+4. **sipyourdrink-ltd/bernstein** — https://github.com/sipyourdrink-ltd/bernstein — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 1,299 stars, 175 forks — created 2026-03-22, pushed 2026-09-27 (today).
+   Why: open-source governance layer — policy-as-code (who may do what, what needs approval, what must be recorded), deterministic scheduler with no model in the coordination loop, gated parallel agent runs, verifiable records (offline verification from artifacts alone), air-gap install. The enforcement backbone pattern for the ops agent's fleet-run contract + per-brand governance policies. Beta, solo-maintained — pattern reference, verify before core use.
+
+5. **iannuttall/seo** — https://github.com/iannuttall/seo — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 540 stars, 43 forks — created 2026-07-10, pushed 2026-09-27 (today).
+   Why: 70+ SEO audit tools through a local CLI + MCP server using the agency's OWN crawl, Search Console, and traffic analytics — no third-party data vendors. The local execution instrument beside claude-seo's (#111) skill/specialist-agent methodology; the always-on scheduled-audit tool for the SEO agent.
+
+6. **ruvnet/metaharness** — https://github.com/ruvnet/metaharness — MIT (LICENSE read in full; © 2026 RuvNet; standard MIT, no carve-outs) — 677 stars, 86 forks — created 2026-06-13, pushed 2026-09-27 (today).
+   Why: not another agent framework — a factory. `npx metaharness` mints a custom AI agent harness for any repo (repo-aware CLI, coding agent, local MCP server, scoped memory, skills generated from file layout, governance policy, release verification, witness-signed provenance) as an npm-publishable .zip with your own branding. Same author as ruflo (#51); 2,254 tests passing. This is how the agency "duplicates the system" for new verticals — the white-label harness factory feeding botmaker's (#95) minting loop.
+
+7. **Hao0321/video-autopilot-kit** — https://github.com/Hao0321/video-autopilot-kit — MIT (LICENSE read in full; © 2026 Hao0321 Studio; standard MIT, no carve-outs) — 2,150 stars, 349 forks — created 2026-06-01, pushed 2026-09-27 (today).
+   Why: framework-style YouTube/short-form automation + methodology — Editkin v4 editor contract (evidence → plan → audit → atomic apply → render) with the audit gate blocking bad cuts BEFORE render, 38-filter library + design-DNA system, quality-95 review gate, publish pack + performance learning loop; self-contained demos run with no real footage. Bilingual repo (Traditional Chinese README + README.en.md English mirror) — pattern reference until the English docs are fully reviewed, verify before core use.
+
+8. **AgriciDaniel/claude-blog** — https://github.com/AgriciDaniel/claude-blog — MIT (LICENSE read in full; © 2025-2026 AgriciDaniel; standard MIT, no carve-outs) — 2,273 stars, 388 forks — created 2026-02-17, pushed 2026-09-25.
+   Why: blog-writing + SEO skill suite (32 skill dirs, 30 commands) with a 5-gate Blog Delivery Contract — every draft scored on a 100-point rubric, delivery BLOCKED below 90, artifacts/links verified, up to 3 iterate-then-escalate rounds; "the user is never the first reviewer." The writing agent's publish gate for all long-form content, pairing with claude-seo's (#111) GEO checks. 250+ tests passing.
+
+### Evaluated and REJECTED (added to rejections table)
+
+- humanlayer/12-factor-agents (~26.4k stars, NOASSERTION) — unlicensed, excluded per policy despite traction.
+- LeoYeAI/openclaw-marketing-skills (~1k stars, NOASSERTION, "Powered by MyClaw.ai" vendor-adjacent) — unlicensed, excluded.
+- AgriciDaniel/codex-seo (~758 stars, NOASSERTION) — Codex-first port of claude-seo; unlicensed, excluded.
+- get-zeked/perplexity-super-skills (~359 stars, license null), yihui-dev/awesome-opus5-5-videos (~316 stars, null — curated list, not software), DuxSec/videoGenerator (~290 stars, null), joeseesun/opus-video-prompts (58 stars, null, Chinese) — unlicensed, excluded.
+- StevensND/nfsmw-nx (GPL-3.0), linuxkid473/ppcosxkvm (GPL-2.0), OverkillLabs/DeadCells-PS5-Native (GPL-2.0) — copyleft + off-lane, excluded.
+
+### Checked, not qualified / skipped this round
+
+- nowork-studio/notfair-plugin (3,872★ MIT) — SEO/GEO marketing skills for agents; lanes covered by claude-seo (#111) + iannuttall/seo (#115); skipped, may revisit if GEO tooling gaps appear.
+- wondelai/skills (2,273★ MIT) — business/marketing/UX frameworks from bestselling books; lane covered by coreyhaines31/marketingskills (#13) + social-media-skills/skills; skipped.
+- kostja94/marketing-skills (997★ MIT, same author as openblog #92) — 160+ marketing skills; marginal vs #13/#111; skipped (may fold into #92's lane).
+- OpenClaudia/openclaudia-skills (700★ MIT) — 77 marketing skills; lanes covered by #13 + claude-plugins-official (#56); skipped.
+- Lifecycle-Innovations-Limited/claude-ops (528★ MIT) — business OS (57 skills, 21 agents); overlaps headcount (#36); skipped.
+- gtmagents/gtm-agents (411★ Apache-2.0) — GTM agents for sales/marketing/customer-success; marginal vs #41 (linkedin) + tin (#44); skipped.
+- rushindrasinha/youtube-shorts-pipeline (2,302★ MIT) — automated Shorts pipeline but stale (pushed 2026-06-09, ~3.5 months quiet); lane covered by #23/#90/#117; skipped.
+- chandra447/pi-hermes-memory (463★ MIT) — Hermes-style memory for Pi coding agent; learning-loop lane covered by hindsight (#8), reef (#52), hermes-agent; skipped.
+- ReScienceLab/opc-skills (1,827★ Apache-2.0) — solopreneur skills; generic, lanes covered; skipped.
+- appeeky/aso-skills (2,107★ MIT) — app-store-optimization niche; off-lane for white-label marketing (store-screenshots precedent); skipped.
+- crewAIInc/crewAI (59.1k★ MIT), deepset-ai/haystack (26.6k★ Apache-2.0), omnigent above, kyegomez/swarms, SolaceLabs/solace-agent-mesh, dynamiq-ai/dynamiq, framerslab/agentos, microsoft/agent-framework(+go), ageerle/ruoyi-ai, Kocoro-lab/Shannon, IBM/AssetOpsBench, Azure-Samples/azure-ai-travel-agents — generic/enterprise agent frameworks; harness lane well covered (paperclip, ruflo, deer-flow, orca, hermes-agent, openrig, sno-station); skipped.
+- ufo-ai/ufo-core (30★ Apache-2.0, created today) — "Business agent operating system"; too generic, no traction; skipped.
+- RayVentura/ShortGPT (7.9k★ MIT), FujiwaraChoki/MoneyPrinter (14k★ MIT) — stale (pushed 2025-02); video-automation lane covered; skipped.
+- jipraks/yt-short-clipper (1k★ MIT) — Windows-only desktop clipper; clipper lane saturated with stronger clean-MIT options (#27/#33/#45/#46/#47/#48/#49); skipped.
+- nicepkg/ai-workflow (283★ MIT), OneWave-AI/claude-skills (309★ MIT), Affitor/affiliate-skills (679★ MIT, affiliate niche), neat-pray-ai/yutu (692★ Apache-2.0, YouTube) — generic/niche; lanes covered; skipped.
+- New-sweep fresh entries (created 2026-09-27): joeseesun/opus-video-prompts (null — rejected above), moguzbulbul/blueprint-animation (NOASSERTION — excluded), zhameersheraz/ph-stocks (null — excluded), itznao/mida (NOASSERTION, Destiny 2 multitool — off-lane), Adversarial-Detection-Engineering/adeskills (null — security, off-lane), brainbrick-trades/The-Quant-Trading-Vault (null — off-lane), Ephemera1117/ai-daily-rules-tutorial (null, Chinese — off-lane); Y0oshi/lain-psx-decompiled (MIT — game decompilation, off-lane); ProjectClash/Clash-Client, OverkillLabs, ppcosx (above).
+- All registered repos re-appearing (claude-plugins-official #56, open-seo #21, openrig #69, univer #9, paperclip #7, crewAI-adjacent noise) — no re-evaluation.
+
+### License-policy notes this round
+
+- All 8 qualifiers' LICENSE files fetched from raw.githubusercontent (main branch, HTTP 200) and read in full; case-insensitive grep for (agpl|gpl-3|gpl-2|noncommercial|polyform|elastic license|proprietary|commercial license|white.?label|resale|all rights reserved) — zero hits in all eight. Six carry standard ~1,069–1,080-byte MIT text; omnigent and bernstein carry standard ~10–11KB Apache-2.0 boilerplate.
+- Hao0321/video-autopilot-kit language check: README is 33% CJK by character count but the repo ships README.en.md + SETUP.en.md English mirrors — bilingual like Mck-ppt-design-skill (#108) → qualified with verify-before-core-use caveat, not rejected (huashu/sealeap rejects were Chinese-ONLY corpora).
+- claude-seo ships a dual distribution (public MIT repo vs paid community mirror) — the public repo is what was evaluated; the private mirror is irrelevant to integration.
+- Registry now at #118; rejections table at 39 entries.
