@@ -1112,3 +1112,14 @@ Registry now stands at #123. Genuine new qualifiers this round: 5 — obra/super
 - Rejections: chatwoot/chatwoot (ee/ carve-out), lobehub/lobe-chat (NOASSERTION), n4ze3m/dialoqbase (archived), MintplexLabs/anything-llm (404, unverifiable).
 - Wix embed: widget deploys on agency infra, embeds via standard Embed/iframe element; RAG backend never touches Wix.
 - Registry now at #167. QC: 0 seen-list matches; all 6 LICENSE files read in full; directive + mentor note per row.
+
+## 2026-09-28 — Motion-design micro-hunt: 5 winners registered (#157–161)
+- Owner's complaint: sites are static — no motion, no moving backgrounds, nothing amazing. Dispatched dedicated motion hunt.
+- #157 darkroomengineering/lenis (MIT) — buttery smooth scroll; the agency's standard scroll layer.
+- #158 magicuidesign/magicui (MIT) — copy-paste animated components; agency motion kit (hero, ticker, shimmer CTA, text reveal).
+- #159 tsparticles/tsparticles (MIT) — living backgrounds; "Swamp Night" + "Gameday" branded presets.
+- #160 swup/swup (MIT) — cinematic page transitions; one signature navy wipe, sub-600ms.
+- #161 shuding/cobe (MIT) — 5KB WebGL hero moment; the "one wow" rule in code.
+- Rejections: greensock/GSAP (custom no-charge license, not MIT/Apache — but free via CDN, use with ScrollTrigger as non-repo rec), greensock/gsap-skills (reference only), theatre-js/theatre (stale 2024), tengbao/vanta (stale 2024; tsParticles covers the lane).
+- Pairs with #58 scroll-craft (patterns) — these five are the libraries the patterns run on. Non-repo: GSAP via CDN.
+- Registry now at #161. QC: 0 seen-list matches; all 5 LICENSE files read in full; directive + mentor note per row.
