@@ -7,7 +7,7 @@ and never stop making it better.
 
 ## 🧰 TOOL REGISTRY — START HERE
 
-**`agency/docs/SOURCES.md` is the tool catalog: 167 open-source tools (MIT/Apache-2.0 only), each with a design directive (owning agent, build spec, acceptance criteria) and a mentor note.** Newest additions: #150–156 (Wix DB connector, Ghost newsletter, Octokit push, YouTube client, MediaMTX multistream, video.js player, LangGraph orchestration), #157–161 (motion-design arsenal: Lenis smooth scroll, Magic UI components, tsParticles backgrounds, Swup page transitions, Cobe WebGL heroes), #162–167 (Gator GBT chatbot stack: Vercel AI SDK, assistant-ui widget, LlamaIndex ingestion, Haystack RAG, Qdrant vectors, LibreChat v0).
+**`agency/docs/SOURCES.md` is the tool catalog: 175 open-source tools (MIT/Apache-2.0 only), each with a design directive (owning agent, build spec, acceptance criteria) and a mentor note.** Newest additions: #150–156 (Wix DB connector, Ghost newsletter, Octokit push, YouTube client, MediaMTX multistream, video.js player, LangGraph orchestration), #157–161 (motion-design arsenal: Lenis smooth scroll, Magic UI components, tsParticles backgrounds, Swup page transitions, Cobe WebGL heroes), #162–167 (Gator GBT chatbot stack: Vercel AI SDK, assistant-ui widget, LlamaIndex ingestion, Haystack RAG, Qdrant vectors, LibreChat v0), #168–175 (Instagram channel skills, Google Maps local intel, SkillCorpus skill QA, SVG diagram lane, clarity copy gate, Amazon merch playbook, eval-driven skill design, marketing skills quarry).
 
 Companion reading: `agency/ops/MENTOR-NOTES-2026-09-28.md` (teaching notes, non-repo recommendations, rejections worth learning from) and `agency/ops/DESIGN-PHILOSOPHY.md` (the design standard: be new and different, no static pages — motion is mandatory).
 
@@ -77,7 +77,7 @@ Every brand gets its own `learnings.md`.
 Every workflow appends lessons to the brand's learnings.md and, when
 transferable, to shared/learnings.md — so every future brand inherits
 every past win. SOURCES.md registers every borrowed idea with repo,
-URL, license, design directive, and mentor note. 167 sources and counting (2026-09-28).
+URL, license, design directive, and mentor note. 175 sources and counting (2026-09-28).
 
 ## How it all works together
 
