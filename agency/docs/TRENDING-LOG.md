@@ -1337,3 +1337,54 @@ The 2026-09-26 23:50 run QUALIFIED these seven but they never landed in SOURCES.
 - VoiceStudio shows the openshorts rule working in reverse: 41k★ + trending daily, but the LICENSE file is 34KB of AGPL-3.0 — read in full, rejected on license alone.
 - onetake's PolyForm Noncommercial ("Required Notice: Copyright (c) 2026 Patrick. onetake is free for noncommercial use only") — commercial carve-out caught via the license endpoint; treated as a hard exclusion.
 - WeKnora: GitHub license "other"/NOASSERTION persisted; the file itself is clean MIT — the registry now records the NOASSERTION flag so future runs don't re-investigate.
+
+## 2026-09-28 07:50 EDT — hourly scan
+
+Sources checked: GitHub trending daily + weekly, targeted API searches (13 lanes, pushed/created-date filtered: agent skills, AI agent frameworks, social schedulers, video clippers, caption tools, n8n workflows, design skills, SEO agent skills, motion skills, outreach, newsletter, learning loops, marketing skills).
+Seen-list checked against `SOURCES.md` (#1–258 + rejections) — this run's NEW finds are below.
+
+217 API hits → 187 new to seen-list → 183 triaged out → **4 QUALIFIED** (all LICENSE files read in full via raw.githubusercontent.com; carve-out grep clean).
+
+### QUALIFIED (4) — registered as #259–262 with full DESIGN DIRECTIVEs
+
+1. **Barty-Bart/motion-graphics** — https://github.com/Barty-Bart/motion-graphics — MIT (LICENSE read in full; © 2026 Bart; standard MIT, no carve-outs) — ~238 stars, pushed 2026-09-25.
+   Why: the motion-broll skill — transcript-timed motion-graphic B-roll (cursor-driven morphing clips, full-frame cutaways + transparent ProRes 4444 panels, compare.html + viewer.html review gate, TIMING.md delivery manifest) — the first motion skill in the lane built for talking-head reels, directly feeding Buddy Martin Show cuts.
+
+2. **xyluxx/openoutbound** — https://github.com/xyluxx/openoutbound — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — 0 stars, pushed 2026-09-27.
+   Why: open-source AI SDR engine any agent can drive (MCP server + Agent Skill + CLI + REST API) with guardrails enforced BY CODE — sending limits, approvals, suppression lists, compliance budgets — plus sandbox mode with fake mailboxes/prospects; the outreach agent's first code-gated outbound engine (Brenden's approval gates map onto its approval config verbatim).
+
+3. **hutaohh1/cutkit** — https://github.com/hutaohh1/cutkit — MIT (LICENSE read in full; © 2026 CutKit contributors; standard MIT, no carve-outs) — ~1 star, pushed 2026-09-25.
+   Why: replayable, auditable video-production orchestration — timeline.json as single execution truth, immutable revision history, deterministic RFC-6902 review patches (≤3 rounds), EBU R128 QC, C2PA provenance, approval gate → final manifest; MISSING_REAL (refuses to silently generate stand-ins) is the agency-wide anti-fabrication rule Brenden's QC standard demands. Chinese-primary repo, EN sparse — pattern reference, verify before core use.
+
+4. **anthropics/financial-services** — https://github.com/anthropics/financial-services — Apache-2.0 (LICENSE read in full; standard Apache-2.0, no carve-outs) — ~37.9k stars, pushed 2026-09-21, trending weekly.
+   Why: official Anthropic vertical-plugin pack (named workflow agents + skills/slash-commands/data-connectors + managed-agent cookbooks, two deploys from one source: Claude Cowork plugin + Managed Agents API) — the reference template for packaging agency verticals, directly feeding Brenden's real-estate duplication directive; its "every output staged for human sign-off" rule matches the agency's approval-gate standard.
+
+### Evaluated and REJECTED (added to rejections table)
+
+- AstrBotDevs/AstrBot (41.1k★, AGPL-3.0) — network copyleft. Described, never copied.
+- Swastik023/social-media-publishing-platform (AGPL-3.0) — copyleft. Described, never copied.
+- rogulia/skills (CC-BY-4.0) — outside MIT/Apache policy scope. Described, never copied.
+
+### Checked, not qualified / skipped this round
+
+- Trending daily: debpalash/VoiceStudio (AGPL, rejected previously — no re-evaluation), paperclip (#7), openrig (#69), univer (#9) — already registered; rest off-lane.
+- Trending weekly: Tencent/WeKnora (#215), orca (#219), hindsight (#8) — already registered; cloudflare/security-audit-skill (security lane, off-lane), trycua/cua + HKUDS/CLI-Anything (computer-use infra, off-lane), TencentCloud/Octop (Tencent vendor coupling), akitaonrails/ai-memory (memory lane covered by #8/#52/#94/#218).
+- mastra-ai/mastra + VoltAgent/voltagent + nanobot (HKUDS) — generic agent frameworks; lanes saturated by langgraph (#156), omnigent (#113), metaharness (#116), ruflo (#51), orca (#219), deer-flow (#216); dev-tooling marginal fit per ECC precedent.
+- TencentCloud/TencentDB-Agent-Memory (27.4k★ NOASSERTION) — memory hub; Tencent vendor coupling + memory lane covered. Skipped.
+- pipecat/livekit-agents/ten-framework (voice-agent frameworks) — no agency voice lane. Skipped.
+- Social-scheduler lane: all 0–1★ stubs, no-license or AGPL; lanes covered by #6/#22/#25/#110. Skipped (pallyy-agent MIT noted, 0★, pattern-only).
+- Caption lane: 0–1★ stubs, mostly unlicensed; cutkit (#261) picked as the lane's real pattern this round; JIZURA (#123) + hyperremoedit (#124) + yaps (#258) cover the tooling. Skipped.
+- Motion lane: farhan-syah/motion-video-skill (33★ MIT), MotionCraft (7★), every-frame-is-code (7★), product-film-skill (zalagarcia fork — original covered by #65), FasalZein/motion-studio (skipped in 05:50 run), automated-QA angle (juanmaagd, 0★), Dakota1-1/super-motion-graphics (0★ NOASSERTION), aftercode-plugin (0★ NOASSERTION) — lane saturated; Barty-Bart (#259) picked for the transcript-timed-B-roll differentiator.
+- SEO/marketing/outreach/newsletter lanes: kid7st/agenticseo, KhSEO, vamshicreates/youtube-uploader, Nagacash/-OpenSEO-Lite, seoskills-sh/catalog, TopCited/topcited-skills (vendor-coupled), gaurmode/claude-marketing-skills (0★, lane saturated per 00:50 run), netflypsb/buzdev-plugin (0★, Hermes-coupled), ducdg88/ducpt-skills, warrox1993/skills-claude-entreprise (French), benoitterpereau/gmail-triage — lanes covered or vendor/language-mismatched. Skipped.
+- Learning-loop lane: Shanghua-Gao/RSI-Jev (Jev-coupled, covered by #83/#218), csells/spork (0★, brand new — watch for traction), BuildAppolis/SIA (0★), dream-rsi-skill, huanghuangdaquan-beep/dream-rsi (2★, paper meta-skill) — lanes covered by #8/#52/#94/#120/#218/#255. Skipped.
+- Design lane: Ygohel18/skills (eng-standards, dev-tooling), mertgoevse-wq/design-skill-library (0★ NOASSERTION, 166-skill curator dump), claraevey/design-skills (0★), Tree-oil/apple-3d-physical-canvas (0★), romachorny/claude-skills (0★), hardware/Android design (off-lane) — saturated (#24/#26/#29/#42/#58/#66/#70/#71/#93/#101/#104/#105/#106/#107/#108/#121/#253/#254). Skipped.
+- fujibee/agmsg (1.5k★ MIT, cross-agent messaging for CLIs) — messaging infra, marginal agency fit. Skipped.
+- xbtlin/ai-berkshire (Chinese, value-investing) — language + lane mismatch. Skipped.
+- Ar9av/obsidian-wiki (3.5k★ MIT, agent digital-brain via Obsidian) — lane covered by second-brain-os (#60), hindsight (#8), wikiskill (#94). Skipped.
+- All other 0★/unlicensed stubs across lanes — excluded per policy.
+
+### License-policy notes this round
+
+- Barty-Bart/motion-graphics: GitHub showed NOASSERTION; the LICENSE file itself is clean standard MIT — registered with the NOASSERTION flag recorded (openshorts rule, same as WeKnora).
+- The three AGPL/copyleft catches (AstrBot 41k★, VoiceStudio, Swastik023) confirm the scan's license-first discipline: popularity never overrides copyleft.
+- anthropics/financial-services: GitHub metadata already reported Apache-2.0; the full 11KB LICENSE text read and verified standard Apache-2.0 anyway.
