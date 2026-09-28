@@ -9,3 +9,6 @@ keys/
 # Local scratch
 .DS_Store
 *.bak
+
+# Vendored tool checkouts (shallow clones; registry is the source of truth)
+vendor/

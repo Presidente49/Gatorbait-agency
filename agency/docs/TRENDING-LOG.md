@@ -1084,3 +1084,18 @@ Registry now stands at #123. Genuine new qualifiers this round: 5 — obra/super
 - Skipped as below-bar/off-lane: kid7st/agenticseo (SEO lane saturated), agentik-os sub-singles, single-commit 0-star design-skill singletons, fancyism/system-design-bytebytego (off-lane), amaan-j12/support-copilot (fictional portfolio project), caption-tools lane returned 0 results.
 - Registry now at #149; rejections table at 73.
 - QC: dedupe run against full registry + rejections before registering (both full-name list and owner/repo tail); all 15 finalist LICENSE files read in full via raw.githubusercontent, carve-out grep zero hits; design directive present on every new row per Brenden's standing rule. No API rate-limit hits (core quota respected, ~14 calls used).
+
+## 2026-09-28 — Targeted roundup: 7 winners registered (#150–156)
+- 8-category one-time hunt at Brenden's order: Wix tooling, newsletter infra, YouTube ops, GitHub REST commits, Restream producer tools, multimedia pages, orchestration layer (+ design/landing screened, nothing beat the existing #142–149).
+- #150 wix/velo-external-db (MIT) — official Wix external-DB connector; newsroom Postgres → native Wix collections.
+- #151 TryGhost/Ghost (MIT) — self-hosted newsletter backend (list + sends only, never a second site).
+- #152 octokit/octokit.js (MIT) — Git Database API push script; also unblocks the agency's own GitHub push path.
+- #153 googleapis/google-api-python-client (Apache-2.0) — the one YouTube module for uploads/playlists/metadata/analytics with quota logging.
+- #154 bluenviron/mediamtx (MIT) — self-hosted multistream router; OBS publishes once, fans out to Restream/YouTube/Facebook + records.
+- #155 videojs/video.js (Apache-2.0) — standard themed player for agency video pages; first brick of the no-more-static mandate.
+- #156 langchain-ai/langgraph (MIT) — THE orchestration layer; multi-agent workflows as durable graphs with human-in-the-loop interrupts at Brenden's gates.
+- Rejections: knadh/listmonk (AGPL), mettle/sendportal (stale 2024), goodtune/restream (BSD), obsproject/obs-websocket (GPL-2.0 — memory was wrong, license file wasn't), shaktech786/restream-mcp-server (unverifiable), tonygeb23/restream-a11y (archived — but README endpoint table kept as Restream REST reference), langfuse/langfuse (ee/ carve-out + ClickHouse copyright), FlowiseAI/Flowise (archived), idyll-lang/idyll (stale 2023).
+- Mentor notes shipped with every row; non-repo recs (official Wix MCP, thin Restream REST wrapper) + runner-ups (Postal, restreamer, Puck, PhotoSwipe) in agency/ops/MENTOR-NOTES-2026-09-28.md.
+- Owner's NO-MORE-STATIC mandate recorded: every web-facing build must move; static = failed QC. Follow-up motion-design hunt dispatched.
+- Registry now at #156. All 7 repos shallow-cloned to vendor/ (gitignored).
+- QC: 0 matches against the 222-URL seen list; all 7 LICENSE files read in full; design directive + mentor note on every row per standing rule.
