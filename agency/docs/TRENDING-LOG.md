@@ -967,3 +967,12 @@ Seen-list checked against `SOURCES.md` (#1–118 + rejections + all prior log no
 - obra/superpowers' "Commercial Services" section (sales@primeradiant.com) is a standard commercial-support offering, not a license carve-out — repo LICENSE is clean MIT.
 - JIZURA is the second bilingual-qualified repo (Japanese-primary + full English edition), following the video-autopilot-kit (#117) precedent.
 - Registry now at #125; rejections table at 40 entries.
+
+### Correction — 2026-09-27 22:05 EDT (QC pass on this round)
+
+Two of the 7 registered "qualifiers" were duplicates of existing registry entries — the dedupe check missed them:
+- YuriCrystal/n8n-marketing-flows (#122) duplicates #57 → REMOVED.
+- samyost1/3dicon (#125) duplicates #75 → REMOVED.
+- elisaterumi-ai/agent-skills-in-practice renumbered #123 → #122; 852wa/JIZURA renumbered #124 → #123.
+
+Registry now stands at #123. Genuine new qualifiers this round: 5 — obra/superpowers (#119), supermemoryai/company-brain (#120), kwakseongjae/oh-my-design (#121), elisaterumi-ai/agent-skills-in-practice (#122), 852wa/JIZURA (#123). The GPL-3.0 rejection (eracle/OpenOutreach) stands. Lesson logged: dedupe must compare against BOTH the full-name list and owner/repo tail, not rely on search-result memory — the same repo can surface fresh in searches when it gains stars.
