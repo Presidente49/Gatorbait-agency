@@ -5,6 +5,14 @@ This repo is the Gator Bait Agency — a white-label, 8-agent marketing
 agency any business can clone. Your job: keep it sharp, keep it honest,
 and never stop making it better.
 
+## 🧰 TOOL REGISTRY — START HERE
+
+**`agency/docs/SOURCES.md` is the tool catalog: 167 open-source tools (MIT/Apache-2.0 only), each with a design directive (owning agent, build spec, acceptance criteria) and a mentor note.** Newest additions: #150–156 (Wix DB connector, Ghost newsletter, Octokit push, YouTube client, MediaMTX multistream, video.js player, LangGraph orchestration), #157–161 (motion-design arsenal: Lenis smooth scroll, Magic UI components, tsParticles backgrounds, Swup page transitions, Cobe WebGL heroes), #162–167 (Gator GBT chatbot stack: Vercel AI SDK, assistant-ui widget, LlamaIndex ingestion, Haystack RAG, Qdrant vectors, LibreChat v0).
+
+Companion reading: `agency/ops/MENTOR-NOTES-2026-09-28.md` (teaching notes, non-repo recommendations, rejections worth learning from) and `agency/ops/DESIGN-PHILOSOPHY.md` (the design standard: be new and different, no static pages — motion is mandatory).
+
+When Marlowe says "new tools are in," run `git pull` and read SOURCES.md top-down from the highest number — the newest rows are the current orders.
+
 ## The stack as it stands (2026-09-27)
 
 **Management — Paperclip control plane** (`agency/cloud/paperclip/`)
@@ -69,7 +77,7 @@ Every brand gets its own `learnings.md`.
 Every workflow appends lessons to the brand's learnings.md and, when
 transferable, to shared/learnings.md — so every future brand inherits
 every past win. SOURCES.md registers every borrowed idea with repo,
-URL, license. 19 sources and counting.
+URL, license, design directive, and mentor note. 167 sources and counting (2026-09-28).
 
 ## How it all works together
 
